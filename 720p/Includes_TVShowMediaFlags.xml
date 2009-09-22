@@ -1,0 +1,479 @@
+<includes>
+	<include name="TVShowResolutionflagsVars">
+		<width>59</width>
+		<height>40</height>
+		<visible>IsEmpty(ListItem.VideoResolution)</visible>
+	</include>
+	<include name="TVShowVideoCodecflagsVars">
+		<width>59</width>
+		<height>40</height>
+		<visible>IsEmpty(ListItem.VideoCodec)</visible>
+	</include>
+	<include name="TVShowAudioCodecflagsVars">
+		<width>59</width>
+		<height>40</height>
+		<visible>IsEmpty(ListItem.AudioCodec)</visible>
+	</include>
+	<include name="TVShowSubtitlesflagsVars">
+		<width>59</width>
+		<height>40</height>
+		<visible>IsEmpty(ListItem.SubtitleLanguage)</visible>
+	</include>
+	<include name="TVShowMediaflagsVars">
+		<width>59</width>
+		<height>40</height>
+	</include>
+	<include name="TVShowMediaflags">
+		<control type="image">
+			<posx>330</posx>
+			<posy>618</posy>
+			<width>626</width>
+			<height>42</height>
+			<texture diffuse="underlay2-diffuse.png" border="4">underlay2.png</texture>
+			<visible>!Skin.HasSetting(Enable_TVShows_Media_Flags) + Container.Content(episodes) + !Control.IsVisible(55)</visible>
+		</control>
+		<control type="grouplist">
+			<visible>!Skin.HasSetting(Enable_TVShows_Media_Flags) + Container.Content(Episodes) + [Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(55)]</visible>
+			<animation effect="slide" end="203,-40" time="0" condition="Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(53)">conditional</animation>
+			<posx>152</posx>
+			<posy>659</posy>
+			<width>577</width>
+			<height>40</height>
+			<itemgap>15</itemgap>
+			<orientation>horizontal</orientation>
+			<align>center</align>
+		<!-- Resolution (Native) -->
+			<control type="image" id="5081">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
+				<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+			</control>
+		<!-- Resolution (Director Tag) -->
+			<control type="image" id="5081">
+				<include>TVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/sd.png</texture>
+				<visible>substring(listitem.director,SDp) | substring(listitem.director,SDi)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>TVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/480p.png</texture>
+				<visible>substring(listitem.director,480p)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>TVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/576p.png</texture>
+				<visible>substring(listitem.director,576p)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>TVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/720p.png</texture>
+				<visible>substring(listitem.director,720p)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>TVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/1080p.png</texture>
+				<visible>substring(listitem.director,1080p)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>TVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/480i.png</texture>
+				<visible>substring(listitem.director,480i)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>TVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/576i.png</texture>
+				<visible>substring(listitem.director,576i)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>TVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/720i.png</texture>
+				<visible>substring(listitem.director,720i)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>TVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/1080i.png</texture>
+				<visible>substring(listitem.director,1080i)</visible>
+			</control>
+		<!-- Aspect Ratio -->
+			<control type="image" id="5082">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+				<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+			</control>
+		<!-- Video Codec (Native) -->
+			<control type="image" id="5083">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/$INFO[ListItem.VideoCodec,,.png]</texture>
+				<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+			</control>
+		<!-- Video Codec  (Director Tag) -->
+			<control type="image" id="5083">
+				<include>TVShowVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/divx.png</texture>
+				<visible>substring(listitem.director,DX50) | substring(listitem.director,divx) | substring(listitem.director,DIV3)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>TVShowVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/xvid.png</texture>
+				<visible>substring(listitem.director,xvid)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>TVShowVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/quicktime.png</texture>
+				<visible>substring(listitem.director,SVQ3)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>TVShowVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/h.264.png</texture>
+				<visible>substring(listitem.director,V_MPEG4)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>TVShowVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/wmv.png</texture>
+				<visible>substring(listitem.director,WMV)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>TVShowVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/wmvhd.png</texture>
+				<visible>substring(listitem.director,WVC1)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>TVShowVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/mpeg.png</texture>
+				<visible>!substring(listitem.filename,hddvd) + [substring(listitem.filename,.ifo,Right) | substring(listitem.filename,.iso,Right) | substring(listitem.filename,.img,Right) | substring(listitem.filename,.mpg,Right) | substring(listitem.filename,.vob,Right)] + ![substring(listitem.director,720) | substring(listitem.director,1080)] + ![substring(listitem.director,DX50) | substring(listitem.director,divx) | substring(listitem.director,DIV3) | substring(listitem.director,xvid) | substring(listitem.director,V_MPEG4) | substring(listitem.director,WVC1)]</visible>
+			</control>
+		<!-- Audio Codec (Native) -->
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/aac.png</texture>
+				<visible>substring(ListItem.AudioCodec,aac)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mono.png</texture>
+				<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,ac-3)] + substring(ListItem.AudioChannels,1)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dolby20.png</texture>
+				<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,ac-3)] + substring(ListItem.AudioChannels,2)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd40.png</texture>
+				<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,ac-3)] + substring(ListItem.AudioChannels,4)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd41.png</texture>
+				<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,ac-3)] + substring(ListItem.AudioChannels,5)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd51.png</texture>
+				<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,ac-3)] + substring(ListItem.AudioChannels,6)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd71.png</texture>
+				<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,ac-3)] + substring(ListItem.AudioChannels,8)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts.png</texture>
+				<visible>[substring(ListItem.AudioCodec,dca) | substring(ListItem.AudioCodec,dts)] + substring(ListItem.AudioChannels,2)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts51.png</texture>
+				<visible>[substring(ListItem.AudioCodec,dca) | substring(ListItem.AudioCodec,dts)] + substring(ListItem.AudioChannels,6)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts71.png</texture>
+				<visible>[substring(ListItem.AudioCodec,dca) | substring(ListItem.AudioCodec,dts)] + substring(ListItem.AudioChannels,8)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mpeg audio.png</texture>
+				<visible>substring(ListItem.AudioCodec,mp1)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mp2.png</texture>
+				<visible>substring(ListItem.AudioCodec,mp2) | [substring(ListItem.AudioCodec,mpeg audio) + [substring(listitem.filename,.ifo,Right) | substring(listitem.filename,.vob,Right) | substring(listitem.filename,.iso,Right)  | substring(listitem.filename,.img,Right)] + [substring(listitem.VideoResolution,SD) | substring(listitem.VideoResolution,480) | substring(listitem.VideoResolution,540) | substring(listitem.VideoResolution,576)]]</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mp3.png</texture>
+				<visible>substring(ListItem.AudioCodec,mp3)  | [substring(ListItem.AudioCodec,mpeg audio) + [substring(listitem.VideoCodec,divx) | substring(listitem.VideoCodec,DX50) | substring(listitem.VideoCodec,DIV3) | substring(listitem.VideoCodec,sorenson 3) | substring(listitem.VideoCodec,svq3) | substring(listitem.VideoCodec,xvid)]]</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/ogg.png</texture>
+				<visible>substring(ListItem.AudioCodec,vorbis)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wav.png</texture>
+				<visible>substring(ListItem.AudioCodec,pcm)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wma.png</texture>
+				<visible>substring(ListItem.AudioCodec,wmav2) | substring(ListItem.AudioCodec,wma2)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wmahd.png</texture>
+				<visible>substring(ListItem.AudioCodec,wmapro) | substring(ListItem.AudioCodec,wma3)</visible>
+			</control>
+		<!-- Audio Codec (Director Tag) -->
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts.png</texture>
+				<visible>substring(listitem.director,dts) + ![substring(listitem.director,6ch) | substring(listitem.director,8ch)]</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd40.png</texture>
+				<visible>substring(listitem.director,4ch) + substring(listitem.director,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd41.png</texture>
+				<visible>substring(listitem.director,5ch) + substring(listitem.director,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd51.png</texture>
+				<visible>substring(listitem.director,6ch) + substring(listitem.director,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd71.png</texture>
+				<visible>substring(listitem.director,8ch) + substring(listitem.director,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts51.png</texture>
+				<visible>substring(listitem.director,6ch) + substring(listitem.director,dts)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts71.png</texture>
+				<visible>substring(listitem.director,8ch) + substring(listitem.director,dts)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dolby20.png</texture>
+				<visible>substring(listitem.director,2ch) + substring(listitem.director,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dolbypro.png</texture>
+				<visible>substring(listitem.director,dolbypro)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mono.png</texture>
+				<visible>substring(listitem.director,mono) + substring(listitem.director,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dolbytruehd.png</texture>
+				<visible>substring(listitem.director,truehd) | substring(listitem.director,true hd)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dtsma.png</texture>
+				<visible>substring(listitem.director,dtsma) | substring(listitem.director,master audio) + !substring(listitem.director,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mp2.png</texture>
+				<visible>substring(listitem.director,MPEG Audio) + [substring(listitem.filename,.ifo,Right) | substring(listitem.filename,.vob,Right) | substring(listitem.filename,.iso,Right)  | substring(listitem.filename,.img,Right)] + [substring(listitem.director,SD) | substring(listitem.director,480) | substring(listitem.director,540) | substring(listitem.director,576)]</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mp3.png</texture>
+				<visible>substring(listitem.director,MPEG Audio) + [substring(listitem.director,divx) | substring(listitem.director,DX50) | substring(listitem.director,DIV3) | substring(listitem.director,svq3) | substring(listitem.director,xvid)]</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/flac.png</texture>
+				<visible>substring(listitem.director,flac)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/ogg.png</texture>
+				<visible>substring(listitem.director,vorbis)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/aac.png</texture>
+				<visible>substring(listitem.director,aac)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wav.png</texture>
+				<visible>substring(listitem.director,pcm)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>TVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wmahd.png</texture>
+				<visible>substring(listitem.director,WMA3)</visible>
+			</control>
+		<!-- Source -->
+			<control type="image" id="5085">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/source/hddvd.png</texture>
+				<visible>substring(listitem.filename,.evo,Right) | substring(listitem.filename,hddvd)</visible>
+			</control>
+			<control type="image" id="5085">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/source/bluray.png</texture>
+				<visible>substring(listitem.filename,.m2ts,Right)) | substring(listitem.filename,bluray) | substring(listitem.filename,blu-ray) | substring(listitem.filename,brrip) | [![substring(listitem.filename,sdtv) | substring(listitem.filename,hdtv) | substring(listitem.filename,tvrip) | substring(listitem.filename,pdtv) | substring(listitem.filename,hddvd) | substring(listitem.filename,sddvd)] + [substring(listitem.filename,.iso,Right) | substring(listitem.filename,.img,Right)] + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]]</visible>
+			</control>
+			<control type="image" id="5085">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/source/dvd.png</texture>
+				<visible>substring(listitem.filename,.ifo,Right) | substring(listitem.filename,.vob,Right) | substring(listitem.filename,sddvd)  | [![substring(listitem.filename,sdtv) | substring(listitem.filename,hdtv) | substring(listitem.filename,bluray) | substring(listitem.filename,hddvd) | substring(listitem.filename,blu-ray) | substring(listitem.filename,brrip) | substring(listitem.filename,tvrip) | substring(listitem.filename,pdtv)] + [substring(listitem.filename,.iso,Right) | substring(listitem.filename,.img,Right)] + [substring(listitem.director,SD) | substring(listitem.director,480) | substring(listitem.director,540) | substring(listitem.director,576) | substring(listitem.VideoResolution,SD) | substring(listitem.VideoResolution,480) | substring(listitem.VideoResolution,540) | substring(listitem.VideoResolution,576)]]</visible>
+			</control>
+			<control type="image" id="5085">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/source/hdtv.png</texture>
+				<visible>substring(listitem.filename,hdtv) | substring(listitem.filename,pdtv) | [![substring(listitem.filename,sdtv) | substring(listitem.filename,bluray) | substring(listitem.filename,hddvd) | substring(listitem.filename,sddvd) | substring(listitem.filename,blu-ray) | substring(listitem.filename,brrip) | substring(listitem.filename,tvrip)] + [substring(listitem.filename,.avi,Right) | substring(listitem.filename,.mkv,Right) | substring(listitem.filename,.mp4,Right) | substring(listitem.filename,.mov,Right) | substring(listitem.filename,.mpeg,Right) | substring(listitem.filename,.mpg,Right) | substring(listitem.filename,.ts,Right) | substring(listitem.filename,.wmv,Right)] + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080]]</visible>
+			</control>
+			<control type="image" id="5085">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/source/sdtv.png</texture>
+				<visible>substring(listitem.filename,sdtv) | substring(listitem.filename,tvrip) | [![substring(listitem.filename,hdtv) | substring(listitem.filename,bluray) | substring(listitem.filename,hddvd) | substring(listitem.filename,sddvd) | substring(listitem.filename,blu-ray) | substring(listitem.filename,brrip) | substring(listitem.filename,pdtv)] + [substring(listitem.filename,.avi,Right) | substring(listitem.filename,.mkv,Right) | substring(listitem.filename,.mp4,Right) | substring(listitem.filename,.mov,Right) | substring(listitem.filename,.mpeg,Right) | substring(listitem.filename,.mpg,Right) | substring(listitem.filename,.ts,Right) | substring(listitem.filename,.wmv,Right)] + [substring(listitem.director,SD) | substring(listitem.director,480) | substring(listitem.director,540) | substring(listitem.director,576) | substring(listitem.VideoResolution,SD) | substring(listitem.VideoResolution,480) | substring(listitem.VideoResolution,540) | substring(listitem.VideoResolution,576)]]</visible>
+			</control>
+		<!-- Subtitles (Native) -->
+			<control type="image" id="5086">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/subtitles/cc.png</texture>
+				<visible>!IsEmpty(ListItem.SubtitleLanguage)</visible>
+			</control>
+		<!-- Subtitles (Director Tag) -->
+			<control type="image" id="5086">
+				<include>TVShowSubtitlesflagsVars</include>
+				<texture>special://skin/images/flags/movies/subtitles/cc.png</texture>
+				<visible>substring(listitem.director,sub)</visible>
+			</control>
+		<!-- Rating -->
+			<control type="image" id="5087">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/rating/tv-y.png</texture>
+				<visible>substring(listitem.director,TV-Y) + ![substring(listitem.director,TV-Y7) | substring(listitem.director,TV-Y7-FV)]</visible>
+			</control>
+			<control type="image" id="5087">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/rating/tv-y7.png</texture>
+				<visible>substring(listitem.director,TV-Y7) | substring(listitem.director,TV-Y7-FV)</visible>
+			</control>
+			<control type="image" id="5087">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/rating/tv-g.png</texture>
+				<visible>substring(listitem.director,TV-G)</visible>
+			</control>
+			<control type="image" id="5087">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/rating/tv-pg.png</texture>
+				<visible>substring(listitem.director,TV-PG)</visible>
+			</control>
+			<control type="image" id="5087">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/rating/tv-14.png</texture>
+				<visible>substring(listitem.director,TV-14)</visible>
+			</control>
+			<control type="image" id="5087">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/rating/tv-ma.png</texture>
+				<visible>substring(listitem.director,TV-MA)</visible>
+			</control>
+<control type="grouplist">
+	<width>59</width>
+	<height>40</height>
+		<!-- Network HD-->
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/ABC_hd.png</texture>
+				<visible>substring(listitem.studio,ABC) + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/BBC_hd.png</texture>
+				<visible>substring(listitem.studio,BBC) + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/Cartoon Network_hd.png</texture>
+				<visible>substring(listitem.studio,Cartoon Network) + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/CBS_hd.png</texture>
+				<visible>substring(listitem.studio,CBS) + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/Comedy Central_hd.png</texture>
+				<visible>substring(listitem.studio,Comedy Central) + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/FOX_hd.png</texture>
+				<visible>substring(listitem.studio,FOX) + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/FX_hd.png</texture>
+				<visible>substring(listitem.studio,FX) + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/HBO_hd.png</texture>
+				<visible>substring(listitem.studio,HBO) + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/History_hd.png</texture>
+				<visible>substring(listitem.studio,History) + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/MTV_hd.png</texture>
+				<visible>substring(listitem.studio,MTV) + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/NBC_hd.png</texture>
+				<visible>substring(listitem.studio,NBC) + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/SciFi_hd.png</texture>
+				<visible>substring(listitem.studio,SciFi) + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/Showtime_hd.png</texture>
+				<visible>substring(listitem.studio,Showtime) + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/Sky One_hd.png</texture>
+				<visible>substring(listitem.studio,Sky One) + [substring(listitem.director,720) | substring(listitem.director,1080) | substring(listitem.VideoResolution,720) | substring(listitem.VideoResolution,1080)]</visible>
+			</control>
+		<!-- Network (Native) -->
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/$INFO[ListItem.Studio,,.png]</texture>
+				<visible>!IsEmpty(ListItem.Studio)</visible>
+			</control>
+</control>
+		</control>
+	</include>
+</includes>

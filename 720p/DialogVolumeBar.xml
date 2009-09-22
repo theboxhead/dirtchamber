@@ -1,0 +1,59 @@
+<window id="104">
+	<defaultcontrol>1</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>846</posx>
+		<posy>43</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<animation effect="slide" start="0,0" end="0,75" time="0" condition="Window.IsVisible(seekbar)">Conditional</animation>
+			<control type="image">
+				<posx>-10</posx>
+				<posy>-16</posy>
+				<width>427</width>
+				<height>80</height>
+				<colordiffuse>DDFFFFFF</colordiffuse>
+				<texture border="40">popup.png</texture>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>6</posy>
+				<width>35</width>
+				<height>35</height>
+				<texture>VolumeIcon.png</texture>
+			</control>
+			<control type="label">
+				<description>Volume Label</description>
+				<posx>50</posx>
+				<posy>22</posy>
+				<label>$INFO[Player.Volume]</label>
+				<font>font-20</font>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="progress" id="1">
+				<description>Progressbar</description>
+				<posx>132</posx>
+				<posy>15</posy>
+				<width>256</width>
+				<height>15</height>
+				<info>Player.Volume</info>
+				<visible>true</visible>
+			</control>
+			<control type="label">
+				<description>Passthrough Label</description>
+				<posx>132</posx>
+				<posy>9</posy>
+				<width>256</width>
+				<height>25</height>
+				<label>$LOCALIZE[29802]</label>
+				<font>font-23</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>player.passthrough</visible>
+			</control>
+		</control>
+	</controls>
+</window>

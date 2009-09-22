@@ -1,0 +1,158 @@
+Transparency! v1.00
+- release
+Transparency! v0.38
+- added 125 record label logo's (thanx Ninjamawwe)
+- changed some alignments of info labels in media info view
+- added mpaa rating to tv show info window
+- added 'native' studio flag for movies and tv shows
+- changed merged some code of the two horizontal menus
+- changed moved backgrounds/icons/flags out of the media folder
+Transparency! v0.37
+- added passthrough notification to volumebar
+Transparency! v0.36
+- added slideview for movies
+Transparency! v0.35
+- changed redid dialogfullinfo
+- changed dialog backgrounds
+Transparency! v0.34
+- changed picture thumb view to wraplist
+- removed wide icon view for programs
+- added polaroid picture view
+- changed redid all thumbnail views
+- changed redid all item/focused layouts
+Transparency! v0.33
+- changed image loading for cdart and clearart, hopefully it'll work better with smb drives now.
+- added fanart view for games
+- added horizontal home menu fade to black
+Transparency! v0.32
+- added 100 film studio icons
+- changed replaced icons
+- changed home menu buttons
+- removed last.fm love-hate button
+Transparency! v0.31
+- added aspectratio to fullscreen media flags
+- changed textures
+Transparency! v0.30
+- changed fonts
+- changed colortheme to blue
+- changed skinsounds
+Transparency! v0.29
+- added fanartview for now playing
+- added progressbar to fanartview for music, now playing and CommonNowPlaying 
+- fixed black screen when having lastfm or shoucast as a source
+- changed label color to white in skin settings backgrounds
+- removed bottom button shadow in settings catagory
+- fixed only load music flags when needed
+Transparency! v0.28
+- added 650 film studio icons
+- changed renamed all font entries
+- fixed animation bug in myvideonav.xml
+- changed all of the genre icons
+- changed most of the backgrounds
+- changed made extension matching less likely to cause false possitives
+- fixed episode name could overlap rating and watched/unwatched flag
+- changed artist - album order is now optional for browsing by album
+- added background for favourites
+- changed colorised shutdown button
+- moved time from top to bottom on home
+- changed button-control is now useabe on home when cd/dvd is present in drive
+- removed favourites and play button
+- added recently added movies, tv-shows and albums to home screen
+- added license file
+- added Transparency! credits to custom_cedits
+- fixed scale background in filemanager
+Transparancy! v0.27:
+- added cdart with animations
+- added flags for 3iv2,div2,flv,mpg4,mp42,mp43,pcm,vorbis,mp1
+- added backgrounds for video plugins and apple movie trailers
+- added option for apple movie trailers to home menu
+- added favourites background
+- added shutdown background
+- added dim on shutdown
+- resized and converted genre icons to cut down on size
+- removed several weather fanart images due to possible copyright issues
+- changed size of current weather icon in myweather
+- changed focussed button in several windows
+- removed icon view at tv show level
+- added year to fullscreen info for movies and tv shows
+- added .mp4 .mov .mpeg extensions to source detection list
+- changed source detection for tvshows and movies
+- added trailer flag in fanart view
+- added movie media flags to fullscreen info window
+- fixed file count label in apply movie trailers when using wide side menu buttons
+- moved watched overlay from thumb to list
+- added unwatched overlay
+- added movie media flags in all views
+- added tv show media flags in all views
+- changed alignment of season / episode title in fanart
+- added dropshadow for tvshowthumb in fanart view
+- added studio folder icon in video library
+- added director folder icon in video library
+- added year folder icon in video library
+- changed color of title to white in 3d coverflow
+- fixed left menu is now mouse compatible
+- fixed wide icon view can contain 10 items if media titles are disabled
+- changed scale fanart and backgrounds instead of stretch
+- changed use listitem.studio for tv network logo
+- added studio to episode dialog info
+- added fanart for games and programs
+- added finish time to fullscreen info for videos
+Transparancy! v0.26:
+- added seperator between listitems
+- added mediaflags for dd4.0 and dd4.1
+- fixed mediaflags, bluray was detected as dvd
+- changed changed up/down/left/right scrollbuttons
+- added option for video plugins to home menu
+- fixed incorrect window title for music & videos in filemode
+- added dropshadow to picturethumbview
+- changed game button now takes you to Games folder if present
+- added option to show clearart for episodes
+- added display cd cover in full screen music window when song is paused
+- added display dvd cover in full screen video window when movie is paused
+- added option to use videos in file mode on the home menu
+- added option to show fanart instead of visualisation on home screen and visualisation window
+- fixed false possitives with codec matching for music files
+Transparancy! v0.25:
+- added support for native media metadata detection
+Transparancy! v0.24:
+- fixed animated gifs deleted from weather icon directories
+Transparancy! v0.23:
+- fixed window title width
+- fixed custom backgrounds for videos section
+- added wide side menu buttons
+- added dvd case to fullscreen video info
+- added pulse on select for settings icons
+- changed made focused sidebutton more transparent
+Transparancy! v0.22:
+- added custom shutdown menu
+- added wide home menu buttons
+- added bigger fonts (thanx tikkiew)
+Transparancy! v0.21:
+- fixed custom backgrounds for movies in home
+- fixed custom backgrounds for tvshows in home
+- fixed scrolling labels on home menu
+- fixed scrolling labels in 3d coverflow
+- fixed scrolling of info in fanart view
+- fixed bug in SettingsSystemInfo.xml which caused the xbox to crash
+- fixed wrong weather icon for day3 was displayed
+- added filemanager to shutdown menu
+- added restart to shutdown menu
+- added system info to shutdown menu
+- added hibernate to shutdown menu
+- added games to home menu
+- added skin version to system info
+- changed exit function for xbox on shutdown menu
+- changed animated weather icons are optional now
+- changed made background for fanart info slightly darker
+Transparancy! v0.20:
+- changed name to Transparency!
+- removed some redundant code
+- fixed [UPPERCASE] display in season fanart view for *All Seasons item
+- changed Icon view for albums / movies, so thumbs are more in the center of the screen
+- fixed bug in MyWeather.xml which caused the xbox to crash
+- fixed corrupted textures on xbox
+PM3.HD-Transparancy v0.19:
+- initial release
+
+
+Synced to PM3.HD r21790

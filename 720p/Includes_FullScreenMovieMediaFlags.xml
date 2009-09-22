@@ -1,0 +1,1465 @@
+<includes>
+	<include name="FullScreenMovieResolutionflagsVars">
+		<width>59</width>
+		<height>40</height>
+		<visible>IsEmpty(VideoPlayer.VideoResolution)</visible>
+	</include>
+	<include name="FullScreenMovieVideoCodecflagsVars">
+		<width>59</width>
+		<height>40</height>
+		<visible>IsEmpty(VideoPlayer.VideoCodec)</visible>
+	</include>
+	<include name="FullScreenMovieAudioCodecflagsVars">
+		<width>59</width>
+		<height>40</height>
+		<visible>IsEmpty(VideoPlayer.AudioCodec)</visible>
+	</include>
+	<include name="FullScreenMovieSubtitlesflagsVars">
+		<width>59</width>
+		<height>40</height>
+		<visible>IsEmpty(VideoPlayer.SubtitleLanguage)</visible>
+	</include>
+	<include name="FullScreenMovieStudioflagsVarsSmall">
+		<width>59</width>
+		<height>40</height>
+	</include>
+	<include name="FullScreenMovieMediaflagsVars">
+		<width>59</width>
+		<height>40</height>
+	</include>
+	<include name="FullScreenMovieMediaflags">
+		<control type="grouplist">
+			<posx>255</posx>
+			<posy>145</posy>
+			<width>577</width>
+			<height>40</height>
+			<itemgap>13</itemgap>
+			<orientation>horizontal</orientation>
+		<!-- Resolution (Native) -->
+			<control type="image" id="5081">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/$INFO[VideoPlayer.VideoResolution,,.png]</texture>
+				<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
+			</control>
+		<!-- Resolution (Studio Tag) -->
+			<control type="image" id="5081">
+				<include>FullScreenMovieResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/sd.png</texture>
+				<visible>substring(VideoPlayer.studio,SDp) | substring(VideoPlayer.studio,SDi)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenMovieResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/480p.png</texture>
+				<visible>substring(VideoPlayer.studio,480p)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenMovieResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/576p.png</texture>
+				<visible>substring(VideoPlayer.studio,576p)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenMovieResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/720p.png</texture>
+				<visible>substring(VideoPlayer.studio,720p)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenMovieResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/1080p.png</texture>
+				<visible>substring(VideoPlayer.studio,1080p)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenMovieResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/480i.png</texture>
+				<visible>substring(VideoPlayer.studio,480i)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenMovieResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/576i.png</texture>
+				<visible>substring(VideoPlayer.studio,576i)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenMovieResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/720i.png</texture>
+				<visible>substring(VideoPlayer.studio,720i)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenMovieResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/1080i.png</texture>
+				<visible>substring(VideoPlayer.studio,1080i)</visible>
+			</control>
+		<!-- AspectRatio (Native) -->
+			<control type="image" id="5082">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/aspectratio/$INFO[VideoPlayer.VideoAspect,,.png]</texture>
+				<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
+			</control>
+		<!-- Video Codec (Native) -->
+			<control type="image" id="5083">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/$INFO[VideoPlayer.VideoCodec,,.png]</texture>
+				<visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
+			</control>
+		<!-- Video Codec  (Studio Tag) -->
+			<control type="image" id="5083">
+				<include>FullScreenMovieVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/divx.png</texture>
+				<visible>substring(VideoPlayer.studio,DX50) | substring(VideoPlayer.studio,divx) | substring(VideoPlayer.studio,DIV3)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>FullScreenMovieVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/xvid.png</texture>
+				<visible>substring(VideoPlayer.studio,xvid)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>FullScreenMovieVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/h.264.png</texture>
+				<visible>substring(VideoPlayer.studio,V_MPEG4)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>FullScreenMovieVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/quicktime.png</texture>
+				<visible>substring(VideoPlayer.studio,SVQ3)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>FullScreenMovieVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/wmv.png</texture>
+				<visible>substring(VideoPlayer.studio,WMV) | substring(VideoPlayer.studio,WMV2)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>FullScreenMovieVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/wmvhd.png</texture>
+				<visible>substring(VideoPlayer.studio,WVC1)</visible>
+			</control>
+		<!-- Audio Codec (Native) -->
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/aac.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,aac)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mono.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,ac3) | substring(VideoPlayer.AudioCodec,ac-3)] + substring(VideoPlayer.AudioChannels,1)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dolby20.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,ac3) | substring(VideoPlayer.AudioCodec,ac-3)] + substring(VideoPlayer.AudioChannels,2)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd40.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,ac3) | substring(VideoPlayer.AudioCodec,ac-3)] + substring(VideoPlayer.AudioChannels,4)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd41.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,ac3) | substring(VideoPlayer.AudioCodec,ac-3)] + substring(VideoPlayer.AudioChannels,5)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd51.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,ac3) | substring(VideoPlayer.AudioCodec,ac-3)] + substring(VideoPlayer.AudioChannels,6)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd71.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,ac3) | substring(VideoPlayer.AudioCodec,ac-3)] + substring(VideoPlayer.AudioChannels,8)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,dca) | substring(VideoPlayer.AudioCodec,dts)] + substring(VideoPlayer.AudioChannels,2)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts51.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,dca) | substring(VideoPlayer.AudioCodec,dts)] + substring(VideoPlayer.AudioChannels,6)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts71.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,dca) | substring(VideoPlayer.AudioCodec,dts)] + substring(VideoPlayer.AudioChannels,8)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mpeg audio.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,mp1)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mp2.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,mp2) | substring(VideoPlayer.AudioCodec,mpeg audio)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mp3.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,mp3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/ogg.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,vorbis)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wav.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,pcm)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wma.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,wmav2) | substring(VideoPlayer.AudioCodec,wma2)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wmahd.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,wmapro) | substring(VideoPlayer.AudioCodec,wma3)</visible>
+			</control>
+		<!-- Audio Codec (Studio Tag) -->
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts.png</texture>
+				<visible>substring(VideoPlayer.studio,dts) + ![substring(VideoPlayer.studio,6ch) | substring(VideoPlayer.studio,8ch)]</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd40.png</texture>
+				<visible>substring(VideoPlayer.studio,4ch) + substring(VideoPlayer.studio,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd41.png</texture>
+				<visible>substring(VideoPlayer.studio,5ch) + substring(VideoPlayer.studio,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd51.png</texture>
+				<visible>substring(VideoPlayer.studio,6ch) + substring(VideoPlayer.studio,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd71.png</texture>
+				<visible>substring(VideoPlayer.studio,8ch) + substring(VideoPlayer.studio,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts51.png</texture>
+				<visible>substring(VideoPlayer.studio,6ch) + substring(VideoPlayer.studio,dts)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts71.png</texture>
+				<visible>substring(VideoPlayer.studio,8ch) + substring(VideoPlayer.studio,dts)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dolby20.png</texture>
+				<visible>substring(VideoPlayer.studio,2ch) + substring(VideoPlayer.studio,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dolbypro.png</texture>
+				<visible>substring(VideoPlayer.studio,dolbypro)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mono.png</texture>
+				<visible>substring(VideoPlayer.studio,1ch) + substring(VideoPlayer.studio,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dolbytruehd.png</texture>
+				<visible>substring(VideoPlayer.studio,truehd) | substring(VideoPlayer.studio,true hd)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dtsma.png</texture>
+				<visible>substring(VideoPlayer.studio,dtsma) | substring(VideoPlayer.studio,master audio) + !substring(VideoPlayer.studio,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mp2.png</texture>
+				<visible>substring(VideoPlayer.studio,MPEG Audio) + ![substring(VideoPlayer.studio,DX50) | substring(VideoPlayer.studio,divx) | substring(VideoPlayer.studio,DIV3) | substring(VideoPlayer.studio,xvid)] + [substring(VideoPlayer.studio,SD) | substring(VideoPlayer.studio,480) | substring(VideoPlayer.studio,540) | substring(VideoPlayer.studio,576)]</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mp3.png</texture>
+				<visible>substring(VideoPlayer.studio,MPEG Audio) + [substring(VideoPlayer.studio,DX50) | substring(VideoPlayer.studio,divx) | substring(VideoPlayer.studio,DIV3) | substring(VideoPlayer.studio,xvid)]</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/flac.png</texture>
+				<visible>substring(VideoPlayer.studio,flac)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/ogg.png</texture>
+				<visible>substring(VideoPlayer.studio,vorbis)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/aac.png</texture>
+				<visible>substring(VideoPlayer.studio,aac)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wav.png</texture>
+				<visible>substring(VideoPlayer.studio,pcm)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wma.png</texture>
+				<visible>substring(VideoPlayer.studio,WMA) + !substring(VideoPlayer.studio,WMA3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenMovieAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wmahd.png</texture>
+				<visible>substring(VideoPlayer.studio,WMA3)</visible>
+			</control>
+		<!-- Subtitles (Studio Tag) -->
+			<control type="image" id="5086">
+				<include>FullScreenMovieSubtitlesflagsVars</include>
+				<texture>special://skin/images/flags/movies/subtitles/cc.png</texture>
+				<visible>substring(VideoPlayer.studio,sub)</visible>
+			</control>
+		<!-- Rating -->
+			<control type="image" id="5087">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/rating/rating-g.png</texture>
+				<visible>substring(VideoPlayer.mpaa,Rated G)</visible>
+			</control>
+			<control type="image" id="5087">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/rating/rating-pg.png</texture>
+				<visible>substring(VideoPlayer.mpaa,Rated PG) + !substring(VideoPlayer.mpaa,Rated PG-13)</visible>
+			</control>
+			<control type="image" id="5087">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/rating/rating-pg13.png</texture>
+				<visible>substring(VideoPlayer.mpaa,Rated PG-13)</visible>
+			</control>
+			<control type="image" id="5087">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/rating/rating-r.png</texture>
+				<visible>substring(VideoPlayer.mpaa,Rated R)</visible>
+			</control>
+			<control type="image" id="5087">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/rating/rating-nc17.png</texture>
+				<visible>substring(VideoPlayer.mpaa,Rated NC-17)</visible>
+			</control>
+<control type="grouplist">
+	<width>59</width>
+	<height>40</height>
+		<!-- Studio (Studio Tag) -->
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/20thcenturyfox.png</texture>
+				<visible>substring(VideoPlayer.studio,Fox)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/universal.png</texture>
+				<visible>substring(VideoPlayer.studio,Universal)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/filmfour.png</texture>
+				<visible>substring(VideoPlayer.studio,FilmFour) | substring(VideoPlayer.studio,Channel Four)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/disney.png</texture>
+				<visible>substring(VideoPlayer.studio,Disney)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/pixar.png</texture>
+				<visible>substring(VideoPlayer.studio,Pixar)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/gaumont.png</texture>
+				<visible>substring(VideoPlayer.studio,Gaumont)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/unitedartists.png</texture>
+				<visible>substring(VideoPlayer.studio,Artists)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/newlinecinema.png</texture>
+				<visible>substring(VideoPlayer.studio,New Line)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/dimension.png</texture>
+				<visible>substring(VideoPlayer.studio,Dimension)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/touchstone.png</texture>
+				<visible>substring(VideoPlayer.studio,Touchstone)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/hollywood.png</texture>
+				<visible>substring(VideoPlayer.studio,Hollywood)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/carolco.png</texture>
+				<visible>substring(VideoPlayer.studio,Carolco)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/revolution.png</texture>
+				<visible>substring(VideoPlayer.studio,Revolution)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/lucasfilm.png</texture>
+				<visible>substring(VideoPlayer.studio,Lucasfilm)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/screengems.png</texture>
+				<visible>substring(VideoPlayer.studio,Screen Gems)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/warner.png</texture>
+				<visible>substring(VideoPlayer.studio,Warner) + !substring(VideoPlayer.studio,Warner Independent)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/tristar.png</texture>
+				<visible>substring(VideoPlayer.studio,TriStar)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/castlerock.png</texture>
+				<visible>substring(VideoPlayer.studio,Castle Rock)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/studiocanal.png</texture>
+				<visible>substring(VideoPlayer.studio,Studio Canal)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/paramount.png</texture>
+				<visible>[substring(VideoPlayer.studio,Paramount) | substring(VideoPlayer.studio,Comedy Central)] + !substring(VideoPlayer.studio,Vantage)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/dreamworks.png</texture>
+				<visible>substring(VideoPlayer.studio,DreamWorks) + ![substring(VideoPlayer.studio,Animation) | substring(VideoPlayer.studio,SKG)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/dreamworks_skg.png</texture>
+				<visible>substring(VideoPlayer.studio,DreamWorks) + [substring(VideoPlayer.studio,Animation) | substring(VideoPlayer.studio,SKG)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/columbia.png</texture>
+				<visible>substring(VideoPlayer.studio,Columbia)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/mgm.png</texture>
+				<visible>substring(VideoPlayer.studio,Mayer) | substring(VideoPlayer.studio,MGM)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/sonypictures.png</texture>
+				<visible>substring(VideoPlayer.studio,Sony) + !substring(VideoPlayer.studio,Classic)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/artisan.png</texture>
+				<visible>substring(VideoPlayer.studio,Artisan)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/lionsgate.png</texture>
+				<visible>substring(VideoPlayer.studio,Lionsgate)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/ceska_televize.png</texture>
+				<visible>substring(VideoPlayer.studio,Česká televize)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/zentropa.png</texture>
+				<visible>substring(VideoPlayer.studio,Zentropa)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/zdf.png</texture>
+				<visible>substring(VideoPlayer.studio,ZDF)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/saul_zaentz.png</texture>
+				<visible>substring(VideoPlayer.studio,Zaentz)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/xfilme.png</texture>
+				<visible>substring(VideoPlayer.studio,Xfilme)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/working_title.png</texture>
+				<visible>substring(VideoPlayer.studio,Working Title)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/wfdif.png</texture>
+				<visible>substring(VideoPlayer.studio,WFDiF)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/wdr.png</texture>
+				<visible>substring(VideoPlayer.studio,WDR)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/warner_independent_pictures.png</texture>
+				<visible>substring(VideoPlayer.studio,Warner Independent)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/village_roadshow.png</texture>
+				<visible>substring(VideoPlayer.studio,Village Roadshow)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/ugc.png</texture>
+				<visible>substring(VideoPlayer.studio,UGC)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/tvp.png</texture>
+				<visible>substring(VideoPlayer.studio,TVP)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/tvn.png</texture>
+				<visible>substring(VideoPlayer.studio,Turner)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/turner.png</texture>
+				<visible>substring(VideoPlayer.studio,Turner)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/tor.png</texture>
+				<visible>substring(VideoPlayer.studio,tor,Left)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/thisisthat.png</texture>
+				<visible>substring(VideoPlayer.studio,This Is That)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/thinkfilm.png</texture>
+				<visible>substring(VideoPlayer.studio,ThinkFilm)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/telos.png</texture>
+				<visible>substring(VideoPlayer.studio,Telos)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/syrena.png</texture>
+				<visible>substring(VideoPlayer.studio,Syrena)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/sidney_kimmel.png</texture>
+				<visible>substring(VideoPlayer.studio,Sidney Kimmel)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/showtime.png</texture>
+				<visible>substring(VideoPlayer.studio,Showtime)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/shout factory.png</texture>
+				<visible>substring(VideoPlayer.studio,Shout)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/sfi.png</texture>
+				<visible>substring(VideoPlayer.studio,SFI) + !substring(VideoPlayer.studio,Lucasfilm)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/semafor.png</texture>
+				<visible>substring(VideoPlayer.studio,SeMaFor)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/screen_australia.png</texture>
+				<visible>substring(VideoPlayer.studio,Screen Australia)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/scott_free.png</texture>
+				<visible>substring(VideoPlayer.studio,Scott)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/scifi.png</texture>
+				<visible>substring(VideoPlayer.studio,SciFi)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/sandrew.png</texture>
+				<visible>substring(VideoPlayer.studio,Sandrew)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/rogue.png</texture>
+				<visible>substring(VideoPlayer.studio,Rogue)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/roadside.png</texture>
+				<visible>substring(VideoPlayer.studio,Roadside Attractions)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/rko_radio.png</texture>
+				<visible>substring(VideoPlayer.studio,RKO Radio)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/rhombus.png</texture>
+				<visible>substring(VideoPlayer.studio,Rhombus)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/relativity.png</texture>
+				<visible>substring(VideoPlayer.studio,Relativity)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/regency.png</texture>
+				<visible>substring(VideoPlayer.studio,Regency)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/redrum.png</texture>
+				<visible>substring(VideoPlayer.studio,Redrum)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/red_wagon.png</texture>
+				<visible>substring(VideoPlayer.studio,Red Wagon)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/rankin.png</texture>
+				<visible>substring(VideoPlayer.studio,Rankin)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/rai.png</texture>
+				<visible>substring(VideoPlayer.studio,Rai)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/premiere.png</texture>
+				<visible>substring(VideoPlayer.studio,Premiere) + !substring(VideoPlayer.studio,Direkt)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/polygram.png</texture>
+				<visible>substring(VideoPlayer.studio,PolyGram)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/film_polski.png</texture>
+				<visible>substring(VideoPlayer.studio,Polski)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/polsat.png</texture>
+				<visible>substring(VideoPlayer.studio,Polsat)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/platige.png</texture>
+				<visible>substring(VideoPlayer.studio,Platige)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/pisf.png</texture>
+				<visible>substring(VideoPlayer.studio,PISF)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/picturehouse.png</texture>
+				<visible>substring(VideoPlayer.studio,Picturehouse)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/phoenix.png</texture>
+				<visible>substring(VideoPlayer.studio,Phoenix)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/pecf.png</texture>
+				<visible>substring(VideoPlayer.studio,PECF)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/participant.png</texture>
+				<visible>substring(VideoPlayer.studio,Participant)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/overture.png</texture>
+				<visible>substring(VideoPlayer.studio,Overture)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/orion.png</texture>
+				<visible>substring(VideoPlayer.studio,ORiON)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/nuimage.png</texture>
+				<visible>substring(VideoPlayer.studio,NUIMAGE)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/nothing.png</texture>
+				<visible>substring(VideoPlayer.studio,nothing)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/nala.png</texture>
+				<visible>substring(VideoPlayer.studio,NALA)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/myriad.png</texture>
+				<visible>substring(VideoPlayer.studio,Myriad)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/mosfilm.png</texture>
+				<visible>substring(VideoPlayer.studio,Mosfilm)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/morgan_creek.png</texture>
+				<visible>substring(VideoPlayer.studio,Morgan Creek)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/monolith.png</texture>
+				<visible>substring(VideoPlayer.studio,Monolith)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/miramax.png</texture>
+				<visible>substring(VideoPlayer.studio,Miramax)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/millenium.png</texture>
+				<visible>substring(VideoPlayer.studio,Millenium)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/mibac.png</texture>
+				<visible>substring(VideoPlayer.studio,MiBAC)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/maya.png</texture>
+				<visible>substring(VideoPlayer.studio,Maya)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/maverick.png</texture>
+				<visible>substring(VideoPlayer.studio,Maverick)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/marvel.png</texture>
+				<visible>substring(VideoPlayer.studio,MARVEL)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/mandate.png</texture>
+				<visible>substring(VideoPlayer.studio,Mandate Pictures)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/mandalay.png</texture>
+				<visible>substring(VideoPlayer.studio,Mandalay)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/magnolia.png</texture>
+				<visible>substring(VideoPlayer.studio,Magnolia)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/madman.png</texture>
+				<visible>substring(VideoPlayer.studio,Madman Entertainment)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/legendary.png</texture>
+				<visible>substring(VideoPlayer.studio,Legendary)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/lakeshore.png</texture>
+				<visible>substring(VideoPlayer.studio,Lakeshore)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/ladd.png</texture>
+				<visible>substring(VideoPlayer.studio,Ladd)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/kadr.png</texture>
+				<visible>substring(VideoPlayer.studio,KADR)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/kadokawa.png</texture>
+				<visible>substring(VideoPlayer.studio,Kadokawa)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/jim henson.png</texture>
+				<visible>substring(VideoPlayer.studio,Jim Henson)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/jerry_bruckheimer.png</texture>
+				<visible>substring(VideoPlayer.studio,Jerry Bruckheimer)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/jawa.png</texture>
+				<visible>substring(VideoPlayer.studio,Jawa)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/iti.png</texture>
+				<visible>substring(VideoPlayer.studio,ITI) + !substring(VideoPlayer.studio,British)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/interactual.png</texture>
+				<visible>substring(VideoPlayer.studio,interActual)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/infinifilm.png</texture>
+				<visible>substring(VideoPlayer.studio,infinifilm)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/infilm.png</texture>
+				<visible>substring(VideoPlayer.studio,Infilm)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/industrial_light.png</texture>
+				<visible>substring(VideoPlayer.studio,Industrial Light and Magic)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/imax.png</texture>
+				<visible>substring(VideoPlayer.studio,IMAX)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/imagine.png</texture>
+				<visible>substring(VideoPlayer.studio,Imagine)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/imaginary_forces.png</texture>
+				<visible>substring(VideoPlayer.studio,Imaginary Forces)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/icon.png</texture>
+				<visible>substring(VideoPlayer.studio,Icon)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/hbo.png</texture>
+				<visible>substring(VideoPlayer.studio,HBO)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/happy_madison.png</texture>
+				<visible>substring(VideoPlayer.studio,Happy Madison)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/hand_made.png</texture>
+				<visible>substring(VideoPlayer.studio,Hand Made Films)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/halestorm.png</texture>
+				<visible>substring(VideoPlayer.studio,Halestorm Entertainment)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/gutek.png</texture>
+				<visible>substring(VideoPlayer.studio,Gutek)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/gramercy.png</texture>
+				<visible>substring(VideoPlayer.studio,Gramercy)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/gofilms.png</texture>
+				<visible>substring(VideoPlayer.studio,Go Films)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/ghosthouse.png</texture>
+				<visible>substring(VideoPlayer.studio,Ghost House)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/fuji.png</texture>
+				<visible>substring(VideoPlayer.studio,Fuji)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/franchise.png</texture>
+				<visible>substring(VideoPlayer.studio,Franchise)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/fox.png</texture>
+				<visible>substring(VideoPlayer.studio,FOX Network) + !substring(VideoPlayer.studio,searchlight)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/searchlight.png</texture>
+				<visible>substring(VideoPlayer.studio,FOX Network) + substring(VideoPlayer.studio,searchlight)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/filmax.png</texture>
+				<visible>substring(VideoPlayer.studio,Filmax)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/film_media.png</texture>
+				<visible>substring(VideoPlayer.studio,Film Media)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/figaro.png</texture>
+				<visible>substring(VideoPlayer.studio,Figaro)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/fact.png</texture>
+				<visible>substring(VideoPlayer.studio,Fact)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/excel.png</texture>
+				<visible>substring(VideoPlayer.studio,Excel)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/europa_corp.png</texture>
+				<visible>substring(VideoPlayer.studio,Europa)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/eurimages.png</texture>
+				<visible>substring(VideoPlayer.studio,Eurimages)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/entertainment_tonight.png</texture>
+				<visible>substring(VideoPlayer.studio,Entertainment Tonight)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/eleven.png</texture>
+				<visible>substring(VideoPlayer.studio,eleven: a music company)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/premiere-direkt.png</texture>
+				<visible>substring(VideoPlayer.studio,Direkt)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/de_laurentiis.png</texture>
+				<visible>substring(VideoPlayer.studio,De Laurentiis)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/digital_playground.png</texture>
+				<visible>substring(VideoPlayer.studio,Digital Playground)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/dfi.png</texture>
+				<visible>substring(VideoPlayer.studio,DFI)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/destination.png</texture>
+				<visible>substring(VideoPlayer.studio,Destination)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/czolowka.png</texture>
+				<visible>substring(VideoPlayer.studio,Czolowka)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/constantin.png</texture>
+				<visible>substring(VideoPlayer.studio,Constantin)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/comedy central.png</texture>
+				<visible>substring(VideoPlayer.studio,Comedy Central)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/cnc.png</texture>
+				<visible>substring(VideoPlayer.studio,CNC)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/cheyenne.png</texture>
+				<visible>substring(VideoPlayer.studio,Cheyenne)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/celador.png</texture>
+				<visible>substring(VideoPlayer.studio,celador)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/cbs.png</texture>
+				<visible>substring(VideoPlayer.studio,CBS)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/cartoon.png</texture>
+				<visible>substring(VideoPlayer.studio,Cartoon)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/carolco.png</texture>
+				<visible>substring(VideoPlayer.studio,Carolco)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/canalplus.png</texture>
+				<visible>substring(VideoPlayer.studio,Canal) + !substring(VideoPlayer.studio,Studio Canal)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/blackdog.png</texture>
+				<visible>substring(VideoPlayer.studio,Black Dog)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/beacon.png</texture>
+				<visible>substring(VideoPlayer.studio,Beacon)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/bbc.png</texture>
+				<visible>substring(VideoPlayer.studio,BBC)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/bazmark.png</texture>
+				<visible>substring(VideoPlayer.studio,Bazmark)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/bandapart.png</texture>
+				<visible>substring(VideoPlayer.studio,Band Apart)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/bad_robot.png</texture>
+				<visible>substring(VideoPlayer.studio,Bad Robot)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/babylonian.png</texture>
+				<visible>substring(VideoPlayer.studio,Babylonian)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/arte.png</texture>
+				<visible>substring(VideoPlayer.studio,Arte)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/ark.png</texture>
+				<visible>substring(VideoPlayer.studio,Ark Film Collective)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/apple.png</texture>
+				<visible>substring(VideoPlayer.studio,Apple Film Production)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/anchor_bay.png</texture>
+				<visible>substring(VideoPlayer.studio,Anchor Bay)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/amblin.png</texture>
+				<visible>substring(VideoPlayer.studio,Amblin)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/alliance atlantis.png</texture>
+				<visible>substring(VideoPlayer.studio,Alliance Atlantis)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/alcon.png</texture>
+				<visible>substring(VideoPlayer.studio,Alcon)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/abc.png</texture>
+				<visible>substring(VideoPlayer.studio,ABC)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/abandon.png</texture>
+				<visible>substring(VideoPlayer.studio,Abandon)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/aandm.png</texture>
+				<visible>substring(VideoPlayer.studio,A and M)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/2929.png</texture>
+				<visible>substring(VideoPlayer.studio,2929)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/57_irving.png</texture>
+				<visible>substring(VideoPlayer.studio,57th and Irving Productions)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/avnet-kerner.png</texture>
+				<visible>substring(VideoPlayer.studio,Avnet Kerner)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/blue_sky.png</texture>
+				<visible>substring(VideoPlayer.studio,Blue Sky)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/capcom.png</texture>
+				<visible>substring(VideoPlayer.studio,capcom)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/criterion.png</texture>
+				<visible>substring(VideoPlayer.studio,Criterion)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/league_of_noble_peers.png</texture>
+				<visible>substring(VideoPlayer.studio,League of Noble Peers)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/manga.png</texture>
+				<visible>substring(VideoPlayer.studio,Manga)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/mediapro.png</texture>
+				<visible>substring(VideoPlayer.studio,Mediapro)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/milkshake.png</texture>
+				<visible>substring(VideoPlayer.studio,Milkshake)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/peace_arch.png</texture>
+				<visible>substring(VideoPlayer.studio,Peace Arch)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/summit.png</texture>
+				<visible>substring(VideoPlayer.studio,summit)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/view_askew.png</texture>
+				<visible>substring(VideoPlayer.studio,View Askew)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/concorde.png</texture>
+				<visible>substring(VideoPlayer.studio,Concorde)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/ambience.png</texture>
+				<visible>substring(VideoPlayer.studio,Ambience)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/pandora.png</texture>
+				<visible>substring(VideoPlayer.studio,Pandora)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/mindeye.png</texture>
+				<visible>substring(VideoPlayer.studio,Mind) + substring(VideoPlayer.studio,Eye)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/mikezossproductions.png</texture>
+				<visible>substring(VideoPlayer.studio,Mike Zoss)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/emmedia.png</texture>
+				<visible>substring(VideoPlayer.studio,EM Media)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/360.png</texture>
+				<visible>substring(VideoPlayer.studio,Management 360)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/alloy.png</texture>
+				<visible>substring(VideoPlayer.studio,Alloy Entertainment)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/bigtalk.png</texture>
+				<visible>substring(VideoPlayer.studio,Big Talk)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/bandai_visual.png</texture>
+				<visible>substring(VideoPlayer.studio,Bandai Visual)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/bandai.png</texture>
+				<visible>substring(VideoPlayer.studio,Bandai) + !substring(VideoPlayer.studio,Bandai Visual)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/playtone.png</texture>
+				<visible>substring(VideoPlayer.studio,Playtone)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/image_movers.png</texture>
+				<visible>substring(VideoPlayer.studio,ImageMovers)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/p_vantage.png</texture>
+				<visible>substring(VideoPlayer.studio,Paramount) + substring(VideoPlayer.studio,Vantage)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/spc.png</texture>
+				<visible>substring(VideoPlayer.studio,Sony) + substring(VideoPlayer.studio,Classic)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/zebra.png</texture>
+				<visible>substring(VideoPlayer.studio,Zebra)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/toho.png</texture>
+				<visible>substring(VideoPlayer.studio,Toho)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/squareenix.png</texture>
+				<visible>substring(VideoPlayer.studio,Enix) + !substring(VideoPlayer.studio,Phoenix)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/cannon.png</texture>
+				<visible>substring(VideoPlayer.studio,Cannon International)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/amc.png</texture>
+				<visible>substring(VideoPlayer.studio,AMC)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/brightlight.png</texture>
+				<visible>substring(VideoPlayer.studio,Brightlight Pictures)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/oddlot.png</texture>
+				<visible>substring(VideoPlayer.studio,Odd Lot Entertainment)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/residentevil.png</texture>
+				<visible>substring(VideoPlayer.studio,Resident Evil Productions)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/silver_pictures.png</texture>
+				<visible>substring(VideoPlayer.studio,Silver Pictures)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/smc.png</texture>
+				<visible>substring(VideoPlayer.studio,SMC)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/steele.png</texture>
+				<visible>substring(VideoPlayer.studio,Steele Films)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/twisted.png</texture>
+				<visible>substring(VideoPlayer.studio,Twisted Pictures)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/walden_media.png</texture>
+				<visible>substring(VideoPlayer.studio,Walden Media)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/wildbunch.png</texture>
+				<visible>substring(VideoPlayer.studio,Wild Bunch)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/kennedymarshall.png</texture>
+				<visible>substring(VideoPlayer.studio,Kennedy)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/aardman.png</texture>
+				<visible>substring(VideoPlayer.studio,Aardman)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/bedford_falls.png</texture>
+				<visible>substring(VideoPlayer.studio,Bedford Falls)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/byp.png</texture>
+				<visible>substring(VideoPlayer.studio,Bob Yari Productions)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/crowvision.png</texture>
+				<visible>substring(VideoPlayer.studio,Crowvision)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/darkhorse.png</texture>
+				<visible>substring(VideoPlayer.studio,Dark Horse)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/fox_atomic.png</texture>
+				<visible>substring(VideoPlayer.studio,Fox Atomic)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/geffen.png</texture>
+				<visible>substring(VideoPlayer.studio,Geffen)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/largo.png</texture>
+				<visible>substring(VideoPlayer.studio,Largo)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/psycho.png</texture>
+				<visible>substring(VideoPlayer.studio,Psycho)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/silver_nitrate.png</texture>
+				<visible>substring(VideoPlayer.studio,Silver Nitrate)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/dc.png</texture>
+				<visible>substring(VideoPlayer.studio,DC Films)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/1492.png</texture>
+				<visible>substring(VideoPlayer.studio,1492)</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>FullScreenMovieStudioflagsVarsSmall</include>
+				<texture>special://skin/images/flags/movies/studio-deprecated/cinergi.png</texture>
+				<visible>substring(VideoPlayer.studio,cinergi)</visible>
+			</control>
+		<!-- Studio -->
+			<control type="image" id="5088">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/$INFO[VideoPlayer.Studio,,.png]</texture>
+				<visible>!IsEmpty(VideoPlayer.Studio)</visible>
+			</control>
+		</control>
+</control>
+	</include>
+</includes>

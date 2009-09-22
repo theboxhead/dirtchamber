@@ -1,0 +1,364 @@
+<window type="buttonMenu" id="111">
+	<defaultcontrol always="true">35</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>320</posy>
+	</coordinates>
+	 <animation effect="zoom" start="400" center="680,290" time="400">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>10</posy>
+			<width>1280</width>
+			<height>70</height>
+			<texture diffuse="underlay2-diffuse.png" border="0,11,0,11">underlay3.png</texture>
+		</control>
+		<control type="grouplist">
+			<posx>0</posx>
+			<posy>5</posy>
+			<width>1280</width>
+			<itemgap>0</itemgap>
+			<align>center</align>
+			<orientation>Horizontal</orientation>
+			<control type="togglebutton" id="7">
+				<description>Master mode button</description>
+				<width>80</width>
+				<height>81</height>
+				<label>20046</label>
+				<altlabel>20045</altlabel>
+				<texturefocus>shut-master-focus.png</texturefocus>
+				<texturenofocus>shut-master-nofocus.png</texturenofocus>
+				<usealttexture>!System.IsMaster</usealttexture>
+				<alttexturefocus>shut-nomaster-focus.png</alttexturefocus>
+				<alttexturenofocus>shut-nomaster-nofocus.png</alttexturenofocus>
+				<onclick>xbmc.mastermode</onclick>
+				<pulseonselect>yes</pulseonselect>
+				<font>-</font>
+				<visible>System.HasLocks</visible>
+				<visible>System.Loggedon</visible>
+				<visible>!Skin.HasSetting(Hide_Shutdown_Master)</visible>
+			</control>
+			<control type="button" id="8">
+				<description>Profile LogOff</description>
+				<width>80</width>
+				<height>81</height>
+				<texturefocus>shut-logoff-focus.png</texturefocus>
+				<texturenofocus>shut-logoff-nofocus.png</texturenofocus>
+				<onclick>dialog.close(all,true)</onclick>
+				<onclick>system.logoff</onclick>
+				<pulseonselect>yes</pulseonselect>
+				<font>-</font>
+				<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+				<visible>System.HasLoginScreen</visible>
+				<visible>System.Loggedon</visible>
+				<visible>!Skin.HasSetting(Hide_Shutdown_Logoff)</visible>
+			</control>
+			<control type="button" id="9">
+				<description>System Info button</description>
+				<width>80</width>
+				<height>81</height>
+				<texturefocus>shut-info-focus.png</texturefocus>
+				<texturenofocus>shut-info-nofocus.png</texturenofocus>
+				<onclick>XBMC.ActivateWindow(7)</onclick>
+				<pulseonselect>no</pulseonselect>
+				<font>-</font>
+				<label>130</label>
+				<visible>System.Loggedon</visible>
+				<visible>!Skin.HasSetting(Hide_Shutdown_Info)</visible>
+			</control>
+			<control type="button" id="10">
+				<description>Filemanager button</description>
+				<posx>480</posx>
+				<posy>5</posy>
+				<width>80</width>
+				<height>81</height>
+				<texturefocus>shut-filemanager-focus.png</texturefocus>
+				<texturenofocus>shut-filemanager-nofocus.png</texturenofocus>
+				<onclick>XBMC.ActivateWindow(MyFiles,autodetect)</onclick>
+				<pulseonselect>yes</pulseonselect>
+				<font>-</font>
+				<label>7</label>
+				<visible>System.Loggedon</visible>
+				<visible>!Skin.HasSetting(Hide_Shutdown_Filemanager)</visible>
+			</control>
+			<control type="button" id="11">
+				<description>Exit xbmc</description>
+				<width>80</width>
+				<height>81</height>
+				<texturefocus>shut-exit-focus.png</texturefocus>
+				<texturenofocus>shut-exit-nofocus.png</texturenofocus>
+				<onclick>dialog.close(all,true)</onclick>
+				<onclick>XBMC.Quit()</onclick>
+				<pulseonselect>yes</pulseonselect>
+				<font>-</font>
+				<label>$LOCALIZE[13012] XBMC</label>
+				<visible>!System.Platform.Xbox</visible>
+				<visible>!Skin.HasSetting(Hide_Shutdown_Exit)</visible>
+			</control>
+			<control type="button" id="12">
+				<description>Exit xbmc</description>
+				<width>80</width>
+				<height>81</height>
+				<texturefocus>shut-exit-focus.png</texturefocus>
+				<texturenofocus>shut-exit-nofocus.png</texturenofocus>
+				<onclick>dialog.close(all,true)</onclick>
+				<onclick>XBMC.Dashboard()</onclick>
+				<pulseonselect>yes</pulseonselect>
+				<font>-</font>
+				<label>$LOCALIZE[13012] XBMC</label>
+				<visible>System.Platform.Xbox</visible>
+				<visible>!Skin.HasSetting(Hide_Shutdown_Exit)</visible>
+			</control>
+			<control type="button" id="13">
+				<description>Restart xbmc</description>
+				<width>80</width>
+				<height>81</height>
+				<texturefocus>shut-restart-focus.png</texturefocus>
+				<texturenofocus>shut-restart-nofocus.png</texturenofocus>
+				<onclick>dialog.close(all,true)</onclick>
+				<onclick>XBMC.Restartapp()</onclick>
+				<pulseonselect>yes</pulseonselect>
+				<font>-</font>
+				<label>$LOCALIZE[13313] XBMC</label>
+				<visible>!Skin.HasSetting(Hide_Shutdown_Restart)</visible>
+			</control>
+			<control type="group" id="14">
+				<width>80</width>
+				<defaultcontrol always="true">35</defaultcontrol>
+				<control type="button" id="30">
+					<description>30min ShutdownTimer button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>80</width>
+					<height>81</height>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown(),30)</onclick>
+					<pulseonselect>yes</pulseonselect>
+					<onleft>13</onleft>
+					<onright>15</onright>
+					<onup>31</onup>
+					<ondown>35</ondown>
+					<font>-</font>
+					<label>20147</label>
+				</control>
+				<control type="button" id="31">
+					<description>60min ShutdownTimer button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>80</width>
+					<height>81</height>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown(),60)</onclick>
+					<pulseonselect>yes</pulseonselect>
+					<onleft>13</onleft>
+					<onright>15</onright>
+					<onup>32</onup>
+					<ondown>30</ondown>
+					<font>-</font>
+					<label>20148</label>
+				</control>
+				<control type="button" id="32">
+					<description>120min ShutdownTimer button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>80</width>
+					<height>81</height>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown(),120)</onclick>
+					<pulseonselect>yes</pulseonselect>
+					<onleft>13</onleft>
+					<onright>15</onright>
+					<onup>33</onup>
+					<ondown>31</ondown>
+					<font>-</font>
+					<label>20149</label>
+				</control>
+				<control type="button" id="33">
+					<description>Custom ShutdownTimer button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>80</width>
+					<height>81</height>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
+					<pulseonselect>yes</pulseonselect>
+					<onleft>13</onleft>
+					<onright>15</onright>
+					<onup>34</onup>
+					<ondown>32</ondown>
+					<font>-</font>
+					<label>20150</label>
+				</control>
+				<control type="button" id="34">
+					<description>Cancel ShutdownTimer button</description>
+					<visible>System.HasAlarm(shutdowntimer)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>80</width>
+					<height>81</height>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
+					<pulseonselect>yes</pulseonselect>
+					<onleft>13</onleft>
+					<onright>15</onright>
+					<onup>35</onup>
+					<ondown>33</ondown>
+					<font>-</font>
+					<label>20151</label>
+				</control>
+				<control type="button" id="35">
+					<description>Shutdown button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>80</width>
+					<height>81</height>
+					<texturefocus>shut-shutdown-focus.png</texturefocus>
+					<texturenofocus>shut-shutdown-nofocus.png</texturenofocus>
+					<onclick>XBMC.Shutdown()</onclick>
+					<pulseonselect>yes</pulseonselect>
+					<onleft>13</onleft>
+					<onright>15</onright>
+					<onup>30</onup>
+					<ondown>34</ondown>
+					<font>-</font>
+					<label>13005</label>
+				</control>
+				<control type="image">
+					<description>Shutdown focus image</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>80</width>
+					<height>81</height>
+					<texture>shut-shutdown-focus.png</texture>
+					<pulseonselect>yes</pulseonselect>
+					<visible>[Control.HasFocus(30) | Control.HasFocus(31) | Control.HasFocus(32) | Control.HasFocus(33) | Control.HasFocus(34)]</visible>
+				</control>
+				<visible>!Skin.HasSetting(Hide_Shutdown_Shutdown)</visible>
+			</control>
+			<control type="button" id="15">
+				<description>Suspend button</description>
+				<posx>400</posx>
+				<posy>5</posy>
+				<width>80</width>
+				<height>81</height>
+				<texturefocus>shut-suspend-focus.png</texturefocus>
+				<texturenofocus>shut-suspend-nofocus.png</texturenofocus>
+				<onclick>XBMC.Suspend()</onclick>
+				<onclick>dialog.close(all,true)</onclick>
+				<pulseonselect>yes</pulseonselect>
+				<font>-</font>
+				<label>13011</label>
+				<visible>System.CanSuspend</visible>
+				<visible>!Skin.HasSetting(Hide_Shutdown_Suspend)</visible>
+			</control>
+			<control type="button" id="16">
+				<description>Hibernate button</description>
+				<posx>400</posx>
+				<posy>5</posy>
+				<width>80</width>
+				<height>81</height>
+				<texturefocus>shut-hibernate-focus.png</texturefocus>
+				<texturenofocus>shut-hibernate-nofocus.png</texturenofocus>
+				<onclick>XBMC.Hibernate()</onclick>
+				<onclick>dialog.close(all,true)</onclick>
+				<pulseonselect>yes</pulseonselect>
+				<font>-</font>
+				<label>13010</label>
+				<visible>System.CanHibernate</visible>
+				<visible>!Skin.HasSetting(Hide_Shutdown_Hibernate)</visible>
+			</control>
+			<control type="button" id="17">
+				<description>Favourites button</description>
+				<posx>480</posx>
+				<posy>5</posy>
+				<width>80</width>
+				<height>81</height>
+				<texturefocus>shut-favourites-focus.png</texturefocus>
+				<texturenofocus>shut-favourites-nofocus.png</texturenofocus>
+				<onclick>XBMC.ActivateWindow(Favourites)</onclick>
+				<pulseonselect>yes</pulseonselect>
+				<font>-</font>
+				<label>1036</label>
+				<visible>System.Loggedon</visible>
+				<visible>!Skin.HasSetting(Hide_Shutdown_Favourites)</visible>
+			</control>
+			<control type="button" id="18">
+				<description>Reboot button</description>
+				<posx>560</posx>
+				<posy>5</posy>
+				<width>80</width>
+				<height>81</height>
+				<texturefocus>shut-reboot-focus.png</texturefocus>
+				<texturenofocus>shut-reboot-nofocus.png</texturenofocus>
+				<onclick>XBMC.Reset()</onclick>
+				<pulseonselect>yes</pulseonselect>
+				<font>-</font>
+				<label>13013</label>
+				<visible>!Skin.HasSetting(Hide_Shutdown_Reboot)</visible>
+			</control>
+			<control type="button" id="19">
+				<description>Eject Drive button</description>
+				<posx>640</posx>
+				<posy>5</posy>
+				<width>80</width>
+				<height>81</height>
+				<texturenofocus>shut-eject-nofocus.png</texturenofocus>
+				<texturefocus>shut-eject-focus.png</texturefocus>
+				<onclick>XBMC.EjectTray()</onclick>
+				<pulseonselect>yes</pulseonselect>
+				<font>-</font>
+				<label>$LOCALIZE[13391] $LOCALIZE[155]</label>
+				<visible>System.Loggedon</visible>
+				<visible>!Skin.HasSetting(Hide_Shutdown_Eject)</visible>
+			</control>
+		</control>
+		<control type="image" id="0">
+			<posx>0</posx>
+			<posy>-80</posy>
+			<width>1280</width>
+			<height>60</height>
+			<colordiffuse>CCFFFFFF</colordiffuse>
+			<texture diffuse="underlay2-diffuse.png" border="0,11,0,11">underlay3.png</texture>
+			<visible>system.hasloginscreen + System.Loggedon</visible>
+		</control>
+		<control type="label">
+			<description>Label control</description>
+			<posx>640</posx>
+			<posy>-72</posy>
+			<width>-</width>
+			<height>45</height>
+			<label>$LOCALIZE[20125] $INFO[system.profilename]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>lightgrey</textcolor>
+			<font>font-25</font>
+			<visible>system.hasloginscreen + System.Loggedon</visible>
+		</control>
+		<control type="image" id="0">
+			<posx>0</posx>
+			<posy>110</posy>
+			<width>1280</width>
+			<height>60</height>
+			<colordiffuse>CCFFFFFF</colordiffuse>
+			<texture diffuse="underlay2-diffuse.png" border="0,11,0,11">underlay3.png</texture>
+		</control>
+		<control type="label" id="3100">
+			<description>Label control</description>
+			<posx>640</posx>
+			<posy>119</posy>
+			<width>-</width>
+			<height>40</height>
+			<label>-</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font-25</font>
+		</control>
+	</controls>
+</window>

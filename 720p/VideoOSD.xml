@@ -1,0 +1,302 @@
+<window type="dialog" id="2901">
+	<defaultcontrol>901</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>502</posx>
+		<posy>184</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(SliderDialog)">conditional</animation>
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>275</width>
+				<height>352</height>
+				<texture border="50">dialog.png</texture>
+			</control>
+			<control type="button" id="999">
+				<posx>226</posx>
+				<posy>38</posy>
+				<width>15</width>
+				<height>15</height>
+				<label>-</label>
+				<texturefocus>close-window-focus.png</texturefocus>
+				<texturenofocus>close-window-nofocus.png</texturenofocus>
+				<onleft>901</onleft>
+				<onright>901</onright>
+				<onup>901</onup>
+				<ondown>901</ondown>
+				<onclick>Dialog.Close(VideoOSD,true)</onclick>
+				<onclick>FullScreen</onclick>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>45</posy>
+				<width>280</width>
+				<height>30</height>
+				<font>font-25</font>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[5]</label>
+			</control>
+			<control type="image">
+				<posx>50</posx>
+				<posy>85</posy>
+				<width>180</width>
+				<height>2</height>
+				<texture>separator.png</texture>
+			</control>
+			<control type="button" id="901">
+				<description>Audio Menu</description>
+				<posx>50</posx>
+				<posy>100</posy>
+				<width>175</width>
+				<height>40</height>
+				<texturenofocus border="7">button-nofocus.png</texturenofocus>
+				<texturefocus border="7">button-focus2.png</texturefocus>
+				<onclick>XBMC.ActivateWindow(124)</onclick>
+				<label>$LOCALIZE[292]</label>
+				<font>font-20</font>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<onleft>999</onleft>
+				<onright>999</onright>
+				<onup>909</onup>
+				<ondown>902</ondown>
+			</control>
+			<control type="button" id="902">
+				<description>Video Menu</description>
+				<posx>50</posx>
+				<posy>140</posy>
+				<width>175</width>
+				<height>40</height>
+				<texturenofocus border="7">button-nofocus.png</texturenofocus>
+				<texturefocus border="7">button-focus2.png</texturefocus>
+				<onclick>XBMC.ActivateWindow(123)</onclick>
+				<label>$LOCALIZE[444]</label>
+				<font>font-20</font>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<onleft>999</onleft>
+				<onright>999</onright>
+				<onup>901</onup>
+				<ondown>903</ondown>
+			</control>
+			<control type="button" id="903">
+				<description>Bookmarks Menu</description>
+				<posx>50</posx>
+				<posy>180</posy>
+				<width>175</width>
+				<height>40</height>
+				<texturenofocus border="7">button-nofocus.png</texturenofocus>
+				<texturefocus border="7">button-focus2.png</texturefocus>
+				<onclick>XBMC.ActivateWindow(125)</onclick>
+				<label>$LOCALIZE[298]</label>
+				<font>font-20</font>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<onleft>999</onleft>
+				<onright>999</onright>
+				<onup>902</onup>
+				<ondown>904</ondown>
+			</control>
+			<control type="button" id="904">
+				<description>DVD menu button</description>
+				<posx>50</posx>
+				<posy>220</posy>
+				<width>175</width>
+				<height>40</height>
+				<texturenofocus border="7">button-nofocus.png</texturenofocus>
+				<texturefocus border="7">button-focus2.png</texturefocus>
+				<label>$LOCALIZE[446]</label>
+				<font>font-20</font>
+				<textcolor>lightgrey</textcolor>
+				<align>center</align>
+				<onleft>999</onleft>
+				<onright>999</onright>
+				<onup>903</onup>
+				<ondown>909</ondown>
+				<onclick>-</onclick>
+				<visible>!VideoPlayer.HasMenu</visible>
+			</control>
+			<control type="button" id="904">
+				<description>DVD menu button</description>
+				<posx>50</posx>
+				<posy>220</posy>
+				<width>175</width>
+				<height>40</height>
+				<texturenofocus border="7">button-nofocus.png</texturenofocus>
+				<texturefocus border="7">button-focus2.png</texturefocus>
+				<label>$LOCALIZE[446]</label>
+				<font>font-20</font>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<onleft>999</onleft>
+				<onright>999</onright>
+				<onup>903</onup>
+				<ondown>909</ondown>
+				<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+				<visible>VideoPlayer.HasMenu</visible>
+			</control>
+			<control type="image">
+				<description>Unfocus Background</description>
+				<posx>50</posx>
+				<posy>260</posy>
+				<width>175</width>
+				<height>40</height>
+				<texture border="7">button-nofocus.png</texture>
+				<visible>!ControlGroup(905).HasFocus</visible>
+			</control>
+			<control type="image">
+				<description>Focus Background</description>
+				<posx>50</posx>
+				<posy>260</posy>
+				<width>175</width>
+				<height>40</height>
+				<texture border="7">button-focus2.png</texture>
+				<visible>ControlGroup(905).HasFocus</visible>
+				<animation effect="fade" start="100" end="70" time="900" pulse="true" condition="ControlGroup(905).HasFocus">conditional</animation>
+			</control>
+			<control type="group" id="905">
+				<posx>29</posx>
+				<posy>268</posy>
+				<control type="button" id="906">
+					<posx>24</posx>
+					<posy>0</posy>
+					<width>24</width>
+					<height>24</height>
+					<label>-</label>
+					<texturefocus>smallplayer-recorddisabled-focus.png</texturefocus>
+					<texturenofocus>smallplayer-recorddisabled-nofocus.png</texturenofocus>
+					<onleft>912</onleft>
+					<onright>907</onright>
+					<onup>904</onup>
+					<ondown>901</ondown>
+					<onclick>-</onclick>
+					<visible>![!VideoPlayer.HasMenu + Player.CanRecord]</visible>
+				</control>
+				<control type="button" id="906">
+					<posx>24</posx>
+					<posy>0</posy>
+					<width>24</width>
+					<height>24</height>
+					<label>-</label>
+					<texturefocus>smallplayer-record-focus.png</texturefocus>
+					<texturenofocus>smallplayer-record-nofocus.png</texturenofocus>
+					<onleft>912</onleft>
+					<onright>907</onright>
+					<onup>904</onup>
+					<ondown>901</ondown>
+					<onclick>XBMC.PlayerControl(record)</onclick>
+					<visible>!VideoPlayer.HasMenu + Player.CanRecord</visible>
+				</control>
+				<control type="button" id="906">
+					<posx>24</posx>
+					<posy>0</posy>
+					<width>24</width>
+					<height>24</height>
+					<label>-</label>
+					<texturefocus>smallplayer-recordrecording-focus.png</texturefocus>
+					<texturenofocus>smallplayer-recordrecording-nofocus.png</texturenofocus>
+					<onleft>912</onleft>
+					<onright>907</onright>
+					<onup>904</onup>
+					<ondown>901</ondown>
+					<onclick>XBMC.PlayerControl(record)</onclick>
+					<visible>!VideoPlayer.HasMenu + Player.CanRecord + Player.Recording</visible>
+				</control>
+				<control type="button" id="907">
+					<posx>48</posx>
+					<posy>0</posy>
+					<width>24</width>
+					<height>24</height>
+					<label>-</label>
+					<texturefocus>smallplayer-previous-focus.png</texturefocus>
+					<texturenofocus>smallplayer-previous-nofocus.png</texturenofocus>
+					<onleft>906</onleft>
+					<onright>908</onright>
+					<onup>904</onup>
+					<ondown>901</ondown>
+					<onclick>XBMC.PlayerControl(Previous)</onclick>
+				</control>
+				<control type="button" id="908">
+					<posx>72</posx>
+					<posy>0</posy>
+					<width>24</width>
+					<height>24</height>
+					<label>-</label>
+					<texturefocus>smallplayer-rewind-focus.png</texturefocus>
+					<texturenofocus>smallplayer-rewind-nofocus.png</texturenofocus>
+					<onleft>907</onleft>
+					<onright>909</onright>
+					<onup>904</onup>
+					<ondown>901</ondown>
+					<onclick>XBMC.PlayerControl(Rewind)</onclick>
+				</control>
+				<control type="togglebutton" id="909">
+					<posx>96</posx>
+					<posy>0</posy>
+					<width>24</width>
+					<height>24</height>
+					<label>-</label>
+					<texturefocus>smallplayer-pause-focus.png</texturefocus>
+					<texturenofocus>smallplayer-pause-nofocus.png</texturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<alttexturefocus>smallplayer-play-focus.png</alttexturefocus>
+					<alttexturenofocus>smallplayer-play-nofocus.png</alttexturenofocus>
+					<onleft>908</onleft>
+					<onright>910</onright>
+					<onup>904</onup>
+					<ondown>901</ondown>
+					<onclick>XBMC.PlayerControl(Play)</onclick>
+				</control>
+				<control type="button" id="910">
+					<posx>120</posx>
+					<posy>0</posy>
+					<width>24</width>
+					<height>24</height>
+					<label>-</label>
+					<texturefocus>smallplayer-forward-focus.png</texturefocus>
+					<texturenofocus>smallplayer-forward-nofocus.png</texturenofocus>
+					<onleft>909</onleft>
+					<onright>911</onright>
+					<onup>904</onup>
+					<ondown>901</ondown>
+					<onclick>XBMC.PlayerControl(Forward)</onclick>
+				</control>
+				<control type="button" id="911">
+					<posx>144</posx>
+					<posy>0</posy>
+					<width>24</width>
+					<height>24</height>
+					<label>-</label>
+					<texturefocus>smallplayer-next-focus.png</texturefocus>
+					<texturenofocus>smallplayer-next-nofocus.png</texturenofocus>
+					<onleft>910</onleft>
+					<onright>912</onright>
+					<onup>904</onup>
+					<ondown>901</ondown>
+					<onclick>XBMC.PlayerControl(Next)</onclick>
+				</control>
+				<control type="button" id="912">
+					<posx>168</posx>
+					<posy>0</posy>
+					<width>24</width>
+					<height>24</height>
+					<label>-</label>
+					<texturefocus>smallplayer-stop-focus.png</texturefocus>
+					<texturenofocus>smallplayer-stop-nofocus.png</texturenofocus>
+					<onleft>911</onleft>
+					<onright>906</onright>
+					<onup>904</onup>
+					<ondown>901</ondown>
+					<onclick>XBMC.PlayerControl(Stop)</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

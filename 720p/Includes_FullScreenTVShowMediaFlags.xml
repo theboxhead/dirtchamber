@@ -1,0 +1,406 @@
+<includes>
+	<include name="FullScreenTVShowResolutionflagsVars">
+		<width>59</width>
+		<height>40</height>
+		<visible>IsEmpty(VideoPlayer.VideoResolution)</visible>
+	</include>
+	<include name="FullScreenTVShowVideoCodecflagsVars">
+		<width>59</width>
+		<height>40</height>
+		<visible>IsEmpty(VideoPlayer.VideoCodec)</visible>
+	</include>
+	<include name="FullScreenTVShowAudioCodecflagsVars">
+		<width>59</width>
+		<height>40</height>
+		<visible>IsEmpty(VideoPlayer.AudioCodec)</visible>
+	</include>
+	<include name="FullScreenTVShowSubtitlesflagsVars">
+		<width>59</width>
+		<height>40</height>
+		<visible>IsEmpty(VideoPlayer.SubtitleLanguage)</visible>
+	</include>
+	<include name="FullScreenTVShowMediaflagsVars">
+		<width>59</width>
+		<height>40</height>
+	</include>
+	<include name="FullScreenTVShowMediaflags">
+		<control type="grouplist">
+			<posx>355</posx>
+			<posy>142</posy>
+			<width>577</width>
+			<height>40</height>
+			<itemgap>13</itemgap>
+			<orientation>horizontal</orientation>
+		<!-- Resolution (Native) -->
+			<control type="image" id="5081">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/$INFO[VideoPlayer.VideoResolution,,.png]</texture>
+				<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
+			</control>
+		<!-- Resolution (Director Tag) -->
+			<control type="image" id="5081">
+				<include>FullScreenTVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/sd.png</texture>
+				<visible>substring(VideoPlayer.director,SDp) | substring(VideoPlayer.director,SDi)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenTVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/480p.png</texture>
+				<visible>substring(VideoPlayer.director,480p)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenTVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/576p.png</texture>
+				<visible>substring(VideoPlayer.director,576p)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenTVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/720p.png</texture>
+				<visible>substring(VideoPlayer.director,720p)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenTVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/1080p.png</texture>
+				<visible>substring(VideoPlayer.director,1080p)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenTVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/480i.png</texture>
+				<visible>substring(VideoPlayer.director,480i)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenTVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/576i.png</texture>
+				<visible>substring(VideoPlayer.director,576i)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenTVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/720i.png</texture>
+				<visible>substring(VideoPlayer.director,720i)</visible>
+			</control>
+			<control type="image" id="5081">
+				<include>FullScreenTVShowResolutionflagsVars</include>
+				<texture>special://skin/images/flags/movies/resolution/1080i.png</texture>
+				<visible>substring(VideoPlayer.director,1080i)</visible>
+			</control>
+		<!-- AspectRatio (Native) -->
+			<control type="image" id="5082">
+				<include>FullScreenMovieMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/aspectratio/$INFO[VideoPlayer.VideoAspect,,.png]</texture>
+				<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
+			</control>
+		<!-- Video Codec (Native) -->
+			<control type="image" id="5083">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/$INFO[VideoPlayer.VideoCodec,,.png]</texture>
+				<visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
+			</control>
+		<!-- Video Codec  (Director Tag) -->
+			<control type="image" id="5083">
+				<include>FullScreenTVShowVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/divx.png</texture>
+				<visible>substring(VideoPlayer.director,DX50) | substring(VideoPlayer.director,divx) | substring(VideoPlayer.director,DIV3)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>FullScreenTVShowVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/xvid.png</texture>
+				<visible>substring(VideoPlayer.director,xvid)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>FullScreenTVShowVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/quicktime.png</texture>
+				<visible>substring(VideoPlayer.director,SVQ3)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>FullScreenTVShowVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/h.264.png</texture>
+				<visible>substring(VideoPlayer.director,V_MPEG4)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>FullScreenTVShowVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/wmv.png</texture>
+				<visible>substring(VideoPlayer.director,WMV)</visible>
+			</control>
+			<control type="image" id="5083">
+				<include>FullScreenTVShowVideoCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/videocodec/wmvhd.png</texture>
+				<visible>substring(VideoPlayer.director,WVC1)</visible>
+			</control>
+		<!-- Audio Codec (Native) -->
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/aac.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,aac)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mono.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,ac3) | substring(VideoPlayer.AudioCodec,ac-3)] + substring(VideoPlayer.AudioChannels,1)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dolby20.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,ac3) | substring(VideoPlayer.AudioCodec,ac-3)] + substring(VideoPlayer.AudioChannels,2)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd40.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,ac3) | substring(VideoPlayer.AudioCodec,ac-3)] + substring(VideoPlayer.AudioChannels,4)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd41.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,ac3) | substring(VideoPlayer.AudioCodec,ac-3)] + substring(VideoPlayer.AudioChannels,5)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd51.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,ac3) | substring(VideoPlayer.AudioCodec,ac-3)] + substring(VideoPlayer.AudioChannels,6)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd71.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,ac3) | substring(VideoPlayer.AudioCodec,ac-3)] + substring(VideoPlayer.AudioChannels,8)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,dca) | substring(VideoPlayer.AudioCodec,dts)] + substring(VideoPlayer.AudioChannels,2)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts51.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,dca) | substring(VideoPlayer.AudioCodec,dts)] + substring(VideoPlayer.AudioChannels,6)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts71.png</texture>
+				<visible>[substring(VideoPlayer.AudioCodec,dca) | substring(VideoPlayer.AudioCodec,dts)] + substring(VideoPlayer.AudioChannels,8)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mpeg audio.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,mp1)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mp2.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,mp2) | substring(VideoPlayer.AudioCodec,mpeg audio)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mp3.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,mp3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/ogg.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,vorbis)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wav.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,pcm)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wma.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,wmav2) | substring(VideoPlayer.AudioCodec,wma2)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wmahd.png</texture>
+				<visible>substring(VideoPlayer.AudioCodec,wmapro) | substring(VideoPlayer.AudioCodec,wma3)</visible>
+			</control>
+		<!-- Audio Codec (Director Tag) -->
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts.png</texture>
+				<visible>substring(VideoPlayer.director,dts) + ![substring(VideoPlayer.director,6ch) | substring(VideoPlayer.director,8ch)]</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd40.png</texture>
+				<visible>substring(VideoPlayer.director,4ch) + substring(VideoPlayer.director,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd41.png</texture>
+				<visible>substring(VideoPlayer.director,5ch) + substring(VideoPlayer.director,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd51.png</texture>
+				<visible>substring(VideoPlayer.director,6ch) + substring(VideoPlayer.director,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dd71.png</texture>
+				<visible>substring(VideoPlayer.director,8ch) + substring(VideoPlayer.director,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts51.png</texture>
+				<visible>substring(VideoPlayer.director,6ch) + substring(VideoPlayer.director,dts)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dts71.png</texture>
+				<visible>substring(VideoPlayer.director,8ch) + substring(VideoPlayer.director,dts)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dolby20.png</texture>
+				<visible>substring(VideoPlayer.director,2ch) + substring(VideoPlayer.director,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dolbypro.png</texture>
+				<visible>substring(VideoPlayer.director,dolbypro)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mono.png</texture>
+				<visible>substring(VideoPlayer.director,mono) + substring(VideoPlayer.director,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dolbytruehd.png</texture>
+				<visible>substring(VideoPlayer.director,truehd) | substring(VideoPlayer.director,true hd)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/dtsma.png</texture>
+				<visible>substring(VideoPlayer.director,dtsma) | substring(VideoPlayer.director,master audio) + !substring(VideoPlayer.director,ac-3)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mp2.png</texture>
+				<visible>substring(VideoPlayer.director,MPEG Audio) + ![substring(VideoPlayer.director,divx) | substring(VideoPlayer.director,DX50) | substring(VideoPlayer.director,DIV3) | substring(VideoPlayer.director,xvid)] + ![substring(VideoPlayer.director,720) | substring(VideoPlayer.director,1080)]</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/mp3.png</texture>
+				<visible>substring(VideoPlayer.director,MPEG Audio) + [substring(VideoPlayer.director,divx) | substring(VideoPlayer.director,DX50) | substring(VideoPlayer.director,DIV3) | substring(VideoPlayer.director,xvid)]</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/flac.png</texture>
+				<visible>substring(VideoPlayer.director,flac)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/ogg.png</texture>
+				<visible>substring(VideoPlayer.director,vorbis)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/aac.png</texture>
+				<visible>substring(VideoPlayer.director,aac)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wav.png</texture>
+				<visible>substring(VideoPlayer.director,PCM)</visible>
+			</control>
+			<control type="image" id="5084">
+				<include>FullScreenTVShowAudioCodecflagsVars</include>
+				<texture>special://skin/images/flags/movies/audiocodec/wmahd.png</texture>
+				<visible>substring(VideoPlayer.director,WMA3)</visible>
+			</control>
+		<!-- Subtitles (Native) -->
+			<control type="image" id="5086">
+				<include>FullScreenTVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/subtitles/cc.png</texture>
+				<visible>!IsEmpty(VideoPlayer.SubtitleLanguage)</visible>
+			</control>
+		<!-- Subtitles (Director Tag) -->
+			<control type="image" id="5086">
+				<include>FullScreenTVShowSubtitlesflagsVars</include>
+				<texture>special://skin/images/flags/movies/subtitles/cc.png</texture>
+				<visible>substring(VideoPlayer.director,sub)</visible>
+			</control>
+<control type="grouplist">
+	<width>59</width>
+	<height>40</height>
+		<!-- Network HD-->
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/ABC_hd.png</texture>
+				<visible>substring(VideoPlayer.studio,ABC) + [substring(VideoPlayer.director,720) | substring(VideoPlayer.director,1080) | substring(VideoPlayer.VideoResolution,720) | substring(VideoPlayer.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/BBC_hd.png</texture>
+				<visible>substring(VideoPlayer.studio,BBC) + [substring(VideoPlayer.director,720) | substring(VideoPlayer.director,1080) | substring(VideoPlayer.VideoResolution,720) | substring(VideoPlayer.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/Cartoon Network_hd.png</texture>
+				<visible>substring(VideoPlayer.studio,Cartoon Network) + [substring(VideoPlayer.director,720) | substring(VideoPlayer.director,1080) | substring(VideoPlayer.VideoResolution,720) | substring(VideoPlayer.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/CBS_hd.png</texture>
+				<visible>substring(VideoPlayer.studio,CBS) + [substring(VideoPlayer.director,720) | substring(VideoPlayer.director,1080) | substring(VideoPlayer.VideoResolution,720) | substring(VideoPlayer.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/Comedy Central_hd.png</texture>
+				<visible>substring(VideoPlayer.studio,Comedy Central) + [substring(VideoPlayer.director,720) | substring(VideoPlayer.director,1080) | substring(VideoPlayer.VideoResolution,720) | substring(VideoPlayer.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/FOX_hd.png</texture>
+				<visible>substring(VideoPlayer.studio,FOX) + [substring(VideoPlayer.director,720) | substring(VideoPlayer.director,1080) | substring(VideoPlayer.VideoResolution,720) | substring(VideoPlayer.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/FX_hd.png</texture>
+				<visible>substring(VideoPlayer.studio,FX) + [substring(VideoPlayer.director,720) | substring(VideoPlayer.director,1080) | substring(VideoPlayer.VideoResolution,720) | substring(VideoPlayer.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/HBO_hd.png</texture>
+				<visible>substring(VideoPlayer.studio,HBO) + [substring(VideoPlayer.director,720) | substring(VideoPlayer.director,1080) | substring(VideoPlayer.VideoResolution,720) | substring(VideoPlayer.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/History_hd.png</texture>
+				<visible>substring(VideoPlayer.studio,History) + [substring(VideoPlayer.director,720) | substring(VideoPlayer.director,1080) | substring(VideoPlayer.VideoResolution,720) | substring(VideoPlayer.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/MTV_hd.png</texture>
+				<visible>substring(VideoPlayer.studio,MTV) + [substring(VideoPlayer.director,720) | substring(VideoPlayer.director,1080) | substring(VideoPlayer.VideoResolution,720) | substring(VideoPlayer.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/NBC_hd.png</texture>
+				<visible>substring(VideoPlayer.studio,NBC) + [substring(VideoPlayer.director,720) | substring(VideoPlayer.director,1080) | substring(VideoPlayer.VideoResolution,720) | substring(VideoPlayer.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/SciFi_hd.png</texture>
+				<visible>substring(VideoPlayer.studio,SciFi) + [substring(VideoPlayer.director,720) | substring(VideoPlayer.director,1080) | substring(VideoPlayer.VideoResolution,720) | substring(VideoPlayer.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/Showtime_hd.png</texture>
+				<visible>substring(VideoPlayer.studio,Showtime) + [substring(VideoPlayer.director,720) | substring(VideoPlayer.director,1080) | substring(VideoPlayer.VideoResolution,720) | substring(VideoPlayer.VideoResolution,1080)]</visible>
+			</control>
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/Sky One_hd.png</texture>
+				<visible>substring(VideoPlayer.studio,Sky One) + [substring(VideoPlayer.director,720) | substring(VideoPlayer.director,1080) | substring(VideoPlayer.VideoResolution,720) | substring(VideoPlayer.VideoResolution,1080)]</visible>
+			</control>
+		<!-- Network (Native) -->
+			<control type="image" id="5088">
+				<include>TVShowMediaflagsVars</include>
+				<texture>special://skin/images/flags/movies/studio/$INFO[VideoPlayer.Studio,,.png]</texture>
+				<visible>!IsEmpty(VideoPlayer.Studio)</visible>
+			</control>
+</control>
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,3795 @@
+<window id="1111">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<imagepath>$INFO[Skin.String(Custom_Back_Settings_Folder)]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<timeperimage>5000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>2000</fadetime>
+			<include>backgroundfade</include>
+			<visible>Skin.HasSetting(Enable_Custom_Back_Settings)</visible>
+			<include condition="Skin.HasSetting(AnimateBackgrounds)">backgroundanimation</include>
+		</control>
+		<control type="largeimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>special://skin/images/backgrounds/background-settings.jpg</texture>
+			<aspectratio>scale</aspectratio>
+			<include>backgroundfade</include>
+			<visible>!Skin.HasSetting(Enable_Custom_Back_Settings)</visible>
+		</control>
+		
+	<control type="image" id="2">
+		<description>MainBackground</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<visible>true</visible>
+		<colordiffuse>FFFFFFFF</colordiffuse>
+		<fadetime>200</fadetime>
+		<texture border="5" flipY="true" flipX="false">scripts.png</texture>
+		<aspectratio>false</aspectratio>
+	</control>    
+
+	<!-- NOT EDITED YET -->
+	<control type="image" id="1">
+		<description>MainBackgroundOverlay</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<visible>true</visible>
+		<fadetime>200</fadetime>
+		<texture border="5" flipY="true" flipX="false">home.png</texture>
+		<aspectratio>false</aspectratio>
+	</control> 		
+		
+		
+		
+		
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<include>ContentPanel</include>
+			<control type="grouplist" id="9001">
+				<visible>Skin.String(SkinSettings,1)</visible>
+				<posx>20</posx>
+				<posy>60</posy>
+				<width>1280</width>
+				<height>610</height>
+				<itemgap>2</itemgap>
+				<pagecontrol>5025</pagecontrol>
+				<onleft>9000</onleft>
+				<onright>5025</onright>
+				<onup>9001</onup>
+				<ondown>9001</ondown>
+				<control type="label" id="100">
+					<width>1200</width>
+					<height>50</height>
+					<font>CommonScreensMedium</font>
+					<label>31106</label>
+					<textcolor>darkblue</textcolor>
+					<align>center</align>
+				</control>
+				<control type="radiobutton" id="101">
+					<width>1200	</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[20079]</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(Animate_Skin)</onclick>
+					<selected>!Skin.HasSetting(Animate_Skin)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="image" id="102">
+					<width>1200</width>
+					<height>2</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="103">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>20189</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+					<selected>Skin.HasSetting(AutoScroll)</selected>
+				</control>
+				<control type="radiobutton" id="104">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>31103</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(Show_SlideShow_Paused)</onclick>
+					<selected>!Skin.HasSetting(Show_SlideShow_Paused)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="image" id="111">
+					<width>1200</width>
+					<height>2</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="105">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>31105</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(No_Media_Titles_In_Scanner)</onclick>
+					<selected>!Skin.HasSetting(No_Media_Titles_In_Scanner)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="110">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>31112</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(Media_Titles_WideIcons)</onclick>
+					<selected>!Skin.HasSetting(Media_Titles_WideIcons)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+
+
+				<control type="image" id="5020">
+					<width>1200</width>
+					<height>2</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="5021">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>Use fanart instead of visualisation</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(FanartNoVisualisation)</onclick>
+					<selected>Skin.HasSetting(FanartNoVisualisation)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5014">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>Show Animated CD in visualisation</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(CDArt)</onclick>
+					<selected>!Skin.HasSetting(CDArt)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5022">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>Change fanart on song change in Now Playing View</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(NowPlayingFanart)</onclick>
+					<selected>Skin.HasSetting(NowPlayingFanart)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="button" id="5023">
+					<description>Music Folder Path</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<label>$LOCALIZE[2] $LOCALIZE[20334] $LOCALIZE[15311]</label>
+					<label2>$INFO[Skin.String(Music_Folder_Path)]</label2>
+					<onclick>Skin.SetPath(Music_Folder_Path)</onclick>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<enable>Skin.HasSetting(FanartNoVisualisation) | Skin.HasSetting(NowPlayingFanart) | !Skin.HasSetting(CDArt)</enable>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="image" id="5024">
+					<width>1200</width>
+					<height>2</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="5027">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>Enable ClearArt for $LOCALIZE[20364] $LOCALIZE[20360]</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>blue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(ClearArt)</onclick>
+					<selected>Skin.HasSetting(ClearArt)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="button" id="5031">
+					<description>TV Shows Folder Path</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<label>$LOCALIZE[20343] $LOCALIZE[20334] $LOCALIZE[15311]</label>
+					<label2>$INFO[Skin.String(TVShows_Folder_Path)]</label2>
+					<onclick>Skin.SetPath(TVShows_Folder_Path)</onclick>
+					<texturefocus border="7">list-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<enable>Skin.HasSetting(ClearArt)</enable>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="image" id="5001">
+					<width>1200</width>
+					<height>2</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="5002">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[21429] $LOCALIZE[557] - $LOCALIZE[558] ($LOCALIZE[132] $LOCALIZE[582])</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(Artist_Album_Order)</onclick>
+					<selected>Skin.HasSetting(Artist_Album_Order)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="image" id="106">
+					<width>1200</width>
+					<height>2</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="107">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>21398</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
+					<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="button" id="108">
+					<description>Startup Playlist</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<label>15311</label>
+					<label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
+					<onclick>Skin.SetFile(Startup_Playlist_Path,.m3u)</onclick>
+					<texturefocus border="7">list-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+			</control>
+			<control type="scrollbar" id="5025">
+				<posx>1240</posx>
+				<posy>80</posy>
+				<width>20</width>
+				<height>580</height>
+				<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
+				<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
+				<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
+				<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
+				<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
+				<onleft>9001</onleft>
+				<onright>9000</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Skin.String(SkinSettings,1)</visible>
+			</control>
+			<control type="grouplist" id="9002">
+				<visible>Skin.String(SkinSettings,2)</visible>
+				<posx>20</posx>
+				<posy>60</posy>
+				<width>1280</width>
+				<height>610</height>
+				<itemgap>2</itemgap>
+				<pagecontrol>5010</pagecontrol>
+				<onleft>9000</onleft>
+				<onright>5010</onright>
+				<onup>9002</onup>
+				<ondown>9002</ondown>
+				<control type="label" id="200">
+					<width>1280</width>
+					<height>50</height>
+					<font>CommonScreensMedium</font>
+					<label>31101</label>
+					<textcolor>darkblue</textcolor>
+					<align>center</align>
+				</control>
+				<control type="radiobutton" id="5050">
+					<description>Horizontal Menu</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>Horizontal Home Menu</label>
+					<onclick>Skin.ToggleSetting(HorizontalHomeMenu)</onclick>
+					<selected>Skin.HasSetting(HorizontalHomeMenu)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5061">
+					<description>Wide Home Menu Buttons</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>Wide Home Menu Buttons</label>
+					<onclick>Skin.ToggleSetting(WideHomeMenu)</onclick>
+					<selected>Skin.HasSetting(WideHomeMenu)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5029">
+					<description>Use Videos in file mode</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[10006] Menu - Use $LOCALIZE[561] $LOCALIZE[13601]</label>
+					<onclick>Skin.ToggleSetting(VideosFilesInHome)</onclick>
+					<selected>Skin.HasSetting(VideosFilesInHome)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="image" id="5071">
+					<width>1200</width>
+					<height>2</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="5051">
+					<description>Hide Videos in home</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[12018] $LOCALIZE[10006] Menu</label>
+					<onclick>Skin.ToggleSetting(VideosInHome)</onclick>
+					<selected>Skin.HasSetting(VideosInHome)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5052">
+					<description>Hide Movies in home</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[12018] $LOCALIZE[20342] Menu</label>
+					<onclick>Skin.ToggleSetting(MoviesInHome)</onclick>
+					<selected>!Skin.HasSetting(MoviesInHome)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5053">
+					<description>Hide TV-Shows in home</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[12018] $LOCALIZE[20343] Menu</label>
+					<onclick>Skin.ToggleSetting(TVShowsInHome)</onclick>
+					<selected>!Skin.HasSetting(TVShowsInHome)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5011">
+					<description>Hide Videos Plugins in home</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[12018] $LOCALIZE[1037] Menu</label>
+					<onclick>Skin.ToggleSetting(VideosPluginsInHome)</onclick>
+					<selected>!Skin.HasSetting(VideosPluginsInHome)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5012">
+					<description>Hide Apple Movie Trailers in home</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[12018] Trailers Menu</label>
+					<onclick>Skin.ToggleSetting(TrailersInHome)</onclick>
+					<selected>!Skin.HasSetting(TrailersInHome)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5054">
+					<description>Hide Music in home</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[12018] $LOCALIZE[10005] Menu</label>
+					<onclick>Skin.ToggleSetting(MusicInHome)</onclick>
+					<selected>Skin.HasSetting(MusicInHome)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5055">
+					<description>Hide Pictures in home</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[12018] $LOCALIZE[10002] Menu</label>
+					<onclick>Skin.ToggleSetting(PicturesInHome)</onclick>
+					<selected>Skin.HasSetting(PicturesInHome)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5056">
+					<description>Hide Programs in home</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[12018] $LOCALIZE[0] Menu</label>
+					<onclick>Skin.ToggleSetting(ProgramsInHome)</onclick>
+					<selected>Skin.HasSetting(ProgramsInHome)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5060">
+					<description>Hide Games in home</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[12018] $LOCALIZE[15016] Menu</label>
+					<onclick>Skin.ToggleSetting(GamesInHome)</onclick>
+					<selected>!Skin.HasSetting(GamesInHome)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5057">
+					<description>Hide Weather in home</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[12018] $LOCALIZE[12600] Menu</label>
+					<onclick>Skin.ToggleSetting(WeatherInHome)</onclick>
+					<selected>Skin.HasSetting(WeatherInHome)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5058">
+					<description>Hide Scripts in home</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[12018] $LOCALIZE[10020] Menu</label>
+					<onclick>Skin.ToggleSetting(ScriptsInHome)</onclick>
+					<selected>Skin.HasSetting(ScriptsInHome)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5019">
+					<description>Hide Favourites in home</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[12018] $LOCALIZE[1036] Menu</label>
+					<onclick>Skin.ToggleSetting(FavouritesInHome)</onclick>
+					<selected>Skin.HasSetting(FavouritesInHome)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5059">
+					<description>Hide Settings in home</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[12018] $LOCALIZE[5] Menu</label>
+					<onclick>Skin.ToggleSetting(SettingsInHome)</onclick>
+					<selected>Skin.HasSetting(SettingsInHome)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="image" id="202">
+					<width>1200</width>
+					<height>2</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="5015">
+					<description>enable recent movies info</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>20386</label>
+					<onclick>Skin.ToggleSetting(HomepageRecentMovies)</onclick>
+					<selected>!Skin.HasSetting(HomepageRecentMovies)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5016">
+					<description>enable recent tv-shows info</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>20387</label>
+					<onclick>Skin.ToggleSetting(HomepageRecentTVShows)</onclick>
+					<selected>!Skin.HasSetting(HomepageRecentTVShows)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5017">
+					<description>enable recent music info</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>359</label>
+					<onclick>Skin.ToggleSetting(HomepageRecentAlbums)</onclick>
+					<selected>!Skin.HasSetting(HomepageRecentAlbums)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="208">
+					<description>enable weather info</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>20084</label>
+					<onclick>Skin.ToggleSetting(homepageWeatherinfo)</onclick>
+					<selected>!Skin.HasSetting(homepageWeatherinfo)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="209">
+					<description>enable System info</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>20085</label>
+					<onclick>Skin.ToggleSetting(homepageSysteminfo)</onclick>
+					<selected>!Skin.HasSetting(homepageSysteminfo)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="206">
+					<description>enable video info</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>20176</label>
+					<onclick>Skin.ToggleSetting(homepageVideoinfo)</onclick>
+					<selected>!Skin.HasSetting(homepageVideoinfo)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="207">
+					<description>enable music info</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>20083</label>
+					<onclick>Skin.ToggleSetting(homepageMusicinfo)</onclick>
+					<selected>!Skin.HasSetting(homepageMusicinfo)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+			</control>
+			<control type="scrollbar" id="5010">
+				<posx>1240</posx>
+				<posy>80</posy>
+				<width>20</width>
+				<height>580</height>
+				<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
+				<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
+				<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
+				<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
+				<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
+				<onleft>9002</onleft>
+				<onright>9000</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Skin.String(SkinSettings,2)</visible>
+			</control>
+			<control type="group">
+				<visible>Skin.String(SkinSettings,3)</visible>
+				<control type="label">
+					<posx>200</posx>
+					<posy>70</posy>
+					<width>880</width>
+					<height>45</height>
+					<font>CommonScreensMedium</font>
+					<label>31102</label>
+					<textcolor>darkblue</textcolor>
+					<align>center</align>
+				</control>
+				<control type="radiobutton" id="5003">
+					<description>animate home backgrounds</description>
+					<posx>20</posx>
+					<posy>120</posy>
+					<width>325</width>
+					<height>40</height>
+					<font>pascallight25</font>
+					<label>Animate Home Backgrounds</label>
+					<onclick>Skin.ToggleSetting(AnimateHomeBackgrounds)</onclick>
+					<selected>Skin.HasSetting(AnimateHomeBackgrounds)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus border="7">-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9003</onup>
+					<ondown>5004</ondown>
+					<animation reversible="false" effect="zoom" start="20,120,325,20" end="20,120,325,40" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5004">
+					<description>animate other backgrounds</description>
+					<posx>20</posx>
+					<posy>155</posy>
+					<width>325</width>
+					<height>40</height>
+					<font>pascallight25</font>
+					<label>Animate Other Backgrounds</label>
+					<onclick>Skin.ToggleSetting(AnimateBackgrounds)</onclick>
+					<selected>Skin.HasSetting(AnimateBackgrounds)</selected>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus border="7">-</texturefocus>
+					<texturenofocus border="7">-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>5003</onup>
+					<ondown>9003</ondown>
+					<animation reversible="false" effect="zoom" start="20,155,325,20" end="20,155,325,40" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="list" id="9003">
+					<posx>20</posx>
+					<posy>200</posy>
+					<width>405</width>
+					<height>440</height>
+					<onleft>9000</onleft>
+					<onright>300</onright>
+					<onup>5004</onup>
+					<ondown>9003</ondown>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>0</scrolltime>
+					<itemlayout height="40" width="325">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>325</width>
+							<height>38</height>
+							<texture border="7">-</texture>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>405</width>
+							<height>40</height>
+							<font>pascallight25</font>
+							<textcolor>black</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							
+						</control>
+					</itemlayout>
+					<focusedlayout height="40" width="325">
+					
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>325</width>
+							<height>38</height>
+							<texture border="7">-</texture>
+							<visible>!Control.HasFocus(9003)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>325</width>
+							<height>38</height>
+							<texture border="7">-</texture>
+							<visible>Control.HasFocus(9003)</visible>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>405</width>
+							<height>40</height>
+							<font>pascallight25</font>
+							<textcolor>darkblue</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Control.HasFocus(9003)</visible>
+							<animation reversible="false" effect="zoom" start="20,155,325,20" end="20,155,325,40" time="300" tween="quadratic" easing="Out">focus</animation>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>405</width>
+							<height>40</height>
+							<font>pascallight25</font>
+							<textcolor>darkblue</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(9003)</visible>
+							<animation reversible="false" effect="zoom" start="10,0,405,20" end="10,0,405,40" time="300" tween="quadratic" easing="Out">focus</animation>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<label>$LOCALIZE[10000] $LOCALIZE[3] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/videos.jpg</icon>
+							<thumb>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</thumb>
+						</item>
+						<item id="2">
+							<label>$LOCALIZE[10000] $LOCALIZE[342] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/movies.jpg</icon>
+							<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
+						</item>
+						<item id="3">
+							<label>$LOCALIZE[10000] $LOCALIZE[20343] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/tvshows.jpg</icon>
+							<thumb>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</thumb>
+						</item>
+						<item id="4">
+							<label>$LOCALIZE[10000] $LOCALIZE[1037] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/plugins.jpg</icon>
+							<thumb>$INFO[Skin.String(Home_Custom_Back_Plugins_Folder)]</thumb>
+						</item>
+						<item id="5">
+							<label>$LOCALIZE[10000] $LOCALIZE[20410] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/trailers.jpg</icon>
+							<thumb>$INFO[Skin.String(Home_Custom_Back_Trailers_Folder)]</thumb>
+						</item>
+						<item id="6">
+							<label>$LOCALIZE[10000] $LOCALIZE[2] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/music.jpg</icon>
+							<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
+						</item>
+						<item id="7">
+							<label>$LOCALIZE[10000] $LOCALIZE[1] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/pictures.jpg</icon>
+							<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
+						</item>
+						<item id="8">
+							<label>$LOCALIZE[10000] $LOCALIZE[0] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/programs.jpg</icon>
+							<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
+						</item>
+						<item id="9">
+							<label>$LOCALIZE[10000] $LOCALIZE[15016] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/games.jpg</icon>
+							<thumb>$INFO[Skin.String(Home_Custom_Back_Games_Folder)]</thumb>
+						</item>
+						<item id="10">
+							<label>$LOCALIZE[10000] $LOCALIZE[8] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/weather.jpg</icon>
+							<thumb>special://skin/images/backgrounds/home-weather-conditional/$INFO[Weather.FanartCode]</thumb>
+							<visible>!Skin.HasSetting(Home_Weather_Conditional_Backgrounds)</visible>
+						</item>
+						<item id="10">
+							<label>$LOCALIZE[10000] $LOCALIZE[8] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/weather.jpg</icon>
+							<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
+							<visible>Skin.HasSetting(Home_Weather_Conditional_Backgrounds)</visible>
+						</item>
+						<item id="11">
+							<label>$LOCALIZE[10000] $LOCALIZE[247] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/scripts.jpg</icon>
+							<thumb>$INFO[Skin.String(Home_Custom_Back_Scripts_Folder)]</thumb>
+						</item>
+						<item id="12">
+							<label>$LOCALIZE[10000] $LOCALIZE[1036] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/favourites.jpg</icon>
+							<thumb>$INFO[Skin.String(Home_Custom_Back_Favourites_Folder)]</thumb>
+						</item>
+						<item id="13">
+							<label>$LOCALIZE[10000] $LOCALIZE[5] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/settings.jpg</icon>
+							<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
+						</item>	
+						<item id="14">
+							<label>$LOCALIZE[3] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/background-videos.jpg</icon>
+							<thumb>$INFO[Skin.String(Custom_Back_Videos_Folder)]</thumb>
+						</item>
+						<item id="15">
+							<label>$LOCALIZE[342] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/background-movies.jpg</icon>
+							<thumb>$INFO[Skin.String(Custom_Back_Movies_Folder)]</thumb>
+						</item>
+						<item id="16">
+							<label>$LOCALIZE[20343] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/background-tvshows.jpg</icon>
+							<thumb>$INFO[Skin.String(Custom_Back_TVShows_Folder)]</thumb>
+						</item>
+						<item id="17">
+							<label>$LOCALIZE[1037] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/background-plugins.jpg</icon>
+							<thumb>$INFO[Skin.String(Custom_Back_Plugins_Folder)]</thumb>
+						</item>
+						<item id="18">
+							<label>$LOCALIZE[20410] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/background-trailers.jpg</icon>
+							<thumb>$INFO[Skin.String(Custom_Back_Trailers_Folder)]</thumb>
+						</item>
+						<item id="19">
+							<label>$LOCALIZE[2] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/background-music.jpg</icon>
+							<thumb>$INFO[Skin.String(Custom_Back_Music_Folder)]</thumb>
+						</item>
+						<item id="20">
+							<label>$LOCALIZE[1] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/background-pictures.jpg</icon>
+							<thumb>$INFO[Skin.String(Custom_Back_Pictures_Folder)]</thumb>
+						</item>
+						<item id="21">
+							<label>$LOCALIZE[0] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/background-programs.jpg</icon>
+							<thumb>$INFO[Skin.String(Custom_Back_Programs_Folder)]</thumb>
+						</item>
+						<item id="22">
+							<label>$LOCALIZE[15016] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/background-games.jpg</icon>
+							<thumb>$INFO[Skin.String(Custom_Back_Games_Folder)]</thumb>
+						</item>
+						<item id="23">
+							<label>$LOCALIZE[8] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/background-weather.jpg</icon>
+							<thumb>special://skin/images/backgrounds/weather-conditional/$INFO[Weather.FanartCode]</thumb>
+							<visible>!Skin.HasSetting(Weather_Conditional_Backgrounds)</visible>
+						</item>
+						<item id="23">
+							<label>$LOCALIZE[8] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/background-weather.jpg</icon>
+							<thumb>$INFO[Skin.String(Custom_Back_Weather_Folder)]</thumb>
+							<visible>Skin.HasSetting(Weather_Conditional_Backgrounds)</visible>
+						</item>
+						<item id="24">
+							<label>$LOCALIZE[247] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/background-scripts.jpg</icon>
+							<thumb>$INFO[Skin.String(Custom_Back_Scripts_Folder)]</thumb>
+						</item>
+						<item id="25">
+							<label>$LOCALIZE[1036] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/background-favourites.jpg</icon>
+							<thumb>$INFO[Skin.String(Custom_Back_Favourites_Folder)]</thumb>
+						</item>
+						<item id="26">
+							<label>$LOCALIZE[5] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/background-settings.jpg</icon>
+							<thumb>$INFO[Skin.String(Custom_Back_Settings_Folder)]</thumb>
+						</item>
+						<item id="27">
+							<label>$LOCALIZE[20096] $LOCALIZE[31102]</label>
+							<onclick>-</onclick>
+							<icon>special://skin/images/backgrounds/background-login.jpg</icon>
+							<thumb>$INFO[Skin.String(Custom_Back_Login_Folder)]</thumb>
+						</item>
+					</content>
+				</control>
+				<control type="label">
+					<posx>610</posx>
+					<posy>120</posy>
+					<width>505</width>
+					<height>35</height>
+					<align>center</align>
+					<font>CommonScreensSmall</font>
+					<aligny>center</aligny>
+					<font>CommonScreensSmall</font>
+					<label>$INFO[Container(9003).ListItem.label]</label>
+					<textcolor>darkblue</textcolor>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(1)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Home_Custom_Back_Videos_Folder)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Home_Custom_Back_Videos_Folder)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Home_Custom_Back_Videos_Folder)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(2)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Home_Custom_Back_Movies_Folder)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>						
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Home_Custom_Back_Movies_Folder)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Home_Custom_Back_Movies_Folder)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(3)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Home_Custom_Back_TVShows_Folder)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Home_Custom_Back_TVShows_Folder)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Home_Custom_Back_TVShows_Folder)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(4)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Home_Custom_Back_Plugins_Folder)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Home_Custom_Back_Plugins_Folder)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Home_Custom_Back_Plugins_Folder)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(5)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Home_Custom_Back_Trailers_Folder)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Home_Custom_Back_Trailers_Folder)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Home_Custom_Back_Trailers_Folder)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(6)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Home_Custom_Back_Music_Folder)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Home_Custom_Back_Music_Folder)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Home_Custom_Back_Music_Folder)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(7)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Home_Custom_Back_Pictures_Folder)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Home_Custom_Back_Pictures_Folder)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Home_Custom_Back_Pictures_Folder)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(8)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Home_Custom_Back_Programs_Folder)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Home_Custom_Back_Programs_Folder)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Home_Custom_Back_Programs_Folder)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(9)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Home_Custom_Back_Games_Folder)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Home_Custom_Back_Games_Folder)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Home_Custom_Back_Games_Folder)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(10)</visible>
+					<control type="button" id="301">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Home_Custom_Back_Weather_Folder)</onclick>
+						<enable>Skin.HasSetting(Home_Weather_Conditional_Backgrounds)</enable>
+						<onleft>9003</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Home_Custom_Back_Weather_Folder)</onclick>
+						<enable>Skin.HasSetting(Home_Weather_Conditional_Backgrounds)</enable>
+						<onleft>301</onleft>
+						<onright>303</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="303">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Home_Custom_Back_Weather_Folder)</onclick>
+						<enable>Skin.HasSetting(Home_Weather_Conditional_Backgrounds)</enable>
+						<onleft>302</onleft>
+						<onright>9003</onright>
+						<onup>303</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="radiobutton" id="300">
+						<description>Conditional Image button</description>
+						<posx>350</posx>
+						<posy>40</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>Conditional</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+						<textureradionofocus>radiobutton-nofocus.png</textureradionofocus>
+						<onclick>Skin.ToggleSetting(Home_Weather_Conditional_Backgrounds)</onclick>
+						<selected>!Skin.HasSetting(Home_Weather_Conditional_Backgrounds)</selected>
+						<onleft>9003</onleft>
+						<onright>60</onright>
+						<onup>303</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(11)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Home_Custom_Back_Scripts_Folder)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Home_Custom_Back_Scripts_Folder)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Home_Custom_Back_Scripts_Folder)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(12)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Home_Custom_Back_Favourites_Folder)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Home_Custom_Back_Favourites_Folder)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Home_Custom_Back_Favourites_Folder)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(13)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Home_Custom_Back_Settings_Folder)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Home_Custom_Back_Settings_Folder)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Home_Custom_Back_Settings_Folder)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(14)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Custom_Back_Videos_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Videos)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Custom_Back_Videos_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Videos)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Custom_Back_Videos_Folder)</onclick>
+						<onclick>Skin.Reset(Enable_Custom_Back_Videos)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(15)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Custom_Back_Movies_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Movies)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Custom_Back_Movies_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Movies)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Custom_Back_Movies_Folder)</onclick>
+						<onclick>Skin.Reset(Enable_Custom_Back_Movies)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(16)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Custom_Back_TVShows_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_TVShows)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Custom_Back_TVShows_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_TVShows)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Custom_Back_TVShows_Folder)</onclick>
+						<onclick>Skin.Reset(Enable_Custom_Back_TVShows)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(17)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Custom_Back_Plugins_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Plugins)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Custom_Back_Plugins_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Plugins)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Custom_Back_Plugins_Folder)</onclick>
+						<onclick>Skin.Reset(Enable_Custom_Back_Plugins)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(18)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Custom_Back_Trailers_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Trailers)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Custom_Back_Trailers_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Trailers)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Custom_Back_Trailers_Folder)</onclick>
+						<onclick>Skin.Reset(Enable_Custom_Back_Trailers)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(19)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Custom_Back_Music_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Music)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Custom_Back_Music_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Music)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Custom_Back_Music_Folder)</onclick>
+						<onclick>Skin.Reset(Enable_Custom_Back_Music)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(20)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Custom_Back_Pictures_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Pictures)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Custom_Back_Pictures_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Pictures)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Custom_Back_Pictures_Folder)</onclick>
+						<onclick>Skin.Reset(Enable_Custom_Back_Pictures)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(21)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Custom_Back_Programs_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Programs)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Custom_Back_Programs_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Programs)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Custom_Back_Programs_Folder)</onclick>
+						<onclick>Skin.Reset(Enable_Custom_Back_Programs)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(22)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Custom_Back_Games_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Games)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Custom_Back_Games_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Games)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Custom_Back_Games_Folder)</onclick>
+						<onclick>Skin.Reset(Enable_Custom_Back_Games)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(23)</visible>
+					<control type="button" id="301">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Custom_Back_Weather_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Weather)</onclick>
+						<enable>Skin.HasSetting(Weather_Conditional_Backgrounds)</enable>
+						<onleft>9003</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Custom_Back_Weather_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Weather)</onclick>
+						<enable>Skin.HasSetting(Weather_Conditional_Backgrounds)</enable>
+						<onleft>301</onleft>
+						<onright>303</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="303">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Custom_Back_Weather_Folder)</onclick>
+						<onclick>Skin.Reset(Enable_Custom_Back_Weather)</onclick>
+						<enable>Skin.HasSetting(Weather_Conditional_Backgrounds)</enable>
+						<onleft>302</onleft>
+						<onright>60</onright>
+						<onup>303</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="radiobutton" id="300">
+						<description>Conditional Image button</description>
+						<posx>350</posx>
+						<posy>40</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>Conditional</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+						<textureradionofocus>radiobutton-nofocus.png</textureradionofocus>
+						<onclick>Skin.ToggleSetting(Weather_Conditional_Backgrounds)</onclick>
+						<selected>!Skin.HasSetting(Weather_Conditional_Backgrounds)</selected>
+						<onleft>9003</onleft>
+						<onright>9003</onright>
+						<onup>303</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(24)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Custom_Back_Scripts_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Scripts)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Custom_Back_Scripts_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Scripts)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Custom_Back_Scripts_Folder)</onclick>
+						<onclick>Skin.Reset(Enable_Custom_Back_Scripts)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(25)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Custom_Back_Favourites_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Favourites)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Custom_Back_Favourites_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Favourites)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Custom_Back_Favourites_Folder)</onclick>
+						<onclick>Skin.Reset(Enable_Custom_Back_Favourites)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(26)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Custom_Back_Settings_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Settings)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Custom_Back_Settings_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Settings)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Custom_Back_Settings_Folder)</onclick>
+						<onclick>Skin.Reset(Enable_Custom_Back_Settings)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>610</posx>
+					<posy>160</posy>
+					<visible>Container(9003).HasFocus(27)</visible>
+					<control type="button" id="300">
+						<description>Single Image button</description>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31113</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetImage(Custom_Back_Login_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Login)</onclick>
+						<onleft>9003</onleft>
+						<onright>301</onright>
+						<onup>300</onup>
+						<ondown>300</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="301">
+						<description>Multi Image button</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>31114</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.SetPath(Custom_Back_Login_Folder)</onclick>
+						<onclick>Skin.SetBool(Enable_Custom_Back_Login)</onclick>
+						<onleft>300</onleft>
+						<onright>302</onright>
+						<onup>301</onup>
+						<ondown>301</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+					<control type="button" id="302">
+						<description>Default Image button</description>
+						<posx>350</posx>
+						<posy>0</posy>
+						<width>165</width>
+						<height>35</height>
+						<label>571</label>
+						<font>pascallight25</font>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<align>center</align>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<onclick>Skin.Reset(Custom_Back_Login_Folder)</onclick>
+						<onclick>Skin.Reset(Enable_Custom_Back_Login)</onclick>
+						<onleft>301</onleft>
+						<onright>60</onright>
+						<onup>302</onup>
+						<ondown>302</ondown>
+						<animation reversible="false" effect="slide" start="0,-5,0,0" end="0,0,0,0" time="300" tween="quadratic" easing="Out">Focus</animation>
+					</control>
+				</control>
+				<control type="label">
+					<posx>450</posx>
+					<posy>650</posy>
+					<width>805</width>
+					<height>20</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>pascalligt25</font>
+					<haspath>true</haspath>
+					<label fallback="571">$INFO[Container(9003).ListItem.Thumb]</label>
+					<textcolor>black</textcolor>
+					<visible>!Container(9003).HasFocus(10) + !Container(9003).HasFocus(23)</visible>
+				</control>
+				<control type="label">
+					<posx>450</posx>
+					<posy>650</posy>
+					<width>805</width>
+					<height>20</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>pascalligt25</font>
+					<haspath>true</haspath>
+					<label fallback="571">$INFO[Container(9003).ListItem.Thumb]</label>
+					<textcolor>black</textcolor>
+					<visible>Container(9003).HasFocus(10) | Container(9003).HasFocus(23)</visible>
+				</control>
+				<control type="multiimage">
+					<posx>470</posx>
+					<posy>210</posy>
+					<width>755</width>
+					<height>430</height>
+					<imagepath>$INFO[Container(9003).ListItem.Icon]</imagepath>
+					<aspectratio>scale</aspectratio>
+					<timeperimage>6000</timeperimage>
+					<randomize>true</randomize>
+					<fadetime>400</fadetime>
+				</control>
+			</control>
+			<control type="scrollbar" id="60">
+				<posx>400</posx>
+				<posy>210</posy>
+				<width>20</width>
+				<height>428</height>
+				<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
+				<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
+				<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
+				<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
+				<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
+				<onleft>9003</onleft>
+				<onright>9000</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Skin.String(SkinSettings,3)</visible>
+			</control>
+			<control type="grouplist" id="5097">
+				<visible>Skin.String(SkinSettings,4)</visible>
+				<posx>20</posx>
+				<posy>60</posy>
+				<width>1280</width>
+				<height>610</height>
+				<itemgap>2</itemgap>
+				<pagecontrol>-</pagecontrol>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>5097</onup>
+				<ondown>5097</ondown>
+				<control type="label" id="5099">
+					<width>1200</width>
+					<height>50</height>
+					<font>CommonScreensMedium</font>
+					<label>$LOCALIZE[305] $LOCALIZE[536]</label>
+					<textcolor>darkblue</textcolor>
+					<align>center</align>
+				</control>
+				<control type="radiobutton" id="5030">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[10000] $LOCALIZE[31024] $LOCALIZE[8] $LOCALIZE[536] - $LOCALIZE[20079]</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(Animate_Home_Weather_Icon)</onclick>
+					<selected>!Skin.HasSetting(Animate_Home_Weather_Icon)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="403">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[8] $LOCALIZE[31024] $LOCALIZE[536] - $LOCALIZE[20079]</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(Animate_Weather_Page_Icons)</onclick>
+					<selected>!Skin.HasSetting(Animate_Weather_Page_Icons)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="image" id="5080">
+					<width>880</width>
+					<height>2</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="5026">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[20338] $LOCALIZE[515] $LOCALIZE[20334] $LOCALIZE[536]</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(Enable_Foldericons_Movies_Genre)</onclick>
+					<selected>!Skin.HasSetting(Enable_Foldericons_Movies_Genre)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5070">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[20364] $LOCALIZE[515] $LOCALIZE[20334] $LOCALIZE[536]</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(Enable_Foldericons_TVShows_Genre)</onclick>
+					<selected>!Skin.HasSetting(Enable_Foldericons_TVShows_Genre)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5032">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[2] $LOCALIZE[515] $LOCALIZE[20334] $LOCALIZE[536]</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(Enable_Foldericons_Music_Genre)</onclick>
+					<selected>!Skin.HasSetting(Enable_Foldericons_Music_Genre)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="image" id="5081">
+					<width>880</width>
+					<height>2</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="5028">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[20338] $LOCALIZE[544] $LOCALIZE[536]</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(Enable_Movies_Media_Flags)</onclick>
+					<selected>!Skin.HasSetting(Enable_Movies_Media_Flags)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5033">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[20364] $LOCALIZE[544] $LOCALIZE[536]</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(Enable_TVShows_Media_Flags)</onclick>
+					<selected>!Skin.HasSetting(Enable_TVShows_Media_Flags)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="radiobutton" id="5072">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[2] $LOCALIZE[544] $LOCALIZE[536]</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(Enable_Music_Media_Flags)</onclick>
+					<selected>!Skin.HasSetting(Enable_Music_Media_Flags)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+			</control>
+			<control type="grouplist" id="9004">
+				<visible>Skin.String(SkinSettings,5)</visible>
+				<posx>20</posx>
+				<posy>60</posy>
+				<width>1280</width>
+				<height>610</height>
+				<itemgap>2</itemgap>
+				<pagecontrol>-</pagecontrol>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9004</onup>
+				<ondown>9004</ondown>
+				<control type="label" id="400">
+					<width>1200</width>
+					<height>50</height>
+					<font>CommonScreensMedium</font>
+					<label>31200</label>
+					<textcolor>darkblue</textcolor>
+					<align>center</align>
+				</control>
+				<control type="radiobutton" id="401">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[31208]</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(LyricScript_Enable)</onclick>
+					<selected>Skin.HasSetting(LyricScript_Enable)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="button" id="402">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>- $LOCALIZE[31204]</label>
+					<label2>[COLOR=blue]$INFO[Skin.String(LyricScript_Path)][/COLOR]</label2>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.SetFile(LyricScript_Path,.py)</onclick>
+					<enable>Skin.HasSetting(LyricScript_Enable)</enable>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="image" id="5082">
+					<width>880</width>
+					<height>2</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="404">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>$LOCALIZE[31209] [B]$LOCALIZE[8][/B]</label>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.ToggleSetting(WeatherScript_Enable)</onclick>
+					<selected>Skin.HasSetting(WeatherScript_Enable)</selected>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="button" id="405">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>- $LOCALIZE[31203]</label>
+					<label2>[COLOR=blue]$INFO[Skin.String(WeatherScript_Label)][/COLOR]</label2>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.SetString(WeatherScript_Label)</onclick>
+					<enable>Skin.HasSetting(WeatherScript_Enable)</enable>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="button" id="406">
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<label>- $LOCALIZE[31204]</label>
+					<label2>[COLOR=blue]$INFO[Skin.String(WeatherScript_Path)][/COLOR]</label2>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+					<onclick>Skin.SetFile(WeatherScript_Path,.py)</onclick>
+					<enable>Skin.HasSetting(WeatherScript_Enable)</enable>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+				<control type="image" id="5018">
+					<width>880</width>
+					<height>2</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="button" id="5013">
+					<description>Apple Movie Trailers Path</description>
+					<width>1200</width>
+					<height>35</height>
+					<font>pascallight25</font>
+					<textcolor>black</textcolor>
+					<focusedcolor>darkblue</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<label>Apple Movie Trailers $LOCALIZE[15311]</label>
+					<label2>$INFO[Skin.String(Trailers_Path)]</label2>
+					<onclick>Skin.SetFile(Trailers_Path)</onclick>
+					<texturenofocus>-</texturenofocus>
+					<animation reversible="false" effect="zoom" start="0,0,1200,50" end="0,0,1200,35" time="300" tween="quadratic" easing="Out">focus</animation>
+				</control>
+			</control>
+			<control type="group" id="9005">
+				<visible>Skin.String(SkinSettings,6)</visible>
+				<posx>200</posx>
+				<posy>135</posy>
+				<width>880</width>
+				<height>445</height>
+				<itemgap>0</itemgap>
+				<pagecontrol>-</pagecontrol>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9004</onup>
+				<ondown>9004</ondown>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>880</width>
+					<height>50</height>
+					<font>font-32</font>
+					<label>$LOCALIZE[20190] $LOCALIZE[13005] Menu</label>
+					<textcolor>lightblue</textcolor>
+					<align>center</align>
+				</control>
+				<control type="image">
+					<posx>-23</posx>
+					<posy>140</posy>
+					<width>928</width>
+					<height>55</height>
+					<texture border="0,11,0,11">underlay3.png</texture>
+				</control>
+				<control type="image">
+					<posx>-9</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-master-nofocus.png</texture>
+					<visible>Skin.HasSetting(Hide_Shutdown_Master)</visible>
+				</control>
+				<control type="image">
+					<posx>-9</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-master-focus.png</texture>
+					<visible>!Skin.HasSetting(Hide_Shutdown_Master)</visible>
+				</control>
+				<control type="button" id="5034">
+					<posx>-9</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texturefocus border="7">button-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>yes</pulseonselect>
+					<onclick>Skin.ToggleSetting(Hide_Shutdown_Master)</onclick>
+					<onleft>24</onleft>
+					<onright>5035</onright>
+					<onup>5034</onup>
+					<ondown>5034</ondown>
+				</control>
+				<control type="image">
+					<posx>66</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-logoff-nofocus.png</texture>
+					<visible>Skin.HasSetting(Hide_Shutdown_Logoff)</visible>
+				</control>
+				<control type="image">
+					<posx>66</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-logoff-focus.png</texture>
+					<visible>!Skin.HasSetting(Hide_Shutdown_Logoff)</visible>
+				</control>
+				<control type="button" id="5035">
+					<posx>66</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texturefocus border="7">button-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>yes</pulseonselect>
+					<onclick>Skin.ToggleSetting(Hide_Shutdown_Logoff)</onclick>
+					<onleft>5034</onleft>
+					<onright>5036</onright>
+					<onup>5035</onup>
+					<ondown>5035</ondown>
+				</control>
+				<control type="image">
+					<posx>141</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-info-nofocus.png</texture>
+					<visible>Skin.HasSetting(Hide_Shutdown_Info)</visible>
+				</control>
+				<control type="image">
+					<posx>141</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-info-focus.png</texture>
+					<visible>!Skin.HasSetting(Hide_Shutdown_Info)</visible>
+				</control>
+				<control type="button" id="5036">
+					<posx>141</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texturefocus border="7">button-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>yes</pulseonselect>
+					<onclick>Skin.ToggleSetting(Hide_Shutdown_Info)</onclick>
+					<onleft>5035</onleft>
+					<onright>5037</onright>
+					<onup>5036</onup>
+					<ondown>5036</ondown>
+				</control>
+				<control type="image">
+					<posx>216</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-filemanager-nofocus.png</texture>
+					<visible>Skin.HasSetting(Hide_Shutdown_Filemanager)</visible>
+				</control>
+				<control type="image">
+					<posx>216</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-filemanager-focus.png</texture>
+					<visible>!Skin.HasSetting(Hide_Shutdown_Filemanager)</visible>
+				</control>
+				<control type="button" id="5037">
+					<posx>216</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texturefocus border="7">button-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>yes</pulseonselect>
+					<onclick>Skin.ToggleSetting(Hide_Shutdown_Filemanager)</onclick>
+					<onleft>5036</onleft>
+					<onright>5038</onright>
+					<onup>5037</onup>
+					<ondown>5037</ondown>
+				</control>
+				<control type="image">
+					<posx>291</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-exit-nofocus.png</texture>
+					<visible>Skin.HasSetting(Hide_Shutdown_Exit)</visible>
+				</control>
+				<control type="image">
+					<posx>291</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-exit-focus.png</texture>
+					<visible>!Skin.HasSetting(Hide_Shutdown_Exit)</visible>
+				</control>
+				<control type="button" id="5038">
+					<posx>291</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texturefocus border="7">button-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>yes</pulseonselect>
+					<onclick>Skin.ToggleSetting(Hide_Shutdown_Exit)</onclick>
+					<onleft>5037</onleft>
+					<onright>5039</onright>
+					<onup>5038</onup>
+					<ondown>5038</ondown>
+				</control>
+				<control type="image">
+					<posx>366</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-restart-nofocus.png</texture>
+					<visible>Skin.HasSetting(Hide_Shutdown_Restart)</visible>
+				</control>
+				<control type="image">
+					<posx>366</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-restart-focus.png</texture>
+					<visible>!Skin.HasSetting(Hide_Shutdown_Restart)</visible>
+				</control>
+				<control type="button" id="5039">
+					<posx>366</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texturefocus border="7">button-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>yes</pulseonselect>
+					<onclick>Skin.ToggleSetting(Hide_Shutdown_Restart)</onclick>
+					<onleft>5038</onleft>
+					<onright>5090</onright>
+					<onup>5039</onup>
+					<ondown>5039</ondown>
+				</control>
+				<control type="image">
+					<posx>441</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-shutdown-nofocus.png</texture>
+					<visible>Skin.HasSetting(Hide_Shutdown_Shutdown)</visible>
+				</control>
+				<control type="image">
+					<posx>441</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-shutdown-focus.png</texture>
+					<visible>!Skin.HasSetting(Hide_Shutdown_Shutdown)</visible>
+				</control>
+				<control type="button" id="5090">
+					<posx>441</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texturefocus border="7">button-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>yes</pulseonselect>
+					<onclick>Skin.ToggleSetting(Hide_Shutdown_Shutdown)</onclick>
+					<onleft>5039</onleft>
+					<onright>5091</onright>
+					<onup>5090</onup>
+					<ondown>5090</ondown>
+				</control>
+				<control type="image">
+					<posx>516</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-suspend-nofocus.png</texture>
+					<visible>Skin.HasSetting(Hide_Shutdown_Suspend)</visible>
+				</control>
+				<control type="image">
+					<posx>516</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-suspend-focus.png</texture>
+					<visible>!Skin.HasSetting(Hide_Shutdown_Suspend)</visible>
+				</control>
+				<control type="button" id="5091">
+					<posx>516</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texturefocus border="7">button-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>yes</pulseonselect>
+					<onclick>Skin.ToggleSetting(Hide_Shutdown_Suspend)</onclick>
+					<onleft>5090</onleft>
+					<onright>5092</onright>
+					<onup>5091</onup>
+					<ondown>5091</ondown>
+				</control>
+				<control type="image">
+					<posx>591</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-hibernate-nofocus.png</texture>
+					<visible>Skin.HasSetting(Hide_Shutdown_Hibernate)</visible>
+				</control>
+				<control type="image">
+					<posx>591</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-hibernate-focus.png</texture>
+					<visible>!Skin.HasSetting(Hide_Shutdown_Hibernate)</visible>
+				</control>
+				<control type="button" id="5092">
+					<posx>591</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texturefocus border="7">button-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>yes</pulseonselect>
+					<onclick>Skin.ToggleSetting(Hide_Shutdown_Hibernate)</onclick>
+					<onleft>5091</onleft>
+					<onright>5093</onright>
+					<onup>5092</onup>
+					<ondown>5092</ondown>
+				</control>
+				<control type="image">
+					<posx>666</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-favourites-nofocus.png</texture>
+					<visible>Skin.HasSetting(Hide_Shutdown_Favourites)</visible>
+				</control>
+				<control type="image">
+					<posx>666</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-favourites-focus.png</texture>
+					<visible>!Skin.HasSetting(Hide_Shutdown_Favourites)</visible>
+				</control>
+				<control type="button" id="5093">
+					<posx>666</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texturefocus border="7">button-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>yes</pulseonselect>
+					<onclick>Skin.ToggleSetting(Hide_Shutdown_Favourites)</onclick>
+					<onleft>5092</onleft>
+					<onright>5094</onright>
+					<onup>5093</onup>
+					<ondown>5093</ondown>
+				</control>
+				<control type="image">
+					<posx>741</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-reboot-nofocus.png</texture>
+					<visible>Skin.HasSetting(Hide_Shutdown_Reboot)</visible>
+				</control>
+				<control type="image">
+					<posx>741</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-reboot-focus.png</texture>
+					<visible>!Skin.HasSetting(Hide_Shutdown_Reboot)</visible>
+				</control>
+				<control type="button" id="5094">
+					<posx>741</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texturefocus border="7">button-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>yes</pulseonselect>
+					<onclick>Skin.ToggleSetting(Hide_Shutdown_Reboot)</onclick>
+					<onleft>5093</onleft>
+					<onright>5095</onright>
+					<onup>5094</onup>
+					<ondown>5094</ondown>
+				</control>
+				<control type="image">
+					<posx>816</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-eject-nofocus.png</texture>
+					<visible>Skin.HasSetting(Hide_Shutdown_Eject)</visible>
+				</control>
+				<control type="image">
+					<posx>816</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texture>shut-eject-focus.png</texture>
+					<visible>!Skin.HasSetting(Hide_Shutdown_Eject)</visible>
+				</control>
+				<control type="button" id="5095">
+					<posx>816</posx>
+					<posy>130</posy>
+					<width>75</width>
+					<height>75</height>
+					<texturefocus border="7">button-focus2.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>yes</pulseonselect>
+					<onclick>Skin.ToggleSetting(Hide_Shutdown_Eject)</onclick>
+					<onleft>5094</onleft>
+					<onright>24</onright>
+					<onup>5095</onup>
+					<ondown>5095</ondown>
+				</control>
+				<control type="image">
+					<posx>-23</posx>
+					<posy>250</posy>
+					<width>928</width>
+					<height>65</height>
+					<colordiffuse>CCFFFFFF</colordiffuse>
+					<texture diffuse="underlay2-diffuse.png" border="0,11,0,11">underlay3.png</texture>
+				</control>
+				<control type="label">
+					<label>20045</label>
+					<include>ShutdownLabel</include>
+					<visible>Control.HasFocus(5034)</visible>
+				</control>
+				<control type="label">
+					<label>20126</label>
+					<include>ShutdownLabel</include>
+					<visible>Control.HasFocus(5035)</visible>
+				</control>
+				<control type="label">
+					<label>130</label>
+					<include>ShutdownLabel</include>
+					<visible>Control.HasFocus(5036)</visible>
+				</control>
+				<control type="label">
+					<label>7</label>
+					<include>ShutdownLabel</include>
+					<visible>Control.HasFocus(5037)</visible>
+				</control>
+				<control type="label">
+					<label>$LOCALIZE[13012] XBMC</label>
+					<include>ShutdownLabel</include>
+					<visible>Control.HasFocus(5038)</visible>
+				</control>
+				<control type="label">
+					<label>$LOCALIZE[13313] XBMC</label>
+					<include>ShutdownLabel</include>
+					<visible>Control.HasFocus(5039)</visible>
+				</control>
+				<control type="label">
+					<label>13005</label>
+					<include>ShutdownLabel</include>
+					<visible>Control.HasFocus(5090)</visible>
+				</control>
+				<control type="label">
+					<label>13011</label>
+					<include>ShutdownLabel</include>
+					<visible>Control.HasFocus(5091)</visible>
+				</control>
+				<control type="label">
+					<label>13010</label>
+					<include>ShutdownLabel</include>
+					<visible>Control.HasFocus(5092)</visible>
+				</control>
+				<control type="label">
+					<label>1036</label>
+					<include>ShutdownLabel</include>
+					<visible>Control.HasFocus(5093)</visible>
+				</control>
+				<control type="label">
+					<label>13013</label>
+					<include>ShutdownLabel</include>
+					<visible>Control.HasFocus(5094)</visible>
+				</control>
+				<control type="label">
+					<label>$LOCALIZE[13391] $LOCALIZE[155]</label>
+					<include>ShutdownLabel</include>
+					<visible>Control.HasFocus(5095)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<posy>23</posy>
+			<include>Window_OpenClose_Left_Panel_Animation</include>
+			<include>CommonNowPlaying</include>
+			<control type="group" id="9000">
+				<include condition="!Skin.HasSetting(WideSideMenuButtons)">Window_OpenClose_Left_Panel_Position_Normal</include>
+				<include condition="Skin.HasSetting(WideSideMenuButtons)">Window_OpenClose_Left_Panel_Position_Wide</include>
+				<animation effect="slide" start="0,0" end="176,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus + !Skin.HasSetting(WideSideMenuButtons)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="251,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus + Skin.HasSetting(WideSideMenuButtons)">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>-16</posy>
+					<height>16</height>
+					<texture border="0,0,15,0">shadow-top2.png</texture>
+					<include condition="!Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesNormal</include>
+					<include condition="Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesWide</include>
+				</control>
+				<control type="button" id="20">
+					<description>General Options</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<include>ButtonCommonValues</include>
+					<label>128</label>
+					<onfocus>Skin.SetString(SkinSettings,1)</onfocus>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+					<onup>603</onup>
+					<ondown>21</ondown>
+				</control>
+				<control type="button" id="21">
+					<description>Home Window Options</description>
+					<posx>0</posx>
+					<posy>45</posy>
+					<include>ButtonCommonValues</include>
+					<label>513</label>
+					<onfocus>Skin.SetString(SkinSettings,2)</onfocus>
+					<onleft>9002</onleft>
+					<onright>9002</onright>
+					<onup>20</onup>
+					<ondown>22</ondown>
+					<pulseonselect>no</pulseonselect>
+					<visible>true</visible>
+				</control>
+				<control type="button" id="22">
+					<description>Backgrounds Options</description>
+					<posx>0</posx>
+					<posy>90</posy>
+					<include>ButtonCommonValues</include>
+					<label>31102</label>
+					<onfocus>Skin.SetString(SkinSettings,3)</onfocus>
+					<onclick>SetFocus(8000)</onclick>
+					<onleft>5003</onleft>
+					<onright>5003</onright>
+					<onup>21</onup>
+					<ondown>5096</ondown>
+				</control>
+				<control type="button" id="5096">
+					<description>Icons Options</description>
+					<posx>0</posx>
+					<posy>135</posy>
+					<include>ButtonCommonValues</include>
+					<label>536</label>
+					<onfocus>Skin.SetString(SkinSettings,4)</onfocus>
+					<onleft>5097</onleft>
+					<onright>5097</onright>
+					<onup>22</onup>
+					<ondown>23</ondown>
+				</control>
+				<control type="button" id="23">
+					<description>Scripts Options</description>
+					<posx>0</posx>
+					<posy>180</posy>
+					<include>ButtonCommonValues</include>
+					<label>10020</label>
+					<onfocus>Skin.SetString(SkinSettings,5)</onfocus>
+					<onleft>9004</onleft>
+					<onright>9004</onright>
+					<onup>5096</onup>
+					<ondown>24</ondown>
+				</control>
+				<control type="button" id="24">
+					<description>Shutdown Options</description>
+					<posx>0</posx>
+					<posy>225</posy>
+					<include>ButtonCommonValues</include>
+					<label>13005</label>
+					<onfocus>Skin.SetString(SkinSettings,6)</onfocus>
+					<onleft>5095</onleft>
+					<onright>5034</onright>
+					<onup>23</onup>
+					<ondown>610</ondown>
+				</control>
+				<control type="button" id="610">
+					<description>Fake Button to fix Player Controls Navigation</description>
+					<onup>24</onup>
+					<ondown>603</ondown>
+					<visible>false</visible>
+				</control>
+				<control type="group">
+					<posx>0</posx>
+					<posy>270</posy>
+					<include>CommonNowPlaying_Controls</include>
+				</control>
+				<control type="button" id="611">
+					<description>Fake Button to fix Player Controls Navigation</description>
+					<onup>607</onup>
+					<ondown>20</ondown>
+					<visible>false</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>272</posy>
+					<height>16</height>
+					<texture border="0,0,5,0">shadow-bottom2.png</texture>
+					<animation effect="slide" end="0,45" time="0" condition="Player.HasAudio | Player.HasVideo">Conditional</animation>
+					<include condition="!Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesNormal</include>
+					<include condition="Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesWide</include>
+				</control>
+			</control>
+		</control>
+	<include>AllPagesInfo</include>
+
+		<control type="label">
+			<include>WindowTitleCommons</include>
+			<label>$LOCALIZE[20077]</label>
+		</control>
+	</controls>
+</window>

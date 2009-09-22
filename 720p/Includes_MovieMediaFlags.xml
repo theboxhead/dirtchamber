@@ -1,0 +1,3126 @@
+<includes>
+	<include name="MovieResolutionflagsVars">
+		<width>59</width>
+		<height>40</height>
+					
+		<visible>IsEmpty(ListItem.VideoResolution)</visible>
+	</include>
+	<include name="MovieVideoCodecflagsVars">
+		<width>59</width>
+		<height>40</height>
+		<visible>IsEmpty(ListItem.VideoCodec)</visible>
+	</include>
+	<include name="MovieAudioCodecflagsVars">
+		<width>59</width>
+		<height>40</height>
+		<visible>IsEmpty(ListItem.AudioCodec)</visible>
+	</include>
+	<include name="MovieSubtitlesflagsVars">
+		<width>59</width>
+		<height>40</height>
+		<visible>IsEmpty(ListItem.SubtitleLanguage)</visible>
+	</include>
+	<include name="MovieStudioflagsVars">
+		<width>93</width>
+		<height>63</height>
+	</include>
+	<include name="MovieStudioflagsVarsSmall">
+		<width>59</width>
+		<height>40</height>
+		<visible>!Control.IsVisible(56)</visible>
+	</include>
+	<include name="MovieMediaflagsVars">
+		<width>59</width>
+		<height>40</height>
+	</include>
+	<include name="MovieMediaflags">
+		<include>Window_OpenClose_Animation</include>
+	<!-- Resolution (Native) -->
+		<control type="image" id="5081"> 
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
+			<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+		</control>
+	<!-- Resolution (Studio Tag) -->
+		<control type="image" id="5081">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieResolutionflagsVars</include>
+			<texture>special://skin/images/flags/movies/resolution/sd.png</texture>
+			<visible>substring(listitem.studio,SDp) | substring(listitem.studio,SDi)</visible>
+		</control>
+		<control type="image" id="5081">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieResolutionflagsVars</include>
+			<texture>special://skin/images/flags/movies/resolution/480p.png</texture>
+			<visible>substring(listitem.studio,480p)</visible>
+		</control>
+		<control type="image" id="5081">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieResolutionflagsVars</include>
+			<texture>special://skin/images/flags/movies/resolution/576p.png</texture>
+			<visible>substring(listitem.studio,576p)</visible>
+		</control>
+		<control type="image" id="5081">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieResolutionflagsVars</include>
+			<texture>special://skin/images/flags/movies/resolution/720p.png</texture>
+			<visible>substring(listitem.studio,720p)</visible>
+		</control>
+		<control type="image" id="5081">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieResolutionflagsVars</include>
+			<texture>special://skin/images/flags/movies/resolution/1080p.png</texture>
+			<visible>substring(listitem.studio,1080p)</visible>
+		</control>
+		<control type="image" id="5081">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieResolutionflagsVars</include>
+			<texture>special://skin/images/flags/movies/resolution/480i.png</texture>
+			<visible>substring(listitem.studio,480i)</visible>
+		</control>
+		<control type="image" id="5081">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieResolutionflagsVars</include>
+			<texture>special://skin/images/flags/movies/resolution/576i.png</texture>
+			<visible>substring(listitem.studio,576i)</visible>
+		</control>
+		<control type="image" id="5081">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieResolutionflagsVars</include>
+			<texture>special://skin/images/flags/movies/resolution/720i.png</texture>
+			<visible>substring(listitem.studio,720i)</visible>
+		</control>
+		<control type="image" id="5081">
+			<include>MovieResolutionflagsVars</include>
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<texture>special://skin/images/flags/movies/resolution/1080i.png</texture>
+			<visible>substring(listitem.studio,1080i)</visible>
+		</control>
+	<!-- Aspect Ratio -->
+		<control type="image" id="5082">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+		</control>
+	<!-- Video Codec (Native) -->
+		<control type="image" id="5083">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/videocodec/$INFO[ListItem.VideoCodec,,.png]</texture>
+			<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+		</control>
+	<!-- Video Codec  (Studio Tag) -->
+		<control type="image" id="5083">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieVideoCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/videocodec/divx.png</texture>
+			<visible>substring(listitem.studio,DX50) | substring(listitem.studio,divx) | substring(listitem.studio,DIV3)</visible>
+		</control>
+		<control type="image" id="5083">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieVideoCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/videocodec/xvid.png</texture>
+			<visible>substring(listitem.studio,xvid)</visible>
+		</control>
+		<control type="image" id="5083">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieVideoCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/videocodec/h.264.png</texture>
+			<visible>substring(listitem.studio,V_MPEG4)</visible>
+		</control>
+		<control type="image" id="5083">
+			<include>MovieVideoCodecflagsVars</include>
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<texture>special://skin/images/flags/movies/videocodec/quicktime.png</texture>
+			<visible>substring(listitem.studio,SVQ3)</visible>
+		</control>
+		<control type="image" id="5083">
+			<include>MovieVideoCodecflagsVars</include>
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<texture>special://skin/images/flags/movies/videocodec/wmv.png</texture>
+			<visible>substring(listitem.studio,WMV) | substring(listitem.studio,WMV2)</visible>
+		</control>
+		<control type="image" id="5083">
+			<include>MovieVideoCodecflagsVars</include>
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<texture>special://skin/images/flags/movies/videocodec/wmvhd.png</texture>
+			<visible>substring(listitem.studio,WVC1)</visible>
+		</control>
+		<control type="image" id="5083">
+			<include>MovieVideoCodecflagsVars</include>
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<texture>special://skin/images/flags/movies/videocodec/mpeg.png</texture>
+			<visible>!substring(listitem.filename,hddvd) + [substring(listitem.filename,.ifo,Right) | substring(listitem.filename,.iso,Right) | substring(listitem.filename,.img,Right) | substring(listitem.filename,.mpg,Right) | substring(listitem.filename,.vob,Right)] + ![substring(listitem.studio,720) | substring(listitem.studio,1080)] + ![substring(listitem.studio,DX50) | substring(listitem.studio,divx) | substring(listitem.studio,DIV3) | substring(listitem.studio,xvid) | substring(listitem.studio,V_MPEG4) | substring(listitem.studio,WVC1) | substring(listitem.studio,WMV)]</visible>
+		</control>
+	<!-- Audio Codec (Native) -->
+		<control type="image" id="5084">
+			<include>MovieMediaflagsVars</include>
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<texture>special://skin/images/flags/movies/audiocodec/aac.png</texture>
+			<visible>substring(ListItem.AudioCodec,aac)</visible>
+		</control>
+		<control type="image" id="5084">
+			<include>MovieMediaflagsVars</include>
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<texture>special://skin/images/flags/movies/audiocodec/mono.png</texture>
+			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,ac-3)] + substring(ListItem.AudioChannels,1)</visible>
+		</control>
+		<control type="image" id="5084">
+			<include>MovieMediaflagsVars</include>
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<texture>special://skin/images/flags/movies/audiocodec/dolby20.png</texture>
+			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,ac-3)] + substring(ListItem.AudioChannels,2)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dd40.png</texture>
+			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,ac-3)] + substring(ListItem.AudioChannels,4)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dd41.png</texture>
+			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,ac-3)] + substring(ListItem.AudioChannels,5)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dd51.png</texture>
+			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,ac-3)] + substring(ListItem.AudioChannels,6)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dd71.png</texture>
+			<visible>[substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,ac-3)] + substring(ListItem.AudioChannels,8)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dts.png</texture>
+			<visible>[substring(ListItem.AudioCodec,dca) | substring(ListItem.AudioCodec,dts)] + substring(ListItem.AudioChannels,2)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dts51.png</texture>
+			<visible>[substring(ListItem.AudioCodec,dca) | substring(ListItem.AudioCodec,dts)] + substring(ListItem.AudioChannels,6)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dts71.png</texture>
+			<visible>[substring(ListItem.AudioCodec,dca) | substring(ListItem.AudioCodec,dts)] + substring(ListItem.AudioChannels,8)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/mpeg audio.png</texture>
+			<visible>substring(ListItem.AudioCodec,mp1)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/mp2.png</texture>
+			<visible>substring(ListItem.AudioCodec,mp2) | substring(ListItem.AudioCodec,mpeg audio)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/mp3.png</texture>
+			<visible>substring(ListItem.AudioCodec,mp3)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/ogg.png</texture>
+			<visible>substring(ListItem.AudioCodec,vorbis)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/wav.png</texture>
+			<visible>substring(ListItem.AudioCodec,pcm)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/wma.png</texture>
+			<visible>substring(ListItem.AudioCodec,wmav2) | substring(ListItem.AudioCodec,wma2)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/wmahd.png</texture>
+			<visible>substring(ListItem.AudioCodec,wmapro) | substring(ListItem.AudioCodec,wma3)</visible>
+		</control>
+	<!-- Audio Codec (Studio Tag) -->
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dts.png</texture>
+			<visible>substring(listitem.studio,dts) + ![substring(listitem.studio,6ch) | substring(listitem.studio,8ch)]</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dd40.png</texture>
+			<visible>substring(listitem.studio,4ch) + substring(listitem.studio,ac-3)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dd41.png</texture>
+			<visible>substring(listitem.studio,5ch) + substring(listitem.studio,ac-3)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dd51.png</texture>
+			<visible>substring(listitem.studio,6ch) + substring(listitem.studio,ac-3)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dd71.png</texture>
+			<visible>substring(listitem.studio,8ch) + substring(listitem.studio,ac-3)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dts51.png</texture>
+			<visible>substring(listitem.studio,6ch) + substring(listitem.studio,dts)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dts71.png</texture>
+			<visible>substring(listitem.studio,8ch) + substring(listitem.studio,dts)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dolby20.png</texture>
+			<visible>substring(listitem.studio,2ch) + substring(listitem.studio,ac-3)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dolbypro.png</texture>
+			<visible>substring(listitem.studio,dolbypro)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/mono.png</texture>
+			<visible>substring(listitem.studio,1ch) + substring(listitem.studio,ac-3)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dolbytruehd.png</texture>
+			<visible>substring(listitem.studio,truehd) | substring(listitem.studio,true hd)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/dtsma.png</texture>
+			<visible>substring(listitem.studio,dtsma) | substring(listitem.studio,master audio) + !substring(listitem.studio,ac-3)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/mp2.png</texture>
+			<visible>substring(listitem.studio,MPEG Audio) + [substring(listitem.filename,.ifo,Right) | substring(listitem.filename,.vob,Right) | substring(listitem.filename,.iso,Right) | substring(listitem.filename,.img,Right)] + ![substring(listitem.studio,720) | substring(listitem.studio,1080)]</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/mp3.png</texture>
+			<visible>substring(listitem.studio,MPEG Audio) + [substring(listitem.studio,DX50) | substring(listitem.studio,divx) | substring(listitem.studio,DIV3) | substring(listitem.studio,svq3) | substring(listitem.studio,xvid)]</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/flac.png</texture>
+			<visible>substring(listitem.studio,flac)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/ogg.png</texture>
+			<visible>substring(listitem.studio,vorbis)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/aac.png</texture>
+			<visible>substring(listitem.studio,aac)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/wav.png</texture>
+			<visible>substring(listitem.studio,PCM)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/wma.png</texture>
+			<visible>substring(listitem.studio,WMA) + !substring(listitem.studio,WMA3)</visible>
+		</control>
+		<control type="image" id="5084">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieAudioCodecflagsVars</include>
+			<texture>special://skin/images/flags/movies/audiocodec/wmahd.png</texture>
+			<visible>substring(listitem.studio,WMA3)</visible>
+		</control>
+	<!-- Source -->
+		<control type="image" id="5085">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/source/dvd.png</texture>
+			<visible>substring(listitem.filename,sddvd) | substring(listitem.filename,.ifo,Right) | substring(listitem.filename,.vob,Right) | [[!substring(listitem.filename,hddvd) + !substring(listitem.filename,bluray) + !substring(listitem.filename,sdtv) + !substring(listitem.filename,hdtv)] + [substring(listitem.filename,.iso,Right) | substring(listitem.filename,.img,Right) | substring(listitem.filename,.avi,Right) | substring(listitem.filename,.mkv,Right) | substring(listitem.filename,.mov,Right) | substring(listitem.filename,.mpg,Right) | substring(listitem.filename,.mpeg,Right) | substring(listitem.filename,.ts,Right) | substring(listitem.filename,.wmv,Right)] + ![substring(listitem.studio,720) | substring(listitem.studio,1080) | substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080)]]</visible>
+		</control>
+		<control type="image" id="5085">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/source/hddvd.png</texture>
+			<visible>substring(listitem.filename,hddvd) | substring(listitem.filename,.evo,Right)</visible>
+		</control>
+		<control type="image" id="5085">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/source/bluray.png</texture>
+			<visible>substring(listitem.filename,bluray) | substring(listitem.filename,blu-ray) | substring(listitem.filename,brrip) | substring(listitem.filename,.mt2s,Right) | [[!substring(listitem.filename,sddvd) + !substring(listitem.filename,blu-ray) + !substring(listitem.filename,brrip) + !substring(listitem.filename,tvrip) + !substring(listitem.filename,pdtv) + !substring(listitem.filename,hddvd) + !substring(listitem.filename,sdtv) + !substring(listitem.filename,hdtv)] + [substring(listitem.filename,.iso,Right) | substring(listitem.filename,.img,Right) | substring(listitem.filename,.avi,Right) | substring(listitem.filename,.mkv,Right) | substring(listitem.filename,.mov,Right) | substring(listitem.filename,.mpg,Right) | substring(listitem.filename,.mpeg,Right) | substring(listitem.filename,.ts,Right) | substring(listitem.filename,.wmv,Right)] + [substring(listitem.studio,720) | substring(listitem.studio,1080) | substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080)]]</visible>
+		</control>
+		<control type="image" id="5085">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/source/sdtv.png</texture>
+			<visible>substring(listitem.filename,sdtv) | substring(listitem.filename,tvrip)</visible>
+		</control>
+		<control type="image" id="5085">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/source/hdtv.png</texture>
+			<visible>substring(listitem.filename,hdtv) | substring(listitem.filename,pdtv)</visible>
+		</control>
+	<!-- Subtitles (Native) -->
+		<control type="image" id="5086">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/subtitles/cc.png</texture>
+			<visible>!IsEmpty(ListItem.SubtitleLanguage)</visible>
+		</control>
+	<!-- Subtitles (Studio Tag) -->
+		<control type="image" id="5086">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieSubtitlesflagsVars</include>
+			<texture>special://skin/images/flags/movies/subtitles/cc.png</texture>
+			<visible>substring(listitem.studio,sub)</visible>
+		</control>
+	<!-- Rating -->
+		<control type="image" id="5087">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/rating/rating-g.png</texture>
+			<visible>substring(listitem.mpaa,Rated G)</visible>
+		</control>
+		<control type="image" id="5087">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/rating/rating-pg.png</texture>
+			<visible>substring(listitem.mpaa,Rated PG) + !substring(listitem.mpaa,Rated PG-13)</visible>
+		</control>
+		<control type="image" id="5087">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/rating/rating-pg13.png</texture>
+			<visible>substring(listitem.mpaa,Rated PG-13)</visible>
+		</control>
+		<control type="image" id="5087">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/rating/rating-r.png</texture>
+			<visible>substring(listitem.mpaa,Rated R)</visible>
+		</control>
+		<control type="image" id="5087">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieMediaflagsVars</include>
+			<texture>special://skin/images/flags/movies/rating/rating-nc17.png</texture>
+			<visible>substring(listitem.mpaa,Rated NC-17)</visible>
+		</control>
+
+<control type="grouplist">
+	<width>59</width>
+	<height>40</height>
+	
+	<!-- Studio (Studio Tag) -->
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/20thcenturyfox.png</texture>
+			<visible>substring(listitem.studio,Fox)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/universal.png</texture>
+			<visible>substring(listitem.studio,Universal)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/filmfour.png</texture>
+			<visible>substring(listitem.studio,FilmFour) | substring(listitem.studio,Channel Four)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/disney.png</texture>
+			<visible>substring(listitem.studio,Disney)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/pixar.png</texture>
+			<visible>substring(listitem.studio,Pixar)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/gaumont.png</texture>
+			<visible>substring(listitem.studio,Gaumont)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/unitedartists.png</texture>
+			<visible>substring(listitem.studio,Artists)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/newlinecinema.png</texture>
+			<visible>substring(listitem.studio,New Line)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/dimension.png</texture>
+			<visible>substring(listitem.studio,Dimension)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/touchstone.png</texture>
+			<visible>substring(listitem.studio,Touchstone)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/hollywood.png</texture>
+			<visible>substring(listitem.studio,Hollywood)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/carolco.png</texture>
+			<visible>substring(listitem.studio,Carolco)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/revolution.png</texture>
+			<visible>substring(listitem.studio,Revolution)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/lucasfilm.png</texture>
+			<visible>substring(listitem.studio,Lucasfilm)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/screengems.png</texture>
+			<visible>substring(listitem.studio,Screen Gems)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/warner.png</texture>
+			<visible>substring(listitem.studio,Warner) + !substring(listitem.studio,Warner Independent)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/tristar.png</texture>
+			<visible>substring(listitem.studio,TriStar)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/castlerock.png</texture>
+			<visible>substring(listitem.studio,Castle Rock)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/studiocanal.png</texture>
+			<visible>substring(listitem.studio,Studio Canal)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/paramount.png</texture>
+			<visible>[substring(listitem.studio,Paramount) | substring(listitem.studio,Comedy Central)] + !substring(listitem.studio,Vantage)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/dreamworks.png</texture>
+			<visible>substring(listitem.studio,DreamWorks) + ![substring(listitem.studio,Animation) | substring(listitem.studio,SKG)]</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/dreamworks_skg.png</texture>
+			<visible>substring(listitem.studio,DreamWorks) + [substring(listitem.studio,Animation) | substring(listitem.studio,SKG)]</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/columbia.png</texture>
+			<visible>substring(listitem.studio,Columbia)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mgm.png</texture>
+			<visible>substring(listitem.studio,Mayer) | substring(listitem.studio,MGM)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/sonypictures.png</texture>
+			<visible>substring(listitem.studio,Sony) + !substring(listitem.studio,Classic)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/artisan.png</texture>
+			<visible>substring(listitem.studio,Artisan)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/lionsgate.png</texture>
+			<visible>substring(listitem.studio,Lionsgate)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/ceska_televize.png</texture>
+			<visible>substring(listitem.studio,Česká televize)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/zentropa.png</texture>
+			<visible>substring(listitem.studio,Zentropa)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/zdf.png</texture>
+			<visible>substring(listitem.studio,ZDF)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/saul_zaentz.png</texture>
+			<visible>substring(listitem.studio,Zaentz)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/xfilme.png</texture>
+			<visible>substring(listitem.studio,Xfilme)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/working_title.png</texture>
+			<visible>substring(listitem.studio,Working Title)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/wfdif.png</texture>
+			<visible>substring(listitem.studio,WFDiF)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/wdr.png</texture>
+			<visible>substring(listitem.studio,WDR)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/warner_independent_pictures.png</texture>
+			<visible>substring(listitem.studio,Warner Independent)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/village_roadshow.png</texture>
+			<visible>substring(listitem.studio,Village Roadshow)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/ugc.png</texture>
+			<visible>substring(listitem.studio,UGC)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/tvp.png</texture>
+			<visible>substring(listitem.studio,TVP)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/tvn.png</texture>
+			<visible>substring(listitem.studio,Turner)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/turner.png</texture>
+			<visible>substring(listitem.studio,Turner)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/tor.png</texture>
+			<visible>substring(listitem.studio,tor,Left)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/thisisthat.png</texture>
+			<visible>substring(listitem.studio,This Is That)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/thinkfilm.png</texture>
+			<visible>substring(listitem.studio,ThinkFilm)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/telos.png</texture>
+			<visible>substring(listitem.studio,Telos)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/syrena.png</texture>
+			<visible>substring(listitem.studio,Syrena)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/sidney_kimmel.png</texture>
+			<visible>substring(listitem.studio,Sidney Kimmel)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/showtime.png</texture>
+			<visible>substring(listitem.studio,Showtime)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/shout factory.png</texture>
+			<visible>substring(listitem.studio,Shout)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/sfi.png</texture>
+			<visible>substring(listitem.studio,SFI) + !substring(listitem.studio,Lucasfilm)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/semafor.png</texture>
+			<visible>substring(listitem.studio,SeMaFor)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/screen_australia.png</texture>
+			<visible>substring(listitem.studio,Screen Australia)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/scott_free.png</texture>
+			<visible>substring(listitem.studio,Scott)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/scifi.png</texture>
+			<visible>substring(listitem.studio,SciFi)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/sandrew.png</texture>
+			<visible>substring(listitem.studio,Sandrew)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/rogue.png</texture>
+			<visible>substring(listitem.studio,Rogue)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/roadside.png</texture>
+			<visible>substring(listitem.studio,Roadside Attractions)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/rko_radio.png</texture>
+			<visible>substring(listitem.studio,RKO Radio)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/rhombus.png</texture>
+			<visible>substring(listitem.studio,Rhombus)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/relativity.png</texture>
+			<visible>substring(listitem.studio,Relativity)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/regency.png</texture>
+			<visible>substring(listitem.studio,Regency)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/redrum.png</texture>
+			<visible>substring(listitem.studio,Redrum)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/red_wagon.png</texture>
+			<visible>substring(listitem.studio,Red Wagon)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/rankin.png</texture>
+			<visible>substring(listitem.studio,Rankin)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/rai.png</texture>
+			<visible>substring(listitem.studio,Rai)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/premiere.png</texture>
+			<visible>substring(listitem.studio,Premiere) + !substring(listitem.studio,Direkt)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/polygram.png</texture>
+			<visible>substring(listitem.studio,PolyGram)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/film_polski.png</texture>
+			<visible>substring(listitem.studio,Polski)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/polsat.png</texture>
+			<visible>substring(listitem.studio,Polsat)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/platige.png</texture>
+			<visible>substring(listitem.studio,Platige)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/pisf.png</texture>
+			<visible>substring(listitem.studio,PISF)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/picturehouse.png</texture>
+			<visible>substring(listitem.studio,Picturehouse)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/phoenix.png</texture>
+			<visible>substring(listitem.studio,Phoenix)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/pecf.png</texture>
+			<visible>substring(listitem.studio,PECF)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/participant.png</texture>
+			<visible>substring(listitem.studio,Participant)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/overture.png</texture>
+			<visible>substring(listitem.studio,Overture)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/orion.png</texture>
+			<visible>substring(listitem.studio,ORiON)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/nuimage.png</texture>
+			<visible>substring(listitem.studio,NUIMAGE)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/nothing.png</texture>
+			<visible>substring(listitem.studio,nothing)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/nala.png</texture>
+			<visible>substring(listitem.studio,NALA)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/myriad.png</texture>
+			<visible>substring(listitem.studio,Myriad)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mosfilm.png</texture>
+			<visible>substring(listitem.studio,Mosfilm)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/morgan_creek.png</texture>
+			<visible>substring(listitem.studio,Morgan Creek)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/monolith.png</texture>
+			<visible>substring(listitem.studio,Monolith)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/miramax.png</texture>
+			<visible>substring(listitem.studio,Miramax)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/millenium.png</texture>
+			<visible>substring(listitem.studio,Millenium)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mibac.png</texture>
+			<visible>substring(listitem.studio,MiBAC)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/maya.png</texture>
+			<visible>substring(listitem.studio,Maya)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/maverick.png</texture>
+			<visible>substring(listitem.studio,Maverick)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/marvel.png</texture>
+			<visible>substring(listitem.studio,MARVEL)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mandate.png</texture>
+			<visible>substring(listitem.studio,Mandate Pictures)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mandalay.png</texture>
+			<visible>substring(listitem.studio,Mandalay)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/magnolia.png</texture>
+			<visible>substring(listitem.studio,Magnolia)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/madman.png</texture>
+			<visible>substring(listitem.studio,Madman Entertainment)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/legendary.png</texture>
+			<visible>substring(listitem.studio,Legendary)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/lakeshore.png</texture>
+			<visible>substring(listitem.studio,Lakeshore)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/ladd.png</texture>
+			<visible>substring(listitem.studio,Ladd)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/kadr.png</texture>
+			<visible>substring(listitem.studio,KADR)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/kadokawa.png</texture>
+			<visible>substring(listitem.studio,Kadokawa)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/jim henson.png</texture>
+			<visible>substring(listitem.studio,Jim Henson)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/jerry_bruckheimer.png</texture>
+			<visible>substring(listitem.studio,Jerry Bruckheimer)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/jawa.png</texture>
+			<visible>substring(listitem.studio,Jawa)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/iti.png</texture>
+			<visible>substring(listitem.studio,ITI) + !substring(listitem.studio,British)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/interactual.png</texture>
+			<visible>substring(listitem.studio,interActual)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/infinifilm.png</texture>
+			<visible>substring(listitem.studio,infinifilm)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/infilm.png</texture>
+			<visible>substring(listitem.studio,Infilm)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/industrial_light.png</texture>
+			<visible>substring(listitem.studio,Industrial Light and Magic)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/imax.png</texture>
+			<visible>substring(listitem.studio,IMAX)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/imagine.png</texture>
+			<visible>substring(listitem.studio,Imagine)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/imaginary_forces.png</texture>
+			<visible>substring(listitem.studio,Imaginary Forces)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/icon.png</texture>
+			<visible>substring(listitem.studio,Icon)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/hbo.png</texture>
+			<visible>substring(listitem.studio,HBO)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/happy_madison.png</texture>
+			<visible>substring(listitem.studio,Happy Madison)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/hand_made.png</texture>
+			<visible>substring(listitem.studio,Hand Made Films)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/halestorm.png</texture>
+			<visible>substring(listitem.studio,Halestorm Entertainment)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/gutek.png</texture>
+			<visible>substring(listitem.studio,Gutek)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/gramercy.png</texture>
+			<visible>substring(listitem.studio,Gramercy)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/gofilms.png</texture>
+			<visible>substring(listitem.studio,Go Films)</visible>
+		</control>
+		<control type="image" id="5088">
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/ghosthouse.png</texture>
+			<visible>substring(listitem.studio,Ghost House)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/fuji.png</texture>
+			<visible>substring(listitem.studio,Fuji)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/franchise.png</texture>
+			<visible>substring(listitem.studio,Franchise)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/fox.png</texture>
+			<visible>substring(listitem.studio,FOX Network) + !substring(listitem.studio,searchlight)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/searchlight.png</texture>
+			<visible>substring(listitem.studio,FOX Network) + substring(listitem.studio,searchlight)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/filmax.png</texture>
+			<visible>substring(listitem.studio,Filmax)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/film_media.png</texture>
+			<visible>substring(listitem.studio,Film Media)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/figaro.png</texture>
+			<visible>substring(listitem.studio,Figaro)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/fact.png</texture>
+			<visible>substring(listitem.studio,Fact)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/excel.png</texture>
+			<visible>substring(listitem.studio,Excel)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/europa_corp.png</texture>
+			<visible>substring(listitem.studio,Europa)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/eurimages.png</texture>
+			<visible>substring(listitem.studio,Eurimages)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/entertainment_tonight.png</texture>
+			<visible>substring(listitem.studio,Entertainment Tonight)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/eleven.png</texture>
+			<visible>substring(listitem.studio,eleven: a music company)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/premiere-direkt.png</texture>
+			<visible>substring(listitem.studio,Direkt)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/de_laurentiis.png</texture>
+			<visible>substring(listitem.studio,De Laurentiis)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/digital_playground.png</texture>
+			<visible>substring(listitem.studio,Digital Playground)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/dfi.png</texture>
+			<visible>substring(listitem.studio,DFI)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/destination.png</texture>
+			<visible>substring(listitem.studio,Destination)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/czolowka.png</texture>
+			<visible>substring(listitem.studio,Czolowka)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/constantin.png</texture>
+			<visible>substring(listitem.studio,Constantin)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/comedy central.png</texture>
+			<visible>substring(listitem.studio,Comedy Central)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/cnc.png</texture>
+			<visible>substring(listitem.studio,CNC)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/cheyenne.png</texture>
+			<visible>substring(listitem.studio,Cheyenne)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/celador.png</texture>
+			<visible>substring(listitem.studio,celador)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/cbs.png</texture>
+			<visible>substring(listitem.studio,CBS)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/cartoon.png</texture>
+			<visible>substring(listitem.studio,Cartoon)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/carolco.png</texture>
+			<visible>substring(listitem.studio,Carolco)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/canalplus.png</texture>
+			<visible>substring(listitem.studio,Canal) + !substring(listitem.studio,Studio Canal)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/blackdog.png</texture>
+			<visible>substring(listitem.studio,Black Dog)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/beacon.png</texture>
+			<visible>substring(listitem.studio,Beacon)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bbc.png</texture>
+			<visible>substring(listitem.studio,BBC)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bazmark.png</texture>
+			<visible>substring(listitem.studio,Bazmark)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bandapart.png</texture>
+			<visible>substring(listitem.studio,Band Apart)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bad_robot.png</texture>
+			<visible>substring(listitem.studio,Bad Robot)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/babylonian.png</texture>
+			<visible>substring(listitem.studio,Babylonian)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/arte.png</texture>
+			<visible>substring(listitem.studio,Arte)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/ark.png</texture>
+			<visible>substring(listitem.studio,Ark Film Collective)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/apple.png</texture>
+			<visible>substring(listitem.studio,Apple Film Production)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/anchor_bay.png</texture>
+			<visible>substring(listitem.studio,Anchor Bay)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/amblin.png</texture>
+			<visible>substring(listitem.studio,Amblin)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/alliance atlantis.png</texture>
+			<visible>substring(listitem.studio,Alliance Atlantis)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/alcon.png</texture>
+			<visible>substring(listitem.studio,Alcon)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/abc.png</texture>
+			<visible>substring(listitem.studio,ABC)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/abandon.png</texture>
+			<visible>substring(listitem.studio,Abandon)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/aandm.png</texture>
+			<visible>substring(listitem.studio,A and M)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/2929.png</texture>
+			<visible>substring(listitem.studio,2929)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/57_irving.png</texture>
+			<visible>substring(listitem.studio,57th and Irving Productions)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/avnet-kerner.png</texture>
+			<visible>substring(listitem.studio,Avnet Kerner)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/blue_sky.png</texture>
+			<visible>substring(listitem.studio,Blue Sky)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/capcom.png</texture>
+			<visible>substring(listitem.studio,capcom)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/criterion.png</texture>
+			<visible>substring(listitem.studio,Criterion)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/league_of_noble_peers.png</texture>
+			<visible>substring(listitem.studio,League of Noble Peers)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/manga.png</texture>
+			<visible>substring(listitem.studio,Manga)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mediapro.png</texture>
+			<visible>substring(listitem.studio,Mediapro)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/milkshake.png</texture>
+			<visible>substring(listitem.studio,Milkshake)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/peace_arch.png</texture>
+			<visible>substring(listitem.studio,Peace Arch)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/summit.png</texture>
+			<visible>substring(listitem.studio,summit)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/view_askew.png</texture>
+			<visible>substring(listitem.studio,View Askew)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/concorde.png</texture>
+			<visible>substring(listitem.studio,Concorde)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/ambience.png</texture>
+			<visible>substring(listitem.studio,Ambience)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/pandora.png</texture>
+			<visible>substring(listitem.studio,Pandora)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mindeye.png</texture>
+			<visible>substring(listitem.studio,Mind) + substring(listitem.studio,Eye)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mikezossproductions.png</texture>
+			<visible>substring(listitem.studio,Mike Zoss)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/emmedia.png</texture>
+			<visible>substring(listitem.studio,EM Media)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/360.png</texture>
+			<visible>substring(listitem.studio,Management 360)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/alloy.png</texture>
+			<visible>substring(listitem.studio,Alloy Entertainment)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bigtalk.png</texture>
+			<visible>substring(listitem.studio,Big Talk)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bandai_visual.png</texture>
+			<visible>substring(listitem.studio,Bandai Visual)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bandai.png</texture>
+			<visible>substring(listitem.studio,Bandai) + !substring(listitem.studio,Bandai Visual)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/playtone.png</texture>
+			<visible>substring(listitem.studio,Playtone)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/image_movers.png</texture>
+			<visible>substring(listitem.studio,ImageMovers)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/p_vantage.png</texture>
+			<visible>substring(listitem.studio,Paramount) + substring(listitem.studio,Vantage)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/spc.png</texture>
+			<visible>substring(listitem.studio,Sony) + substring(listitem.studio,Classic)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/zebra.png</texture>
+			<visible>substring(listitem.studio,Zebra)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/toho.png</texture>
+			<visible>substring(listitem.studio,Toho)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/squareenix.png</texture>
+			<visible>substring(listitem.studio,Enix) + !substring(listitem.studio,Phoenix)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/cannon.png</texture>
+			<visible>substring(listitem.studio,Cannon International)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/amc.png</texture>
+			<visible>substring(listitem.studio,AMC)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/brightlight.png</texture>
+			<visible>substring(listitem.studio,Brightlight Pictures)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/oddlot.png</texture>
+			<visible>substring(listitem.studio,Odd Lot Entertainment)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/residentevil.png</texture>
+			<visible>substring(listitem.studio,Resident Evil Productions)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/silver_pictures.png</texture>
+			<visible>substring(listitem.studio,Silver Pictures)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/smc.png</texture>
+			<visible>substring(listitem.studio,SMC)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/steele.png</texture>
+			<visible>substring(listitem.studio,Steele Films)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/twisted.png</texture>
+			<visible>substring(listitem.studio,Twisted Pictures)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/walden_media.png</texture>
+			<visible>substring(listitem.studio,Walden Media)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/wildbunch.png</texture>
+			<visible>substring(listitem.studio,Wild Bunch)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/kennedymarshall.png</texture>
+			<visible>substring(listitem.studio,Kennedy)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/aardman.png</texture>
+			<visible>substring(listitem.studio,Aardman)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bedford_falls.png</texture>
+			<visible>substring(listitem.studio,Bedford Falls)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/byp.png</texture>
+			<visible>substring(listitem.studio,Bob Yari Productions)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/crowvision.png</texture>
+			<visible>substring(listitem.studio,Crowvision)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/darkhorse.png</texture>
+			<visible>substring(listitem.studio,Dark Horse)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/fox_atomic.png</texture>
+			<visible>substring(listitem.studio,Fox Atomic)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/geffen.png</texture>
+			<visible>substring(listitem.studio,Geffen)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/largo.png</texture>
+			<visible>substring(listitem.studio,Largo)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/psycho.png</texture>
+			<visible>substring(listitem.studio,Psycho)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/silver_nitrate.png</texture>
+			<visible>substring(listitem.studio,Silver Nitrate)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/dc.png</texture>
+			<visible>substring(listitem.studio,DC Films)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/1492.png</texture>
+			<visible>substring(listitem.studio,1492)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/cinergi.png</texture>
+			<visible>substring(listitem.studio,cinergi)</visible>
+		</control>
+	<!-- Studio  -->
+		<control type="image" id="5089">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVarsSmall</include>
+			<texture>special://skin/images/flags/movies/studio/$INFO[ListItem.Studio,,.png]</texture>
+			<visible>!IsEmpty(ListItem.Studio)</visible>
+		</control>
+</control>
+	</include>
+	<include name="MovieStudioflag">
+		<include>Window_OpenClose_Animation</include>
+<control type="grouplist">
+	<width>93</width>
+	<height>63</height>
+	<!-- Studio (Studio Tag) -->
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/20thcenturyfox.png</texture>
+			<visible>substring(listitem.studio,Fox)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/universal.png</texture>
+			<visible>substring(listitem.studio,Universal)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/filmfour.png</texture>
+			<visible>substring(listitem.studio,FilmFour) | substring(listitem.studio,Channel Four)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/disney.png</texture>
+			<visible>substring(listitem.studio,Disney)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/pixar.png</texture>
+			<visible>substring(listitem.studio,Pixar)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/gaumont.png</texture>
+			<visible>substring(listitem.studio,Gaumont)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/unitedartists.png</texture>
+			<visible>substring(listitem.studio,Artists)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/newlinecinema.png</texture>
+			<visible>substring(listitem.studio,New Line)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/dimension.png</texture>
+			<visible>substring(listitem.studio,Dimension)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/touchstone.png</texture>
+			<visible>substring(listitem.studio,Touchstone)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/hollywood.png</texture>
+			<visible>substring(listitem.studio,Hollywood)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/carolco.png</texture>
+			<visible>substring(listitem.studio,Carolco)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/revolution.png</texture>
+			<visible>substring(listitem.studio,Revolution)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/lucasfilm.png</texture>
+			<visible>substring(listitem.studio,Lucasfilm)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/screengems.png</texture>
+			<visible>substring(listitem.studio,Screen Gems)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/warner.png</texture>
+			<visible>substring(listitem.studio,Warner) + !substring(listitem.studio,Warner Independent)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/tristar.png</texture>
+			<visible>substring(listitem.studio,TriStar)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/castlerock.png</texture>
+			<visible>substring(listitem.studio,Castle Rock)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/studiocanal.png</texture>
+			<visible>substring(listitem.studio,Studio Canal)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/paramount.png</texture>
+			<visible>[substring(listitem.studio,Paramount) | substring(listitem.studio,Comedy Central)] + !substring(listitem.studio,Vantage)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/dreamworks.png</texture>
+			<visible>substring(listitem.studio,DreamWorks) + ![substring(listitem.studio,Animation) | substring(listitem.studio,SKG)]</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/dreamworks_skg.png</texture>
+			<visible>substring(listitem.studio,DreamWorks) + [substring(listitem.studio,Animation) | substring(listitem.studio,SKG)]</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/columbia.png</texture>
+			<visible>substring(listitem.studio,Columbia)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mgm.png</texture>
+			<visible>substring(listitem.studio,Mayer) | substring(listitem.studio,MGM)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/sonypictures.png</texture>
+			<visible>substring(listitem.studio,Sony) + !substring(listitem.studio,Classic)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/artisan.png</texture>
+			<visible>substring(listitem.studio,Artisan)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/lionsgate.png</texture>
+			<visible>substring(listitem.studio,Lionsgate)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/ceska_televize.png</texture>
+			<visible>substring(listitem.studio,Česká televize)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/zentropa.png</texture>
+			<visible>substring(listitem.studio,Zentropa)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/zdf.png</texture>
+			<visible>substring(listitem.studio,ZDF)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/saul_zaentz.png</texture>
+			<visible>substring(listitem.studio,Zaentz)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/xfilme.png</texture>
+			<visible>substring(listitem.studio,Xfilme)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/working_title.png</texture>
+			<visible>substring(listitem.studio,Working Title)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/wfdif.png</texture>
+			<visible>substring(listitem.studio,WFDiF)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/wdr.png</texture>
+			<visible>substring(listitem.studio,WDR)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/warner_independent_pictures.png</texture>
+			<visible>substring(listitem.studio,Warner Independent)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/village_roadshow.png</texture>
+			<visible>substring(listitem.studio,Village Roadshow)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/ugc.png</texture>
+			<visible>substring(listitem.studio,UGC)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/tvp.png</texture>
+			<visible>substring(listitem.studio,TVP)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/tvn.png</texture>
+			<visible>substring(listitem.studio,Turner)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/turner.png</texture>
+			<visible>substring(listitem.studio,Turner)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/tor.png</texture>
+			<visible>substring(listitem.studio,tor,Left)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/thisisthat.png</texture>
+			<visible>substring(listitem.studio,This Is That)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/thinkfilm.png</texture>
+			<visible>substring(listitem.studio,ThinkFilm)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/telos.png</texture>
+			<visible>substring(listitem.studio,Telos)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/syrena.png</texture>
+			<visible>substring(listitem.studio,Syrena)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/sidney_kimmel.png</texture>
+			<visible>substring(listitem.studio,Sidney Kimmel)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/showtime.png</texture>
+			<visible>substring(listitem.studio,Showtime)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/shout factory.png</texture>
+			<visible>substring(listitem.studio,Shout)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/sfi.png</texture>
+			<visible>substring(listitem.studio,SFI) + !substring(listitem.studio,Lucasfilm)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/semafor.png</texture>
+			<visible>substring(listitem.studio,SeMaFor)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/screen_australia.png</texture>
+			<visible>substring(listitem.studio,Screen Australia)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/scott_free.png</texture>
+			<visible>substring(listitem.studio,Scott)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/scifi.png</texture>
+			<visible>substring(listitem.studio,SciFi)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/sandrew.png</texture>
+			<visible>substring(listitem.studio,Sandrew)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/rogue.png</texture>
+			<visible>substring(listitem.studio,Rogue)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/roadside.png</texture>
+			<visible>substring(listitem.studio,Roadside Attractions)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/rko_radio.png</texture>
+			<visible>substring(listitem.studio,RKO Radio)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/rhombus.png</texture>
+			<visible>substring(listitem.studio,Rhombus)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/relativity.png</texture>
+			<visible>substring(listitem.studio,Relativity)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/regency.png</texture>
+			<visible>substring(listitem.studio,Regency)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/redrum.png</texture>
+			<visible>substring(listitem.studio,Redrum)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/red_wagon.png</texture>
+			<visible>substring(listitem.studio,Red Wagon)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/rankin.png</texture>
+			<visible>substring(listitem.studio,Rankin)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/rai.png</texture>
+			<visible>substring(listitem.studio,Rai)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/premiere.png</texture>
+			<visible>substring(listitem.studio,Premiere) + !substring(listitem.studio,Direkt)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/polygram.png</texture>
+			<visible>substring(listitem.studio,PolyGram)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/film_polski.png</texture>
+			<visible>substring(listitem.studio,Polski)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/polsat.png</texture>
+			<visible>substring(listitem.studio,Polsat)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/platige.png</texture>
+			<visible>substring(listitem.studio,Platige)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/pisf.png</texture>
+			<visible>substring(listitem.studio,PISF)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/picturehouse.png</texture>
+			<visible>substring(listitem.studio,Picturehouse)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/phoenix.png</texture>
+			<visible>substring(listitem.studio,Phoenix)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/pecf.png</texture>
+			<visible>substring(listitem.studio,PECF)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/participant.png</texture>
+			<visible>substring(listitem.studio,Participant)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/overture.png</texture>
+			<visible>substring(listitem.studio,Overture)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/orion.png</texture>
+			<visible>substring(listitem.studio,ORiON)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/nuimage.png</texture>
+			<visible>substring(listitem.studio,NUIMAGE)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/nothing.png</texture>
+			<visible>substring(listitem.studio,nothing)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/nala.png</texture>
+			<visible>substring(listitem.studio,NALA)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/myriad.png</texture>
+			<visible>substring(listitem.studio,Myriad)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mosfilm.png</texture>
+			<visible>substring(listitem.studio,Mosfilm)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/morgan_creek.png</texture>
+			<visible>substring(listitem.studio,Morgan Creek)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/monolith.png</texture>
+			<visible>substring(listitem.studio,Monolith)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/miramax.png</texture>
+			<visible>substring(listitem.studio,Miramax)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/millenium.png</texture>
+			<visible>substring(listitem.studio,Millenium)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mibac.png</texture>
+			<visible>substring(listitem.studio,MiBAC)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/maya.png</texture>
+			<visible>substring(listitem.studio,Maya)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/maverick.png</texture>
+			<visible>substring(listitem.studio,Maverick)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/marvel.png</texture>
+			<visible>substring(listitem.studio,MARVEL)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mandate.png</texture>
+			<visible>substring(listitem.studio,Mandate Pictures)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mandalay.png</texture>
+			<visible>substring(listitem.studio,Mandalay)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/magnolia.png</texture>
+			<visible>substring(listitem.studio,Magnolia)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/madman.png</texture>
+			<visible>substring(listitem.studio,Madman Entertainment)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/legendary.png</texture>
+			<visible>substring(listitem.studio,Legendary)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/lakeshore.png</texture>
+			<visible>substring(listitem.studio,Lakeshore)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/ladd.png</texture>
+			<visible>substring(listitem.studio,Ladd)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/kadr.png</texture>
+			<visible>substring(listitem.studio,KADR)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/kadokawa.png</texture>
+			<visible>substring(listitem.studio,Kadokawa)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/jim henson.png</texture>
+			<visible>substring(listitem.studio,Jim Henson)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/jerry_bruckheimer.png</texture>
+			<visible>substring(listitem.studio,Jerry Bruckheimer)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/jawa.png</texture>
+			<visible>substring(listitem.studio,Jawa)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/iti.png</texture>
+			<visible>substring(listitem.studio,ITI) + !substring(listitem.studio,British)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/interactual.png</texture>
+			<visible>substring(listitem.studio,interActual)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/infinifilm.png</texture>
+			<visible>substring(listitem.studio,infinifilm)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/infilm.png</texture>
+			<visible>substring(listitem.studio,Infilm)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/industrial_light.png</texture>
+			<visible>substring(listitem.studio,Industrial Light and Magic)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/imax.png</texture>
+			<visible>substring(listitem.studio,IMAX)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/imagine.png</texture>
+			<visible>substring(listitem.studio,Imagine)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/imaginary_forces.png</texture>
+			<visible>substring(listitem.studio,Imaginary Forces)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/icon.png</texture>
+			<visible>substring(listitem.studio,Icon)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/hbo.png</texture>
+			<visible>substring(listitem.studio,HBO)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/happy_madison.png</texture>
+			<visible>substring(listitem.studio,Happy Madison)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/hand_made.png</texture>
+			<visible>substring(listitem.studio,Hand Made Films)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/halestorm.png</texture>
+			<visible>substring(listitem.studio,Halestorm Entertainment)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/gutek.png</texture>
+			<visible>substring(listitem.studio,Gutek)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/gramercy.png</texture>
+			<visible>substring(listitem.studio,Gramercy)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/gofilms.png</texture>
+			<visible>substring(listitem.studio,Go Films)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/ghosthouse.png</texture>
+			<visible>substring(listitem.studio,Ghost House)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/fuji.png</texture>
+			<visible>substring(listitem.studio,Fuji)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/franchise.png</texture>
+			<visible>substring(listitem.studio,Franchise)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/fox.png</texture>
+			<visible>substring(listitem.studio,FOX Network) + !substring(listitem.studio,searchlight)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/searchlight.png</texture>
+			<visible>substring(listitem.studio,FOX Network) + substring(listitem.studio,searchlight)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/filmax.png</texture>
+			<visible>substring(listitem.studio,Filmax)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/film_media.png</texture>
+			<visible>substring(listitem.studio,Film Media)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/figaro.png</texture>
+			<visible>substring(listitem.studio,Figaro)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/fact.png</texture>
+			<visible>substring(listitem.studio,Fact)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/excel.png</texture>
+			<visible>substring(listitem.studio,Excel)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/europa_corp.png</texture>
+			<visible>substring(listitem.studio,Europa)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/eurimages.png</texture>
+			<visible>substring(listitem.studio,Eurimages)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/entertainment_tonight.png</texture>
+			<visible>substring(listitem.studio,Entertainment Tonight)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/eleven.png</texture>
+			<visible>substring(listitem.studio,eleven: a music company)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/premiere-direkt.png</texture>
+			<visible>substring(listitem.studio,Direkt)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/de_laurentiis.png</texture>
+			<visible>substring(listitem.studio,De Laurentiis)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/digital_playground.png</texture>
+			<visible>substring(listitem.studio,Digital Playground)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/dfi.png</texture>
+			<visible>substring(listitem.studio,DFI)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/destination.png</texture>
+			<visible>substring(listitem.studio,Destination)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/czolowka.png</texture>
+			<visible>substring(listitem.studio,Czolowka)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/constantin.png</texture>
+			<visible>substring(listitem.studio,Constantin)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/comedy central.png</texture>
+			<visible>substring(listitem.studio,Comedy Central)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/cnc.png</texture>
+			<visible>substring(listitem.studio,CNC)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/cheyenne.png</texture>
+			<visible>substring(listitem.studio,Cheyenne)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/celador.png</texture>
+			<visible>substring(listitem.studio,celador)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/cbs.png</texture>
+			<visible>substring(listitem.studio,CBS)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/cartoon.png</texture>
+			<visible>substring(listitem.studio,Cartoon)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/carolco.png</texture>
+			<visible>substring(listitem.studio,Carolco)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/canalplus.png</texture>
+			<visible>substring(listitem.studio,Canal) + !substring(listitem.studio,Studio Canal)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/blackdog.png</texture>
+			<visible>substring(listitem.studio,Black Dog)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/beacon.png</texture>
+			<visible>substring(listitem.studio,Beacon)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bbc.png</texture>
+			<visible>substring(listitem.studio,BBC)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bazmark.png</texture>
+			<visible>substring(listitem.studio,Bazmark)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bandapart.png</texture>
+			<visible>substring(listitem.studio,Band Apart)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bad_robot.png</texture>
+			<visible>substring(listitem.studio,Bad Robot)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/babylonian.png</texture>
+			<visible>substring(listitem.studio,Babylonian)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/arte.png</texture>
+			<visible>substring(listitem.studio,Arte)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/ark.png</texture>
+			<visible>substring(listitem.studio,Ark Film Collective)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/apple.png</texture>
+			<visible>substring(listitem.studio,Apple Film Production)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/anchor_bay.png</texture>
+			<visible>substring(listitem.studio,Anchor Bay)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/amblin.png</texture>
+			<visible>substring(listitem.studio,Amblin)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/alliance atlantis.png</texture>
+			<visible>substring(listitem.studio,Alliance Atlantis)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/alcon.png</texture>
+			<visible>substring(listitem.studio,Alcon)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/abc.png</texture>
+			<visible>substring(listitem.studio,ABC)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/abandon.png</texture>
+			<visible>substring(listitem.studio,Abandon)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/aandm.png</texture>
+			<visible>substring(listitem.studio,A and M)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/2929.png</texture>
+			<visible>substring(listitem.studio,2929)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/57_irving.png</texture>
+			<visible>substring(listitem.studio,57th and Irving Productions)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/avnet-kerner.png</texture>
+			<visible>substring(listitem.studio,Avnet Kerner)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/blue_sky.png</texture>
+			<visible>substring(listitem.studio,Blue Sky)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/capcom.png</texture>
+			<visible>substring(listitem.studio,capcom)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/criterion.png</texture>
+			<visible>substring(listitem.studio,Criterion)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/league_of_noble_peers.png</texture>
+			<visible>substring(listitem.studio,League of Noble Peers)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/manga.png</texture>
+			<visible>substring(listitem.studio,Manga)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mediapro.png</texture>
+			<visible>substring(listitem.studio,Mediapro)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/milkshake.png</texture>
+			<visible>substring(listitem.studio,Milkshake)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/peace_arch.png</texture>
+			<visible>substring(listitem.studio,Peace Arch)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/summit.png</texture>
+			<visible>substring(listitem.studio,summit)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/view_askew.png</texture>
+			<visible>substring(listitem.studio,View Askew)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/concorde.png</texture>
+			<visible>substring(listitem.studio,Concorde)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/ambience.png</texture>
+			<visible>substring(listitem.studio,Ambience)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/pandora.png</texture>
+			<visible>substring(listitem.studio,Pandora)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mindeye.png</texture>
+			<visible>substring(listitem.studio,Mind) + substring(listitem.studio,Eye)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/mikezossproductions.png</texture>
+			<visible>substring(listitem.studio,Mike Zoss)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/emmedia.png</texture>
+			<visible>substring(listitem.studio,EM Media)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/360.png</texture>
+			<visible>substring(listitem.studio,Management 360)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/alloy.png</texture>
+			<visible>substring(listitem.studio,Alloy Entertainment)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bigtalk.png</texture>
+			<visible>substring(listitem.studio,Big Talk)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bandai_visual.png</texture>
+			<visible>substring(listitem.studio,Bandai Visual)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bandai.png</texture>
+			<visible>substring(listitem.studio,Bandai) + !substring(listitem.studio,Bandai Visual)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/playtone.png</texture>
+			<visible>substring(listitem.studio,Playtone)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/image_movers.png</texture>
+			<visible>substring(listitem.studio,ImageMovers)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/p_vantage.png</texture>
+			<visible>substring(listitem.studio,Paramount) + substring(listitem.studio,Vantage)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/spc.png</texture>
+			<visible>substring(listitem.studio,Sony) + substring(listitem.studio,Classic)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/zebra.png</texture>
+			<visible>substring(listitem.studio,Zebra)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/toho.png</texture>
+			<visible>substring(listitem.studio,Toho)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/squareenix.png</texture>
+			<visible>substring(listitem.studio,Enix) + !substring(listitem.studio,Phoenix)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/cannon.png</texture>
+			<visible>substring(listitem.studio,Cannon International)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/amc.png</texture>
+			<visible>substring(listitem.studio,AMC)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/brightlight.png</texture>
+			<visible>substring(listitem.studio,Brightlight Pictures)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/oddlot.png</texture>
+			<visible>substring(listitem.studio,Odd Lot Entertainment)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/residentevil.png</texture>
+			<visible>substring(listitem.studio,Resident Evil Productions)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/silver_pictures.png</texture>
+			<visible>substring(listitem.studio,Silver Pictures)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/smc.png</texture>
+			<visible>substring(listitem.studio,SMC)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/steele.png</texture>
+			<visible>substring(listitem.studio,Steele Films)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/twisted.png</texture>
+			<visible>substring(listitem.studio,Twisted Pictures)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/walden_media.png</texture>
+			<visible>substring(listitem.studio,Walden Media)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/wildbunch.png</texture>
+			<visible>substring(listitem.studio,Wild Bunch)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/kennedymarshall.png</texture>
+			<visible>substring(listitem.studio,Kennedy)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/aardman.png</texture>
+			<visible>substring(listitem.studio,Aardman)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/bedford_falls.png</texture>
+			<visible>substring(listitem.studio,Bedford Falls)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/byp.png</texture>
+			<visible>substring(listitem.studio,Bob Yari Productions)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/crowvision.png</texture>
+			<visible>substring(listitem.studio,Crowvision)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/darkhorse.png</texture>
+			<visible>substring(listitem.studio,Dark Horse)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/fox_atomic.png</texture>
+			<visible>substring(listitem.studio,Fox Atomic)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/geffen.png</texture>
+			<visible>substring(listitem.studio,Geffen)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/largo.png</texture>
+			<visible>substring(listitem.studio,Largo)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/psycho.png</texture>
+			<visible>substring(listitem.studio,Psycho)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/silver_nitrate.png</texture>
+			<visible>substring(listitem.studio,Silver Nitrate)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/dc.png</texture>
+			<visible>substring(listitem.studio,DC Films)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/1492.png</texture>
+			<visible>substring(listitem.studio,1492)</visible>
+		</control>
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio-deprecated/cinergi.png</texture>
+			<visible>substring(listitem.studio,cinergi)</visible>
+		</control>
+	<!-- Studio  -->
+		<control type="image" id="5088">
+			<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+			<include>MovieStudioflagsVars</include>
+			<texture>special://skin/images/flags/movies/studio/$INFO[ListItem.Studio,,.png]</texture>
+			<visible>!IsEmpty(ListItem.Studio)</visible>
+		</control>
+</control>
+	</include>
+</includes>

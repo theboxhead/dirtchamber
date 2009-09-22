@@ -1,0 +1,155 @@
+<window type="dialog" id="134">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>450</posx>
+		<posy>105</posy>
+	</coordinates>
+	<animation effect="slide" start="830,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+	<animation effect="slide" end="830,0" start="0,0" time="500" tween="quadratic" easing="in">WindowClose</animation>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>900</width>
+			<height>510</height>
+			<texture border="50">dialog.png</texture>
+		</control>
+		<control type="label" id="2">
+			<description>heading label</description>
+			<posx>40</posx>
+			<posy>40</posy>
+			<width>790</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font-32</font>
+			<label>$LOCALIZE[1036]</label>
+			<textcolor>lightblue</textcolor>
+		</control>
+		<control type="image">
+			<posx>40</posx>
+			<posy>80</posy>
+			<width>790</width>
+			<height>2</height>
+			<texture>separator.png</texture>
+		</control>
+		<control type="list" id="450">
+			<posx>45</posx>
+			<posy>100</posy>
+			<width>450</width>
+			<height>320</height>
+			<onup>450</onup>
+			<onleft>450</onleft>
+			<onright>450</onright>
+			<ondown>450</ondown>
+			<pagecontrol>-</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="40">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>450</width>
+					<height>35</height>
+					<texture border="7">button-nofocus.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>430</width>
+					<height>35</height>
+					<font>font-20</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<selectedcolor>blue</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="40">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>450</width>
+					<height>35</height>
+					<visible>!Control.HasFocus(450)</visible>
+					<texture border="7">button-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>450</width>
+					<height>35</height>
+					<visible>Control.HasFocus(450)</visible>
+					<texture border="7">button-focus.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>430</width>
+					<height>35</height>
+					<font>font-20</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<selectedcolor>blue</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="label">
+			<description>Page label</description>
+			<posx>40</posx>
+			<posy>430</posy>
+			<width>450</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font-20</font>
+			<label>$INFO[Container(450).NumItems] $LOCALIZE[31025] - $LOCALIZE[31024] $INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages]</label>
+			<visible>!Control.IsVisible(451)</visible>
+		</control>
+		<control type="image">
+			<posx>500</posx>
+			<posy>100</posy>
+			<width>310</width>
+			<height>315</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[Container(450).ListItem.Icon]</texture>
+			<bordertexture border="7">button-focus2.png</bordertexture>
+			<bordersize>5</bordersize>
+			<visible>![[substring(listitem.path,musicdb) | substring(listitem.path,videodb)] + substring(listitem.path,playmedia)]</visible>
+		</control>
+		<control type="image">
+			<posx>530</posx>
+			<posy>115</posy>
+			<width>272</width>
+			<height>272</height>
+			<texture>$INFO[Container(450).ListItem.Icon]</texture>
+			<visible>substring(listitem.path,musicdb) + substring(listitem.path,playmedia)</visible>
+		</control>
+		<control type="image">
+			<posx>500</posx>
+			<posy>110</posy>
+			<width>310</width>
+			<height>282</height>
+			<texture>cdcase.png</texture>
+			<visible>[substring(listitem.path,musicdb) + substring(listitem.path,playmedia)] + !IsEmpty(ListItem.thumb)</visible>
+		</control>
+		<control type="image">
+			<posx>574</posx>
+			<posy>104</posy>
+			<width>200</width>
+			<height>306</height>
+			<texture>$INFO[Container(450).ListItem.Icon]</texture>
+			<visible>substring(listitem.path,videodb) + substring(listitem.path,playmedia)</visible>
+		</control>
+		<control type="image">
+			<posx>547</posx>
+			<posy>100</posy>
+			<width>232</width>
+			<height>315</height>
+			<texture>dvdcase.png</texture>
+			<visible>[substring(listitem.path,videodb) + substring(listitem.path,playmedia)] + !IsEmpty(ListItem.thumb)</visible>
+		</control>
+	</controls>
+</window>

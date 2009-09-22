@@ -1,0 +1,156 @@
+<includes>
+	<include name="MusicMediaCodecVars">
+		<width>80</width>
+		<height>55</height>
+		<visible>Container.Content(Songs) | Window.IsVisible(musicfiles)</visible>
+	</include>
+	<include name="MusicMediaLabelVars">
+		<width>80</width>
+		<height>55</height>
+		<visible>Container.Content(Albums)</visible>
+	</include>
+	<include name="MusicMediaflags">
+		<control type="grouplist">
+			<visible>!Skin.HasSetting(Enable_Music_Media_Flags)</visible>
+			<posx>704</posx>
+			<posy>579</posy>
+			<width>80</width>
+			<height>55</height>
+			<itemgap>10</itemgap>
+			<orientation>horizontal</orientation>
+		<!-- Audio Codec -->
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/aac.png</texture>
+				<visible>substring(listitem.filename,.aac,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/ac3.png</texture>
+				<visible>substring(listitem.filename,.ac3,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/aif.png</texture>
+				<visible>substring(listitem.filename,.aif,Right) + ![substring(listitem.filename,.aifc,Right)  | substring(listitem.filename,.aiff,Right)]</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/aifc.png</texture>
+				<visible>substring(listitem.filename,.aifc,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/aiff.png</texture>
+				<visible>substring(listitem.filename,.aiff,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/avs.png</texture>
+				<visible>substring(listitem.filename,.avs,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/ape.png</texture>
+				<visible>substring(listitem.filename,.ape,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/cdda.png</texture>
+				<visible>substring(listitem.filename,.cdda,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/dts.png</texture>
+				<visible>substring(listitem.filename,.dts,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/flac.png</texture>
+				<visible>substring(listitem.filename,.flac,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/m4a.png</texture>
+				<visible>substring(listitem.filename,.m4a,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/mlp.png</texture>
+				<visible>substring(listitem.filename,.mlp,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/mp2.png</texture>
+				<visible>substring(listitem.filename,.mp2,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/mp3.png</texture>
+				<visible>substring(listitem.filename,.mp3,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/mpc.png</texture>
+				<visible>substring(listitem.filename,.mpc,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/ogg.png</texture>
+				<visible>substring(listitem.filename,.ogg,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/ra.png</texture>
+				<visible>substring(listitem.filename,.ra,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/shn.png</texture>
+				<visible>substring(listitem.filename,.shn,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/wav.png</texture>
+				<visible>substring(listitem.filename,.wav,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/wma.png</texture>
+				<visible>substring(listitem.filename,.wma,Right)</visible>
+			</control>
+			<control type="image" id="5081">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaCodecVars</include>
+				<texture>special://skin/images/flags/music/audiocodec/wv.png</texture>
+				<visible>substring(listitem.filename,.wv,Right)</visible>
+			</control>
+		<!-- Genre -->
+			<control type="image" id="5082">
+				<colordiffuse>MediaFlagsDarkGrey</colordiffuse>
+				<include>MusicMediaLabelVars</include>
+				<texture>special://skin/images/flags/music/recordlabel/$INFO[ListItem.Property(Label),,.png]</texture>
+			</control>
+		</control>
+	</include>
+</includes>

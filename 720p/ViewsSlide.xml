@@ -1,0 +1,1068 @@
+<includes>
+
+	<include name="Slide_Video">
+		<control type="group" id="7003">
+			<posx>0</posx>
+			<posy>445</posy>
+			
+			<visible>Control.IsVisible(596) + Container.OnNext</visible>
+			<animation effect="fade" begin="100" end="100" time="250">Hidden</animation>
+
+			<control type="image">
+				<posx>-48</posx>
+				<posy>128</posy>
+				<width>73</width>
+				<height>102</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-7).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="-48,128,73,102" end="-159,129,72,101" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>-154</posx>
+				<posy>117</posy>
+				<width>90</width>
+				<height>125</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="-154,117,90,125" end="-248,128,73,102" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+
+			<control type="image">
+				<posx>37</posx>
+				<posy>126</posy>
+				<width>74</width>
+				<height>104</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-6).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="37,126,74,104" end="-48,128,73,102" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+
+			<control type="image">
+				<posx>124</posx>
+				<posy>122</posy>
+				<width>77</width>
+				<height>108</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-5).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="124,122,77,108" end="37,126,74,104" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>27</posx>
+				<posy>113</posy>
+				<width>100</width>
+				<height>130</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="27,113,100,130" end="-54,117,90,125" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>214</posx>
+				<posy>114</posy>
+				<width>83</width>
+				<height>116</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-4).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="214,114,83,116" end="124,122,77,108" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>110</posx>
+				<posy>109</posy>
+				<width>106</width>
+				<height>135</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="110,109,106,135" end="27,113,100,130" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>312</posx>
+				<posy>97</posy>
+				<width>94</width>
+				<height>132</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-3).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="312,97,94,132" end="214,114,83,116" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>200</posx>
+				<posy>100</posy>
+				<width>111</width>
+				<height>144</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="200,100,111,144" end="110,109,106,135" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>425</posx>
+				<posy>65</posy>
+				<width>117</width>
+				<height>164</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-2).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="425,65,117,164" end="312,97,94,132" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>296</posx>
+				<posy>81</posy>
+				<width>126</width>
+				<height>164</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="296,81,126,164" end="200,100,111,144" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>567</posx>
+				<posy>0</posy>
+				<width>164</width>
+				<height>228</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-1).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="567,0,164,228" end="425,65,117,164" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>404</posx>
+				<posy>45</posy>
+				<width>159</width>
+				<height>205</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="404,45,159,205" end="296,81,126,164" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>751</posx>
+				<posy>65</posy>
+				<width>117</width>
+				<height>164</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(0).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="751,65,117,164" end="567,0,164,228" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>536</posx>
+				<posy>-29</posy>
+				<width>225</width>
+				<height>285</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="536,-29,225,285" end="404,45,159,205" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>884</posx>
+				<posy>97</posy>
+				<width>94</width>
+				<height>132</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(1).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="884,97,94,132" end="751,65,117,164" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>730</posx>
+				<posy>45</posy>
+				<width>159</width>
+				<height>205</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="730,45,159,205" end="536,-29,225,285" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>993</posx>
+				<posy>114</posy>
+				<width>83</width>
+				<height>116</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(2).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="993,114,83,116" end="884,97,94,132" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>868</posx>
+				<posy>81</posy>
+				<width>126</width>
+				<height>164</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="868,81,126,164" end="730,45,159,205" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>1089</posx>
+				<posy>122</posy>
+				<width>77</width>
+				<height>108</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(3).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="1089,122,77,108" end="993,114,83,116" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>979</posx>
+				<posy>100</posy>
+				<width>111</width>
+				<height>144</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="979,100,111,144" end="868,81,126,164" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>1177</posx>
+				<posy>126</posy>
+				<width>74</width>
+				<height>104</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(4).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="1177,126,74,104" end="1089,122,77,108" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>1075</posx>
+				<posy>109</posy>
+				<width>106</width>
+				<height>135</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="1075,109,106,135" end="979,100,111,144" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>1263</posx>
+				<posy>128</posy>
+				<width>73</width>
+				<height>102</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(5).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="1263,128,73,102" end="1177,126,74,104" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>1164</posx>
+				<posy>113</posy>
+				<width>100</width>
+				<height>130</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="1164,113,100,130" end="1075,109,106,135" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>1348</posx>
+				<posy>129</posy>
+				<width>72</width>
+				<height>101</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(6).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="1348,129,72,101" end="1263,128,73,102" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>1253</posx>
+				<posy>117</posy>
+				<width>90</width>
+				<height>125</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="1253,117,90,125" end="1164,113,100,130" time="250">Hidden</animation>
+				<visible>Container(596).OnNext</visible>
+			</control>
+			<control type="image">
+				<posx>1263</posx>
+				<posy>128</posy>
+				<width>73</width>
+				<height>102</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(7).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="1263,128,73,102" end="1348,129,72,101" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>1253</posx>
+				<posy>126</posy>
+				<width>85</width>
+				<height>105</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="1253,126,85,105" end="1253,117,90,125" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>1348</posx>
+				<posy>129</posy>
+				<width>72</width>
+				<height>101</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(8).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="1348,129,72,101" end="1432,130,71,100" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>1338</posx>
+				<posy>127</posy>
+				<width>84</width>
+				<height>104</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="1338,127,84,104" end="1253,126,85,105" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			</control>
+		<control type="group" id="7004">
+			<posx>0</posx>
+			<posy>445</posy>
+			<include>Window_OpenClose_Animation</include>
+			<visible>Control.IsVisible(596) + Container.OnPrevious</visible>
+			<animation effect="fade" begin="100" end="100" time="250">Hidden</animation>
+			<control type="image">
+				<posx>-169</posx>
+				<posy>129</posy>
+				<width>72</width>
+				<height>101</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-6).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="-169,129,72,101" end="-48,128,73,102" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>-54</posx>
+				<posy>117</posy>
+				<width>90</width>
+				<height>125</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="-54,117,90,125" end="27,113,100,130" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>-48</posx>
+				<posy>128</posy>
+				<width>73</width>
+				<height>102</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-5).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="-48,128,73,102" end="37,126,74,104" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>27</posx>
+				<posy>113</posy>
+				<width>100</width>
+				<height>130</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="27,113,100,130" end="110,109,106,135" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>37</posx>
+				<posy>126</posy>
+				<width>74</width>
+				<height>104</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-4).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="37,126,74,104" end="124,122,77,108" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>110</posx>
+				<posy>109</posy>
+				<width>106</width>
+				<height>135</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="110,109,106,135" end="200,100,111,144" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>124</posx>
+				<posy>122</posy>
+				<width>77</width>
+				<height>108</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-3).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="124,122,77,108" end="214,114,83,116" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>200</posx>
+				<posy>100</posy>
+				<width>111</width>
+				<height>144</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="200,100,111,144" end="296,81,126,164" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>214</posx>
+				<posy>114</posy>
+				<width>83</width>
+				<height>116</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-2).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="214,114,83,116" end="312,97,94,132" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>296</posx>
+				<posy>81</posy>
+				<width>126</width>
+				<height>164</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="296,81,126,164" end="404,45,159,205" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>312</posx>
+				<posy>97</posy>
+				<width>94</width>
+				<height>132</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-1).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="312,97,94,132" end="425,65,117,164" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>404</posx>
+				<posy>45</posy>
+				<width>159</width>
+				<height>205</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="404,45,159,205" end="536,-29,225,285" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>425</posx>
+				<posy>65</posy>
+				<width>117</width>
+				<height>164</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(0).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="425,65,117,164" end="567,0,164,228" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>536</posx>
+				<posy>-29</posy>
+				<width>225</width>
+				<height>285</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="536,-29,225,285" end="730,45,159,205" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>567</posx>
+				<posy>0</posy>
+				<width>164</width>
+				<height>228</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(1).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="567,0,164,228" end="751,65,117,164" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>730</posx>
+				<posy>45</posy>
+				<width>159</width>
+				<height>205</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="730,45,159,205" end="868,81,126,164" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>751</posx>
+				<posy>65</posy>
+				<width>117</width>
+				<height>164</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(2).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="751,65,117,164" end="884,97,94,132" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+
+			</control>
+			<control type="image">
+				<posx>868</posx>
+				<posy>81</posy>
+				<width>126</width>
+				<height>164</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="868,81,126,164" end="979,100,111,144" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>884</posx>
+				<posy>97</posy>
+				<width>94</width>
+				<height>132</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(3).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="884,97,94,132" end="993,114,83,116" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>979</posx>
+				<posy>100</posy>
+				<width>111</width>
+				<height>144</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="979,100,111,144" end="1075,109,106,135" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>993</posx>
+				<posy>114</posy>
+				<width>83</width>
+				<height>116</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(4).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="993,114,83,116" end="1089,122,77,108" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>1075</posx>
+				<posy>109</posy>
+				<width>106</width>
+				<height>135</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="1075,109,106,135" end="1164,113,100,130" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>1089</posx>
+				<posy>122</posy>
+				<width>77</width>
+				<height>108</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(5).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="1089,122,77,108" end="1177,126,74,104" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>1164</posx>
+				<posy>113</posy>
+				<width>100</width>
+				<height>130</height>
+				<texture>movieposter_frame_AA.png</texture>
+				<animation reversible="false" effect="zoom" start="1164,113,100,130" end="1253,117,90,125" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>1177</posx>
+				<posy>126</posy>
+				<width>74</width>
+				<height>104</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(6).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="1177,126,74,104" end="1263,128,73,102" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+
+			<control type="image">
+				<posx>1263</posx>
+				<posy>128</posy>
+				<width>73</width>
+				<height>102</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(7).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="1263,128,73,102" end="1348,129,72,101" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+
+			<control type="image">
+				<posx>1348</posx>
+				<posy>129</posy>
+				<width>72</width>
+				<height>101</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(8).Icon]</texture>
+				<animation reversible="false" effect="zoom" start="1348,129,72,101" end="1432,130,71,100" time="250">Hidden</animation>
+				<visible>Container(596).OnPrevious</visible>
+			</control>
+
+		</control>
+		<control type="group">
+			<posx>0</posx>
+			<posy>445</posy>
+			<include>slideCoverAnim</include>
+			<visible>Control.IsVisible(596) + !Control.IsVisible(7003) + !Control.IsVisible(7004)</visible>
+			<control type="image">
+				<posx>-169</posx>
+				<posy>129</posy>
+				<width>72</width>
+				<height>101</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-7).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>-159</posx>
+				<posy>127</posy>
+				<width>84</width>
+				<height>104</height>
+				<texture>movieposter_frame_AA.png</texture>
+			</control>
+			<control type="image">
+				<posx>-48</posx>
+				<posy>128</posy>
+				<width>73</width>
+				<height>102</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-6).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>-54</posx>
+				<posy>117</posy>
+				<width>90</width>
+				<height>125</height>
+				<texture>movieposter_frame_AA.png</texture>
+			</control>
+			<control type="image">
+				<posx>40</posx>
+				<posy>126</posy>
+				<width>74</width>
+				<height>104</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-5).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>27</posx>
+				<posy>113</posy>
+				<width>100</width>
+				<height>130</height>
+				<texture>movieposter_frame_AA.png</texture>
+			</control>
+			<control type="image">
+				<posx>124</posx>
+				<posy>122</posy>
+				<width>77</width>
+				<height>108</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-4).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>110</posx>
+				<posy>109</posy>
+				<width>106</width>
+				<height>135</height>
+				<texture>movieposter_frame_AA.png</texture>
+			</control>
+			<control type="image">
+				<posx>214</posx>
+				<posy>114</posy>
+				<width>83</width>
+				<height>116</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-3).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>200</posx>
+				<posy>100</posy>
+				<width>111</width>
+				<height>144</height>
+				<texture>movieposter_frame_AA.png</texture>
+			</control>
+			<control type="image">
+				<posx>312</posx>
+				<posy>97</posy>
+				<width>94</width>
+				<height>132</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-2).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>296</posx>
+				<posy>81</posy>
+				<width>126</width>
+				<height>164</height>
+				<texture>movieposter_frame_AA.png</texture>
+			</control>
+			<control type="image">
+				<posx>425</posx>
+				<posy>65</posy>
+				<width>117</width>
+				<height>164</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(-1).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>404</posx>
+				<posy>45</posy>
+				<width>159</width>
+				<height>205</height>
+				<texture>movieposter_frame_AA.png</texture>
+			</control>
+			<control type="image">
+				<posx>567</posx>
+				<posy>0</posy>
+				<width>164</width>
+				<height>228</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(0).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>536</posx>
+				<posy>-29</posy>
+				<width>225</width>
+				<height>285</height>
+				<texture>movieposter_frame_AA.png</texture>
+			</control>
+			<control type="image">
+				<posx>751</posx>
+				<posy>65</posy>
+				<width>117</width>
+				<height>164</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(1).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>730</posx>
+				<posy>45</posy>
+				<width>159</width>
+				<height>205</height>
+				<texture>movieposter_frame_AA.png</texture>
+			</control>
+			<control type="image">
+				<posx>884</posx>
+				<posy>97</posy>
+				<width>94</width>
+				<height>132</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(2).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>868</posx>
+				<posy>81</posy>
+				<width>126</width>
+				<height>164</height>
+				<texture>movieposter_frame_AA.png</texture>
+			</control>
+			<control type="image">
+				<posx>993</posx>
+				<posy>115</posy>
+				<width>83</width>
+				<height>115</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(3).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>979</posx>
+				<posy>100</posy>
+				<width>111</width>
+				<height>144</height>
+				<texture>movieposter_frame_AA.png</texture>
+			</control>
+			<control type="image">
+				<posx>1089</posx>
+				<posy>122</posy>
+				<width>77</width>
+				<height>108</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(4).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>1075</posx>
+				<posy>109</posy>
+				<width>106</width>
+				<height>135</height>
+				<texture>movieposter_frame_AA.png</texture>
+			</control>
+			<control type="image">
+				<posx>1177</posx>
+				<posy>126</posy>
+				<width>74</width>
+				<height>104</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(5).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>1164</posx>
+				<posy>113</posy>
+				<width>100</width>
+				<height>130</height>
+				<texture>movieposter_frame_AA.png</texture>
+			</control>
+			<control type="image">
+				<posx>1264</posx>
+				<posy>128</posy>
+				<width>73</width>
+				<height>102</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(6).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>1253</posx>
+				<posy>117</posy>
+				<width>90</width>
+				<height>125</height>
+				<texture>movieposter_frame_AA.png</texture>
+			</control>
+			<control type="image">
+				<posx>1348</posx>
+				<posy>129</posy>
+				<width>72</width>
+				<height>101</height>
+				<texture diffuse="movieposter_mask.png">$INFO[Container(596).ListItem(7).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>1338</posx>
+				<posy>127</posy>
+				<width>84</width>
+				<height>104</height>
+				<texture>movieposter_frame_AA.png</texture>
+			</control>
+		</control>
+		<control type="wraplist" id="596">
+			<include>Window_OpenClose_Animation</include>
+			<description>Fake list</description>
+			<visible>Container.Content(Movies)</visible>
+			<posx>640</posx>
+			<posy>720</posy>
+			<width>1</width>
+			<height>1</height>
+			<onleft>7001</onleft>
+			<onright>7002</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<viewtype label="Slide">list</viewtype>
+			<pagecontrol>-</pagecontrol>
+			<orientation>horizontal</orientation>
+			<scrolltime>0</scrolltime>
+			<focusedposition>8</focusedposition>
+			<preloaditems>4</preloaditems>
+			<itemlayout height="1" width="1" />
+			<focusedlayout height="1" width="1">
+				<control type="label">
+					<posx>640</posx>
+					<posy>720</posy>
+					<width>1</width>
+					<height>1</height>
+					<font>font-20</font>
+					<textcolor>white</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>	
+					<label>-</label>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="group" id="191919">
+			<include>Window_OpenClose_Animation</include>
+			<visible>Control.IsVisible(596)</visible>
+
+			<control type="label">
+				<posx>50</posx>
+				<posy>681</posy>
+				<width>1200</width>
+				<height>35</height>
+				<font>CommonScreensMedium</font>
+				<textcolor>black</textcolor>
+
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+				<scrollspeed>0</scrollspeed>
+			</control>
+
+			<control type="group">
+<!-- 				<animation effect="zoom" start="640,0,1,720" end="0,0,1280,720" time="200" condition="!Skin.HasSetting(Animate_Skin)">Visible</animation>
+				<animation effect="zoom" start="0,0,1280,720" end="0,360,1280,1" time="200" condition="!Skin.HasSetting(Animate_Skin)">Hidden</animation>
+				<animation effect="fade" start="0" end="100" time="200" condition="Skin.HasSetting(Animate_Skin)">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200" condition="Skin.HasSetting(Animate_Skin)">Hidden</animation> -->
+				<animation type="Visible">
+				  <effect type="zoom" revirsible="false" start="2000,2000" end="100,100" center="600,200" time="200" delay="0" tween="qubic" easing="out" />
+				  <effect type="zoom" revirsible="false" start="30,30" end="100,100" center="600,200" time="400" delay="200" tween="elastic" easing="out" />
+				  <effect type="fade" revirsible="false" start="0" end="100" delay="0" time="600" />
+				</animation>
+				<animation type="hidden">
+				  <effect type="zoom" start="100,100" end="2000,2000" center="600,200" time="1600" delay="100" tween="qubic" />
+				  <effect type="fade" start="100" end="0" delay="0" time="600" />
+				</animation>				
+				
+				<control type="image">
+					<posx>160</posx>
+					<posy>43</posy>
+					<width>960</width>
+					<height>420</height>
+					<texture>contentpanelnoinnerglow.png</texture>
+				</control>
+				<visible>Control.IsVisible(596) + !Window.IsVisible(videofiles) + !IsEmpty(ListItem.Thumb) + System.IdleTime(2)</visible>
+				<control type="group">
+				<posy>-60</posy>
+					<visible>!Control.IsVisible(7003) + !Control.IsVisible(7004)</visible>
+					<control type="label">
+						<posx>257</posx>
+						<posy>145</posy>
+						<width>300</width>
+						<height>30</height>
+						<font>CommonScreensSmall</font>
+						<textcolor>darkblue</textcolor>
+
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[572] : </label>
+						<scrollspeed>0</scrollspeed>
+					</control>
+					<control type="label">
+						<posx>257</posx>
+						<posy>165</posy>
+						<width>300</width>
+						<height>30</height>
+						<font>pascallight20</font>
+						<textcolor>black</textcolor>
+
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Studio]</label>
+						<scrollspeed>0</scrollspeed>
+					</control>
+					<control type="label">
+						<posx>257</posx>
+						<posy>195</posy>
+						<width>300</width>
+						<height>30</height>
+						<font>CommonScreensSmall</font>
+						<textcolor>darkblue</textcolor>
+
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[20339] : </label>
+						<scrollspeed>0</scrollspeed>
+					</control>
+					<control type="label">
+						<posx>257</posx>
+						<posy>215</posy>
+						<width>300</width>
+						<height>30</height>
+						<font>pascallight20</font>
+						<textcolor>black</textcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Director]</label>
+						<scrollspeed>0</scrollspeed>
+					</control>
+					<control type="label">
+						<posx>257</posx>
+						<posy>245</posy>
+						<width>300</width>
+						<height>30</height>
+						<font>CommonScreensSmall</font>
+						<textcolor>darkblue</textcolor>
+
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[20417] : </label>
+						<scrollspeed>0</scrollspeed>
+					</control>
+					<control type="label">
+						<posx>257</posx>
+						<posy>265</posy>
+						<width>300</width>
+						<height>30</height>
+						<font>pascallight20</font>
+						<textcolor>black</textcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Writer]</label>
+						<scrollspeed>0</scrollspeed>
+					</control>
+					<control type="label">
+						<posx>257</posx>
+						<posy>295</posy>
+						<width>300</width>
+						<height>30</height>
+						<font>CommonScreensSmall</font>
+						<textcolor>darkblue</textcolor>
+
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[515] : </label>
+						<scrollspeed>0</scrollspeed>
+					</control>
+					<control type="label">
+						<posx>257</posx>
+						<posy>315</posy>
+						<width>300</width>
+						<height>30</height>
+						<font>pascallight20</font>
+						<textcolor>black</textcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Genre]</label>
+						<scrollspeed>0</scrollspeed>
+					</control>
+					<control type="label">
+						<posx>257</posx>
+						<posy>345</posy>
+						<width>300</width>
+						<height>30</height>
+						<font>CommonScreensSmall</font>
+						<textcolor>darkblue</textcolor>
+
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[2050] : </label>
+						<scrollspeed>0</scrollspeed>
+					</control>
+					<control type="label">
+						<posx>257</posx>
+						<posy>365</posy>
+						<width>300</width>
+						<height>30</height>
+						<font>pascallight20</font>
+						<textcolor>black</textcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Duration]</label>
+						<scrollspeed>0</scrollspeed>
+					</control>
+					<control type="label">
+						<posx>257</posx>
+						<posy>395</posy>
+						<width>150</width>
+						<height>30</height>
+						<font>CommonScreensSmall</font>
+						<textcolor>darkblue</textcolor>
+
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[345] : </label>
+						<scrollspeed>0</scrollspeed>
+					</control>
+					<control type="label">
+						<posx>257</posx>
+						<posy>415</posy>
+						<width>150</width>
+						<height>30</height>
+						<font>pascallight20</font>
+						<textcolor>black</textcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Year]</label>
+						<scrollspeed>0</scrollspeed>
+					</control>
+					<control type="label">
+						<posx>400</posx>
+						<posy>395</posy>
+						<width>150</width>
+						<height>30</height>
+						<font>CommonScreensSmall</font>
+						<textcolor>darkblue</textcolor>
+
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[563] : </label>
+						<scrollspeed>0</scrollspeed>
+					</control>
+					<control type="label">
+						<posx>400</posx>
+						<posy>415</posy>
+						<width>150</width>
+						<height>30</height>
+						<font>pascallight20</font>
+						<textcolor>black</textcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Rating]</label>
+						<scrollspeed>0</scrollspeed>
+					</control>
+					<control type="image">
+						<posx>566</posx>
+						<posy>160</posy>
+						<width>2</width>
+						<height>270</height>
+						<texture>separator2.png</texture>
+					</control>
+					<control type="label">
+						<posx>575</posx>
+						<posy>145</posy>
+						<width>300</width>
+						<height>30</height>
+						<font>CommonScreensSmall</font>
+						<textcolor>darkblue</textcolor>
+
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[207] : </label>
+						<scrollspeed>0</scrollspeed>
+					</control>
+					<control type="textbox">
+						<posx>575</posx>
+						<posy>174</posy>
+						<width>440</width>
+						<height>274</height>
+						<font>pascallight20</font>
+						<textcolor>black</textcolor>
+						<scroll>true</scroll>
+						<align>justify</align>
+						<label>$INFO[ListItem.Plot]</label>
+						<autoscroll time="2000" delay="15000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

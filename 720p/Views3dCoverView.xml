@@ -1,0 +1,1560 @@
+<includes>
+	<include name="3d_CoverView">
+		
+	<!-- 		<control type="image">
+			<posx>0</posx>
+			<posy>580</posy>
+			<width>1280</width>
+			<height>240</height>
+			<visible>Control.IsVisible(500)</visible>
+			<texture>white-reflect.png</texture>
+			<include>Window_OpenClose_Animation</include>
+		</control> -->
+	<control type="group">
+	<posx>-40</posx>
+		<control type="group" id="7001">
+			<include>Window_OpenClose_Animation</include>
+			
+			<posy>140</posy>
+			<visible>Control.IsVisible(500) + Container.OnNext</visible>
+			<animation effect="slide" end="-100,0" time="250" reversible="false" >Hidden</animation>
+			<control type="group">
+				<posx>80</posx>
+				<visible>Container.OnNext</visible>
+				<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+				<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(-4).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(-4).Thumb)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<posx>180</posx>
+				<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(-3).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(-3).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>280</posx>
+				<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(-2).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(-2).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>1000</posx>
+				<visible>!Container.OnNext</visible>
+				<animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
+				<animation effect="rotatey" center="1320" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(3).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(3).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>900</posx>
+				<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(2).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(2).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>800</posx>
+				<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(1).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(1).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<visible>Container.OnNext</visible>
+				<animation effect="slide" end="-100,0" time="1250" reversible="false" tween="elastic" easing="out">Hidden</animation>
+				<control type="group">
+					<posx>700</posx>
+					<visible>Container.OnNext</visible>
+					<animation effect="rotatey" center="1020" start="0" end="-60" time="1250" reversible="false" tween="elastic" easing="out">Hidden</animation>
+					<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
+					<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(0).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(0).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>490</posx>
+				<visible>Container.OnNext</visible>
+				<animation effect="rotatey" center="470" start="-20" end="-60" time="1250" reversible="false" tween="elastic" easing="out">Hidden</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(-1).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(-1).Thumb)</visible>
+				</control>
+
+				</control>
+			</control>
+		</control>
+		<control type="group" id="7002">
+			<include>Window_OpenClose_Animation</include>
+			<posy>140</posy>
+			<visible>Control.IsVisible(500) + Container.OnPrevious</visible>
+			<animation effect="slide" end="90,0" time="250" reversible="false">Hidden</animation>
+			<control type="group">
+				<posx>900</posx>
+				<visible>Container.OnPrevious</visible>
+				<animation effect="fade" start="100" end="0" time="250" reversible="false" >Hidden</animation>
+				<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(4).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(4).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>800</posx>
+				<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(3).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(3).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>700</posx>
+				<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(2).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(2).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>-20</posx>
+				<visible>!Container.OnPrevious</visible>
+				<animation effect="fade" start="0" end="100" time="250" reversible="false">Visible</animation>
+				<animation effect="rotatey" center="-60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(-3).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(-3).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>80</posx>
+				<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(-2).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(-2).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>180</posx>
+				<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(-1).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(-1).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<visible>Container.OnPrevious</visible>
+				<animation effect="slide" end="90,0" time="1250" reversible="false" tween="elastic" easing="out">Hidden</animation>
+				<control type="group">
+					<posx>290</posx>
+					<visible>Container.OnPrevious</visible>
+					<animation effect="rotatey" center="290" start="0" end="60" time="1250" reversible="false" tween="elastic" easing="out">Hidden</animation>
+					<animation effect="rotatey" center="290" start="-60" end="-60" time="0" condition="true" >Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(0).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(0).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>490</posx>
+				<visible>Container.OnPrevious</visible>
+				<animation effect="rotatey" center="810" start="20" end="60" time="1250" reversible="false" tween="elastic" easing="out">Hidden</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(1).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(1).Thumb)</visible>
+				</control>
+
+				</control>
+			</control>
+		</control>
+		<control type="group" id="7000">
+			<include>ThumbNailsAnim</include>
+			<posy>140</posy>
+			<visible>Control.IsVisible(500) + !Control.IsVisible(7001)  + !Control.IsVisible(7002)</visible>
+			<control type="group">
+				<posx>80</posx>
+				<animation effect="fade" start="100" end="0" time="250" reversible="false" >Hidden</animation>
+				<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(-3).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(-3).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>180</posx>
+				<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(-2).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(-2).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>280</posx>
+				<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true" tween="elastic" easing="out">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(-1).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(-1).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>900</posx>
+				<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(3).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(3).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>800</posx>
+				<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(2).Icon]</texture>
+				</control>
+				<control type="image">
+
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(2).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>700</posx>
+				<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true" tween="elastic" easing="out">Conditional</animation>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(1).Icon]</texture>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(1).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>483</posx>
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$INFO[Container(500).ListItem(0).Icon]</texture>
+					<visible>Control.HasFocus(500) | Control.IsVisible(9000)</visible>
+				</control>
+
+				<control type="image">
+					<posx>-20</posx>
+					<posy>-50</posy>
+					<width>412</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>movieposter_frame_AA.png</texture>
+					<visible>!IsEmpty(Listitem(0).Thumb) + [!Control.IsVisible(7001) + !Control.IsVisible(7002)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="wraplist" id="500">
+			
+			<include>ThumbNailsAnim</include>
+			<description>Fake list to control coverflow movement</description>
+			<visible>Container.Content(Movies)</visible>
+			<posx>483</posx>
+			<posy>140</posy>
+			<width>306</width>
+			<height>440</height>
+			<onleft>57</onleft>
+			<onright>57</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<viewtype label="31032">list</viewtype>
+			<pagecontrol>-</pagecontrol>
+			<orientation>horizontal</orientation>
+			<scrolltime>250</scrolltime>
+			<focusedposition>3</focusedposition>
+			<itemlayout height="1" width="1">
+			</itemlayout>
+			<focusedlayout height="429" width="257">
+				<control type="image">
+					<posx>36</posx>
+					<posy>5</posy>
+					<width>300</width>
+					<height>440</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="movieposter_mask.png">$Info(ListItem.Icon)</texture>
+					<visible>!Control.IsVisible(7001) + !Control.IsVisible(7002)</visible>
+				</control>
+				
+
+
+			</focusedlayout>
+		</control>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<visible>Control.IsVisible(500)</visible>
+
+			<control type="label">
+				<posx>68</posx>
+				<posy>77</posy>
+				<width>1200</width>
+				<height>35</height>
+				<font>CommonScreensMedium</font>
+				<textcolor>black</textcolor>
+				<animation effect="fade" start="100" end="0" time="150" reversible="true" >Visible</animation>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+				<scrollspeed>0</scrollspeed>
+			</control>
+		</control>
+	</control>
+	</include>
+	<include name="3d_CoverView_Music">
+		
+		<control type="group" id="7001">
+
+						
+
+			<posx>-13</posx>
+			<posy>200</posy>
+			<visible>Control.IsVisible(500) + Container.OnNext</visible>
+            <animation effect="slide" end="-100,0" time="250" reversible="false">Hidden</animation>
+			
+			<control type="group">
+			    <posx>20</posx>
+				<visible>Container.OnNext</visible>
+				<animation effect="fade" start="100" end="0" time="250" reversible="false" >Hidden</animation>
+				<animation effect="rotatey" center="0" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-4).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-4).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(-4).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>120</posx>
+				<animation effect="rotatey" center="100" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-3).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-3).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(-3).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>220</posx>
+				<animation effect="rotatey" center="200" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-2).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-2).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(-2).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>1000</posx>
+				<visible>!Container.OnNext</visible>
+				<animation effect="fade" start="0" end="100" delay="0" time="1250" reversible="false" tween="elastic" easing="out">Visible</animation>
+				<animation effect="rotatey" center="1380" start="65" end="65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(3).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(3).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(3).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>900</posx>
+				<animation effect="rotatey" center="1280" start="65" end="65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(2).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(2).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(2).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>800</posx>
+				<animation effect="rotatey" center="1180" start="65" end="65" time="0" condition="true" >Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(1).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(1).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(1).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<visible>Container.OnNext</visible>
+				<animation effect="slide" end="-120,0" time="250" reversible="false">Hidden</animation>
+			<control type="group">
+					<posx>700</posx>
+					<visible>Container.OnNext</visible>
+							
+<!-- 				<animation reversible="false" effect="zoom" start="50,450,318,318" end="150,250,100,100" delay="560" time="1200" tween="elastic" easing="out">Hidden</animation>	
+ -->					
+					<animation effect="rotatey" center="1080" start="-35" end="-65" time="1250" reversible="false" tween="elastic" easing="out">Hidden</animation>
+					<animation effect="rotatey" center="1080" start="65" end="65" time="0" condition="true" >Conditional</animation>
+				<control type="image">
+					<animation reversible="false" effect="zoom" start="150,250,100,100" end="50,450,318,318" delay="160" time="1200" tween="elastic" easing="Out">hidden</animation>
+					
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(0).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<animation reversible="false" effect="zoom" start="150,250,100,100" end="50,450,318,318" delay="0" time="1200" tween="elastic" easing="Out">hidden</animation>
+
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(0).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<animation reversible="false" effect="zoom" start="150,250,100,100" end="50,450,318,318" delay="0" time="1200" tween="elastic" easing="Out">hidden</animation>
+
+				<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(0).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>460</posx>
+				<visible>Container.OnNext</visible>
+				<animation effect="rotatey" center="450" start="0" end="-65" time="1250" reversible="false" tween="elastic" easing="out">Hidden</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-1).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-1).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(-1).Thumb)</visible>
+				</control>
+
+				</control>
+			</control>
+		</control>
+		<control type="group" id="7002">
+			<include>Window_OpenClose_Animation</include>
+			<posx>-13</posx>
+			<posy>200</posy>
+			<visible>Control.IsVisible(500) + Container.OnPrevious</visible>
+			<animation effect="slide" end="100,0" time="250" reversible="false">Hidden</animation>
+			<control type="group">
+				<posx>900</posx>
+				<visible>Container.OnPrevious</visible>
+				<animation effect="fade" start="100" end="0" time="250" reversible="false" >Hidden</animation>
+				<animation effect="rotatey" center="1280" start="65" end="65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(4).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(4).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(4).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>800</posx>
+				<animation effect="rotatey" center="1180" start="65" end="65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(3).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(3).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(3).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>700</posx>
+				<animation effect="rotatey" center="1080" start="65" end="65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(2).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(2).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(2).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>-80</posx>
+				<visible>!Container.OnPrevious</visible>
+				<animation effect="fade" start="0" end="100" time="250" reversible="false">Visible</animation>
+				<animation effect="rotatey" center="-100" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">>$INFO[Container(500).ListItem(-3).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-3).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(-3).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>20</posx>
+				<animation effect="rotatey" center="0" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-2).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-2).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(-2).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>120</posx>
+				<animation effect="rotatey" center="100" start="-65" end="-65" time="0" condition="true" tween="elastic" easing="out">Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-1).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-1).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(-1).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+			
+				<visible>Container.OnPrevious</visible>
+				<animation effect="slide" end="120,0" time="250" reversible="false" >Hidden</animation>
+				
+				<control type="group">
+					<posx>220</posx>
+					<visible>Container.OnPrevious</visible>
+					
+					<animation effect="rotatey" center="200" start="35" end="65" time="1250" reversible="false" tween="elastic" easing="OUT">Hidden</animation>
+					<animation effect="rotatey" center="200" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<animation reversible="false" effect="zoom" start="150,250,100,100" end="50,450,318,318" delay="0" time="1200" tween="elastic" easing="Out">hidden</animation>
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(0).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+				<animation reversible="false" effect="zoom" start="150,250,100,100" end="50,450,318,318" delay="0" time="1200" tween="elastic" easing="Out">hidden</animation>
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(0).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+				<animation reversible="false" effect="zoom" start="150,250,100,100" end="50,450,318,318" delay="0" time="1200" tween="elastic" easing="Out">hidden</animation>
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(0).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>460</posx>
+				<visible>Container.OnPrevious</visible>
+				<animation effect="rotatey" center="840" start="0" end="65" time="1250" reversible="false" tween="elastic" easing="out">Hidden</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(1).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(1).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(1).Thumb)</visible>
+				</control>
+
+				</control>
+			</control>
+		</control>
+		<control type="group" id="7000">
+			<include>ThumbNailsAnim</include>
+			
+			<posx>-13</posx>
+			<posy>200</posy>
+			<visible>Control.IsVisible(500) + !Control.IsVisible(7001)  + !Control.IsVisible(7002)</visible>
+			<control type="group">
+				<posx>20</posx>
+				<animation effect="rotatey" center="0" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-3).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-3).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(-3).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>120</posx>
+				<animation effect="rotatey" center="100" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-2).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-2).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(-2).Thumb)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>220</posx>
+				<animation effect="rotatey" center="200" start="-65" end="-65" time="0" condition="true" tween="elastic" easing="out">Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-1).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(-1).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(-1).Thumb)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>346</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture flipy="true" diffuse="thumb-diffuse-mirror.png">$INFO[Container(500).ListItem(-1).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+
+			</control>
+			<control type="group">
+				<posx>900</posx>
+				<animation effect="rotatey" center="1280" start="65" end="65" time="0" condition="true" >Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(3).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(3).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(3).Thumb)</visible>
+				</control>
+
+
+			</control>
+			<control type="group">
+				<posx>800</posx>
+				<animation effect="rotatey" center="1180" start="65" end="65" time="0" condition="true" >Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(2).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(2).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(2).Thumb)</visible>
+				</control>
+
+
+			</control>
+			<control type="group">
+				<posx>700</posx>
+				
+				<animation effect="rotatey" center="1080" start="65" end="65" time="0" condition="true" tween="elastic" easing="out">Conditional</animation>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(1).Icon]</texture>
+					<visible>Container.Content(Artists)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(1).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)]</visible>
+				</control>
+				<control type="image">
+					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(1).Thumb)</visible>
+				</control>
+
+
+			</control>
+			<control type="group">
+			
+				<posx>460</posx>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(0).Icon]</texture>
+					<visible>Container.Content(Artists) + Control.HasFocus(500)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(0).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + Control.HasFocus(500)</visible>
+				</control>
+
+
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(0).Icon]</texture>
+					<visible>Container.Content(Artists) + !Control.HasFocus(500)</visible>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Container(500).ListItem(0).Icon]</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !Control.HasFocus(500)</visible>
+				</control>
+
+
+			</control>
+		</control>
+		<control type="wraplist" id="500">
+			<include>ThumbNailsAnim</include>
+
+			<description>Fake list to control coverflow movement</description>
+			<visible>Container.Content(Artists) | [Container.Content(Albums) | Container.Content(Songs)] | Container.Content(Songs) | Window.IsVisible(Musicfiles)</visible>
+			<posx>447</posx>
+			<posy>200</posy>
+			<width>366</width>
+			<height>350</height>
+			<onleft>57</onleft>
+			<onright>57</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<viewtype label="31032">list</viewtype>
+			<pagecontrol>-</pagecontrol>
+			<orientation>horizontal</orientation>
+			<scrolltime>250</scrolltime>
+			<focusedposition>3</focusedposition>
+			<itemlayout height="1" width="1">
+			</itemlayout>
+			<focusedlayout height="318" width="318">
+			
+				<control type="image">
+					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[ListItem.Icon]</texture>
+					<aspectratio>stretch</aspectratio>
+<!-- 					<animation reversible="false" effect="zoom" start="150,250,100,100" end="50,450,318,318" delay="160" time="1200" tween="elastic" easing="Out">hidden</animation>					<visible>Container.Content(Artists) + !Control.IsVisible(7001) + !Control.IsVisible(7002)</visible>
+				</control>
+				<control type="image">
+<!-- 					<animation reversible="false" effect="zoom" start="150,250,100,100" end="50,450,318,318" delay="160" time="1200" tween="elastic" easing="Out">hidden</animation>
+ -->					<posx>34</posx>
+					<posy>28</posy>
+					<width>318</width>
+					<height>318</height>
+					<texture diffuse="cdcover_mask.png">$INFO[ListItem.Icon]</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !Control.IsVisible(7001) + !Control.IsVisible(7002)</visible>
+				</control>
+				<control type="image">
+<!-- 					<animation reversible="false" effect="zoom" start="150,250,100,100" end="50,450,318,318" delay="160" time="1200" tween="elastic" easing="Out">hidden</animation>
+ -->					<posx>-11</posx>
+					<posy>-17</posy>
+					<width>407</width>
+					<height>408</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>cdcover_frame_AA.png</texture>
+					<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(Listitem(0).Thumb) + [!Control.IsVisible(7001) + !Control.IsVisible(7002)]</visible>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<visible>Control.IsVisible(500)</visible>
+
+			<control type="label">
+				<posx>40</posx>
+				<posy>20</posy>
+				<width>1200</width>
+				<height>35</height>
+				<font>CommonScreensMedium</font>
+				<textcolor>black</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+				<scrollspeed>0</scrollspeed>
+				<visible>![Container.Content(Albums) | Container.Content(Songs)]</visible>
+			</control>
+			<control type="label">
+				<posx>40</posx>
+				<posy>90</posy>
+				<width>1200</width>
+				<height>35</height>
+				<font>CommonScreensMedium</font>
+				<textcolor>black</textcolor>
+
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+				<scrollspeed>0</scrollspeed>
+				<visible>Container.Content(Albums)</visible>
+			</control>
+			<control type="label">
+				<posx>40</posx>
+				<posy>130</posy>
+				<width>1200</width>
+				<height>35</height>
+				<font>CommonScreensMedium</font>
+				<textcolor>darkgrey</textcolor>
+
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+				<scrollspeed>0</scrollspeed>
+				<visible>Container.Content(Albums)</visible>
+			</control>
+			<control type="label">
+				<posx>40</posx>
+				<posy>600</posy>
+				<width>1200</width>
+				<height>35</height>
+				<font>CommonScreensSmall</font>
+				<textcolor>darkgrey</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+				<scrollspeed>0</scrollspeed>
+				<visible>Container.Content(Albums)</visible>
+			</control>
+			<control type="label">
+				<posx>40</posx>
+				<posy>620</posy>
+				<width>1200</width>
+				<height>35</height>
+				<font>CommonScreensSmall</font>
+				<textcolor>darkgrey</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+				<scrollspeed>0</scrollspeed>
+				<visible>Container.Content(Albums)</visible>
+			</control>
+			<control type="label">
+				<posx>40</posx>
+				<posy>140</posy>
+				<width>1200</width>
+				<height>35</height>
+				<font>CommonScreensMedium</font>
+				<textcolor>black</textcolor>
+
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+				<scrollspeed>0</scrollspeed>
+				<visible>Container.Content(Songs)</visible>
+			</control>
+			<control type="label">
+				<posx>40</posx>
+				<posy>600</posy>
+				<width>1200</width>
+				<height>35</height>
+				<font>CommonScreensMedium</font>
+				<textcolor>darkgrey</textcolor>
+
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label2]</label>
+				<scrollspeed>0</scrollspeed>
+				<visible>Container.Content(Songs)</visible>
+			</control>
+		</control>
+
+
+		</include>
+</includes>

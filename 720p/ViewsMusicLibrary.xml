@@ -1,0 +1,582 @@
+<includes>
+	
+	<include name="MusicCDView">
+
+
+	
+		<control type="grouplist">
+			<visible>Control.IsVisible(599)</visible>
+			<posx>-17</posx>
+			<posy>135</posy>
+			<width>1330</width>
+			<height>450</height>
+			<onup>9000</onup>
+			<ondown>61</ondown>
+
+			
+			<usecontrolcoords>true</usecontrolcoords>
+			<control type="wraplist" id="599">
+				<include>CdCoverAnim</include>
+				<visible>Container.Content(Albums)</visible>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1330</width>
+				<height>450</height>
+				<onleft>599</onleft>
+				<onright>599</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<viewtype label="31028">list</viewtype>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<focusposition>3</focusposition>
+				<orientation>horizontal</orientation>
+				<hitrect x="370" y="50" w="186" h="252" />
+				<preloaditems>4</preloaditems>
+				<itemlayout height="310" width="186">
+					<control type="image">
+						<posx>18</posx>
+						<posy>43</posy>
+						<width>162</width>
+						<height>162</height>
+						<aspectratio>stretch</aspectratio>
+						<texture diffuse="cdcover_mask.png" background="true">$INFO[ListItem.Icon]</texture>
+					</control>
+					
+					<control type="image">
+						<posx>-5</posx>
+						<posy>21</posy>
+						<width>208</width>
+						<height>207</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>cdcover_frame_AA.png</texture>
+						<description>cdthumb view</description>
+						<visible>Container.Content(Albums) + !IsEmpty(Listitem.thumb)</visible>
+					</control>
+<!-- 					<control type="image">
+						<posx>18</posx>
+						<posy>211</posy>
+						<width>162</width>
+						<height>162</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[ListItem.Icon]</texture>
+					</control> -->
+<!-- 					<control type="image">
+						<posx>0</posx>
+						<posy>208</posy>
+						<width>186</width>
+						<height>168</height>
+						<aspectratio>stretch</aspectratio>
+						<texture flipy="true" diffuse="diffuse_mirror2.png">cdcase.png</texture>
+						<description>cdthumb view mirror</description>
+						<visible>Container.Content(Albums) + !IsEmpty(Listitem.thumb)</visible>
+					</control> -->
+				</itemlayout>
+				<focusedlayout height="310" width="186">
+					<control type="image">
+						<posx>18</posx>
+						<posy>43</posy>
+						<width>162</width>
+						<height>162</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" diffuse="cdcover_mask.png">$INFO[ListItem.Icon]</texture>
+						<animation reversible="false" effect="zoom" start="18,43,162,162" end="-42,-23,300,300" time="300" tween="quadratic" easing="Out">focus</animation>
+						<animation reversible="false" effect="zoom" end="18,43,162,162" start="-42,-23,300,300" time="200" tween="quadratic" easing="In">unfocus</animation>
+					</control>
+					<control type="image">
+						<posx>-5</posx>
+						<posy>21</posy>
+						<width>207</width>
+						<height>207</height>
+						<texture>cdcover_frame_AA.png</texture>
+						<description>cdthumb view selected</description>
+						<visible>Container.Content(Albums) + !IsEmpty(Listitem.thumb)</visible>
+						<aspectratio>stretch</aspectratio>
+						<animation reversible="false" effect="zoom" start="-5,21,207,206" end="-84,-66,385,385" time="300" tween="quadratic" easing="Out">focus</animation>
+						<animation reversible="false" effect="zoom" end="-5,21,207,206" start="-84,-66,385,385" time="200" tween="quadratic" easing="In">unfocus</animation>
+					</control>
+<!-- 					<control type="image">
+						<posx>18</posx>
+						<posy>211</posy>
+						<width>162</width>
+						<height>162</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[ListItem.Icon]</texture>
+						<animation reversible="false" effect="zoom" start="18,211,162,162" end="-42,286,300,300" time="200">focus</animation>
+						<animation reversible="false" effect="zoom" end="18,211,162,162" start="-42,286,300,300" time="200">unfocus</animation>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>208</posy>
+						<width>186</width>
+						<height>168</height>
+						<aspectratio>stretch</aspectratio>
+						<texture flipy="true" diffuse="diffuse_mirror2.png">cdcase.png</texture>
+						<description>cdthumb view mirror selected</description>
+						<visible>Container.Content(Albums) + !IsEmpty(Listitem.thumb)</visible>
+						<animation reversible="false" effect="zoom" start="0,208,186,168" end="-75,281,343,310" time="200">focus</animation>
+						<animation reversible="false" effect="zoom" end="0,208,186,168" start="-75,281,343,310" time="200">unfocus</animation>
+					</control> -->
+				</focusedlayout>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(599)</visible>
+			<include>listfaderczar</include>
+			<control type="label">
+				<posx>47</posx>
+				<posy>80</posy>
+				<width>1200</width>
+				<height>35</height>
+				<font>CommonScreensMedium</font>
+				<textcolor>black</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+			</control>
+			<control type="label">
+				<posx>47</posx>
+				<posy>120</posy>
+				<width>1200</width>
+				<height>35</height>
+				<font>CommonScreensMedium</font>
+				<textcolor>darkgrey</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+			</control>
+			<control type="label">
+				<posx>200</posx>
+				<posy>590</posy>
+				<width>880</width>
+				<height>35</height>
+				<font>CommonScreensSmall</font>
+				<textcolor>darkgrey</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+			</control>
+			<control type="label">
+				<posx>200</posx>
+				<posy>610</posy>
+				<width>880</width>
+				<height>35</height>
+				<font>CommonScreensSmall</font>
+				<textcolor>darkgrey</textcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+			</control>
+		</control>
+				<control type="image">
+			<posx>0</posx>
+			<posy>60</posy>
+			<visible>![Control.IsVisible(50) | Control.IsVisible(51)  | Control.IsVisible(4567) | Control.IsVisible(53)]</visible>
+			<texture>leftdiffuse.png</texture>
+		</control>
+		<control type="image">
+			<posx>880</posx>
+			<posy>60</posy>
+			<visible>![Control.IsVisible(50) | Control.IsVisible(51)  | Control.IsVisible(4567) | Control.IsVisible(53)]</visible>
+			<texture>rightdiffuse.png</texture>
+		</control>
+	</include>
+	<include name="AlbumSongsFanartView">
+		<control type="list" id="55">
+			<include>CommonListFanartRightAnim</include>
+			<visible>Container.Content(Albums) | Container.Content(Songs) | Window.IsVisible(Musicfiles) | Window.IsVisible(500)</visible>
+			<posx>870</posx>
+			<posy>243</posy>
+			<width>355</width>
+			<height>412</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>55</onup>
+			<ondown>55</ondown>
+			<viewtype label="31030">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="29" width="390">
+
+			
+				
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>335</width>
+					<height>30</height>
+					<font>pascallight20</font>
+					<textcolor>black</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="29" width="390">
+
+
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>335</width>
+					<height>30</height>
+					<font>pascalbold30</font>
+					<textcolor>blue</textcolor>
+					<animation reversible="false" effect="zoom" start="10,3,235,20" end="10,0,335,30" time="300" tween="quadratic" easing="Out">focus</animation>
+					<selectedcolor>blue</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+		
+		</control>
+<!-- 
+Small Diffuses -->
+		<control type="image">
+			<posx>826</posx>
+			<posy>220</posy>
+			<width>448</width>
+			<height>325</height>
+			<visible>Control.IsVisible(4567)</visible>
+			<texture diffuse="fanartsquare_mask.png">topdiffusesmall.png</texture>
+		</control>
+		<control type="image">
+			<posx>826</posx>
+			<posy>350</posy>
+			<width>448</width>
+			<height>325</height>
+			<visible>Control.IsVisible(4567)</visible>
+			<texture diffuse="fanartsquare_mask.png">bottomdiffusesmall.png</texture>
+		</control>		
+	</include>
+	<include name="AlbumSongsFanartView_Extras">
+		<control type="group" id="4567">
+			<visible>Control.IsVisible(55)</visible>
+			<animation effect="fade" time="600" delay="400">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
+
+
+
+
+			<control type="image">
+				<posx>220</posx>
+				<posy>500</posy>
+				<width>640</width>
+				<height>200</height>
+				<include>listfaderczar</include>
+				<texture>fanartwide.png</texture>
+			</control>
+			<control type="image">
+				<posx>825</posx>
+				<posy>214</posy>
+				<width>450</width>
+				<height>470</height>
+				<include>listfaderczar</include>
+				<texture>fanartsquare.png</texture>
+			</control>
+			<include>MusicMediaflags</include>
+			
+			<control type="group">
+				<include>CommonListFanartIconAnim</include>
+				<control type="image">
+					<posx>22</posx>
+					<posy>470</posy>
+					<width>211</width>
+					<height>191</height>
+					<aspectratio>stretch</aspectratio>
+					<texture diffuse="cdcover_mask.png">$INFO[Listitem.Icon]</texture>
+					<visible>Window.IsVisible(Musicfiles)</visible>
+				</control>
+				<control type="image">
+					<posx>-8</posx>
+					<posy>443</posy>
+					<width>271</width>
+					<height>245</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<description>music list view</description>
+					<visible>Window.IsVisible(Musicfiles)</visible>
+				</control>
+				<control type="image">
+					<posx>22</posx>
+					<posy>470</posy>
+					<width>211</width>
+					<height>191</height>
+					<texture diffuse="cdcover_mask.png">$INFO[Listitem.thumb]</texture>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<visible>!IsEmpty(Listitem.thumb) + !Window.IsVisible(Musicfiles)</visible>
+				</control>
+
+				<control type="image">
+					<posx>-8</posx>
+					<posy>443</posy>
+					<width>271</width>
+					<height>245</height>
+					<texture>cdcover_frame_AA.png</texture>
+					<description>music list view</description>
+					<visible>!IsEmpty(Listitem.thumb) + !Window.IsVisible(Musicfiles)</visible>
+				</control>
+			</control>
+			
+			<control type="group">
+				<include>listfaderczar</include>
+				<control type="label">
+					<posx>262</posx>
+					<posy>537</posy>
+					<width>613</width>
+					<height>30</height>
+					<font>pascallight30</font>
+					<textcolor>black</textcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label2]</label>
+					<scrollspeed>0</scrollspeed>
+					<visible>Container.Content(Albums)</visible>
+				</control>
+				<control type="label">
+					<posx>262</posx>
+					<posy>565</posy>
+					<width>543</width>
+					<height>30</height>
+					<font>pascallight30</font>
+					<textcolor>darkgrey</textcolor>
+
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<scrollspeed>0</scrollspeed>
+					<visible>Container.Content(Albums)</visible>
+				</control>
+				<control type="label">
+					<posx>262</posx>
+					<posy>540</posy>
+					<width>480</width>
+					<height>30</height>
+					<font>pascallight30</font>
+					<textcolor>black</textcolor>
+
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<scrollspeed>0</scrollspeed>
+					<visible>Container.Content(Songs) | Window.IsVisible(Musicfiles)</visible>
+				</control>
+				<control type="label">
+					<posx>820</posx>
+					<posy>540</posy>
+					<width>150</width>
+					<height>30</height>
+					<font>pascallight30</font>
+					<textcolor>black</textcolor>
+
+					<scroll>true</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label2]</label>
+					<scrollspeed>0</scrollspeed>
+					<visible>!ListItem.IsPlaying + [Container.Content(Songs) | Window.IsVisible(Musicfiles)]</visible>
+				</control>
+				<control type="label">
+					<posx>262</posx>
+					<posy>570</posy>
+					<width>613</width>
+					<height>30</height>
+					<font>pascallight30</font>
+					<textcolor>black</textcolor>
+
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Artist]</label>
+					<scrollspeed>0</scrollspeed>
+					<visible>Container.Content(Songs) | Window.IsVisible(Musicfiles)</visible>
+				</control>
+				<control type="label">
+					<posx>262</posx>
+					<posy>600</posy>
+					<width>613</width>
+					<height>30</height>
+					<font>CommonScreensSmall</font>
+					<textcolor>black</textcolor>
+
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scrollspeed>0</scrollspeed>
+					<label>$INFO[ListItem.Genre]</label>
+				</control>
+				<control type="label">
+					<posx>262</posx>
+					<posy>620</posy>
+					<width>613</width>
+					<height>30</height>
+					<font>CommonScreensSmall</font>
+					<textcolor>black</textcolor>
+
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scrollspeed>0</scrollspeed>
+					<label>$INFO[ListItem.Year]</label>
+				</control>
+				<control type="progress">
+					<description>Progressbar</description>
+					<posx>340</posx>
+					<posy>673</posy>
+					<width>420</width>
+					<height>20</height>
+					<info>Player.Progress</info>
+					<visible>ListItem.IsPlaying</visible>
+				</control>
+				<control type="label" id="1">
+					<description>time label</description>
+					<posx>865</posx>
+					<posy>587</posy>
+					<width>150</width>
+					<height>30</height>
+					<font>font-30</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollspeed>0</scrollspeed>
+					<label>$INFO[MusicPlayer.Time]</label>
+					<visible>ListItem.IsPlaying</visible>
+				</control>
+
+
+		</control>
+
+		</control>
+	
+	</include>
+	<include name="ArtistFanartView">
+		<control type="list" id="56">
+			<visible>Container.Content(Artists)</visible>
+			<posx>200</posx>
+			<posy>142</posy>
+			<width>355</width>
+			<height>436</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>56</onup>
+			<ondown>56</ondown>
+			<viewtype label="31030">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="29" width="390">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>355</width>
+					<height>30</height>
+					<texture border="7">list-nofocus.png</texture>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>335</width>
+					<height>30</height>
+					<font>font-20</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="29" width="390">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>355</width>
+					<height>30</height>
+					<texture border="7">list-nofocus.png</texture>
+					<visible>!Control.HasFocus(56)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>355</width>
+					<height>30</height>
+					<texture border="7">list-focus.png</texture>
+					<visible>Control.HasFocus(56)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>335</width>
+					<height>30</height>
+					<font>font-20</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>blue</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		
+	</include>
+	<include name="ArtistFanartView_Extras">
+		<control type="group">
+			<visible>Control.IsVisible(56) + Container.Content(Artists)</visible>
+			<animation effect="fade" time="600" delay="400">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>547</posy>
+				<width>875</width>
+				<height>161</height>
+				<texture border="10">underlay.png</texture>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>560</posy>
+				<width>850</width>
+				<height>30</height>
+				<font>font-30</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Artist]</label>
+			</control>
+		</control>
+		<control type="textbox">
+			<description>Description Value for Artist</description>
+			<posx>25</posx>
+			<posy>600</posy>
+			<width>790</width>
+			<height>88</height>
+			<font>font-19</font>
+			<align>justify</align>
+			<textcolor>white</textcolor>
+			<pagecontrol>9999999999</pagecontrol>
+			<label>$INFO[ListItem.Property(Description)]</label>
+			<autoscroll time="2000" delay="10000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+			<visible>Control.IsVisible(56) + Container.Content(Artists)</visible>
+			<animation effect="fade" time="600" delay="400">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
+		</control>
+
+		
+		
+		
+	</include>
+
+
+</includes>

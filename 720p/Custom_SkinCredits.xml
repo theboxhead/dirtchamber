@@ -1,0 +1,171 @@
+<window id="1112" type="dialog">
+	<defaultcontrol>61</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>147</posx>
+		<posy>76</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1010</width>
+			<height>580</height>
+			<texture border="50">dialog.png</texture>
+		</control>
+		<control type="label">
+			<description>Item Title value</description>
+			<posx>40</posx>
+			<posy>45</posy>
+			<width>930</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>lightblue</textcolor>
+			<label>Transparency!</label>
+			<font>font-32</font>
+		</control>
+		<control type="image">
+			<posx>40</posx>
+			<posy>84</posy>
+			<width>930</width>
+			<height>2</height>
+			<texture>separator.png</texture>
+		</control>
+		<control type="scrollbar" id="61">
+			<posx>950</posx>
+			<posy>100</posy>
+			<width>20</width>
+			<height>430</height>
+			<texturesliderbackground border="0,10,0,10">scrollbar-back.png</texturesliderbackground>
+			<texturesliderbar border="0,10,0,10">scrollbar-front-nofocus.png</texturesliderbar>
+			<texturesliderbarfocus border="0,10,0,10">scrollbar-front.png</texturesliderbarfocus>
+			<textureslidernib>scrollbar-nib-nofocus.png</textureslidernib>
+			<textureslidernibfocus>scrollbar-nib.png</textureslidernibfocus>
+			<onleft>61</onleft>
+			<onright>61</onright>
+			<ondown>61</ondown>
+			<onup>61</onup>
+			<showonepage>true</showonepage>
+			<orientation>vertical</orientation>
+		</control>
+		<control type="textbox" id="5">
+			<description>textarea</description>
+			<posx>50</posx>
+			<posy>115</posy>
+			<width>910</width>
+			<height>400</height>
+			<font>font-23</font>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<pagecontrol>61</pagecontrol>
+			<autoscroll time="1000" delay="5000" repeat="7500">true</autoscroll>
+			<label>
+
+[COLOR=blue][B]Transparency![/B][/COLOR]
+
+[B]Would Like To Thank:[/B]
+
+
+
+[COLOR=blue]Hosting Service:[/COLOR]
+dynamix [COLOR=grey]- main download site[/COLOR]
+Bram77 [COLOR=grey]- xbmc xbox skins[/COLOR]
+TheQuestor [COLOR=grey]- xbmc nightly builds[/COLOR]
+
+
+[COLOR=blue]Graphics:[/COLOR]
+Burncycle [COLOR=grey]- partial home menu button design[/COLOR]
+
+
+[COLOR=blue]Fonts:[/COLOR]
+tikkiew [COLOR=grey]- bigger font sizes[/COLOR]
+
+
+[COLOR=blue]Media Flagging:[/COLOR]
+krypt2nite
+Imaginos
+ccMatrix
+
+
+[COLOR=blue]Weather Fanart:[/COLOR]
+timdog82001
+Silverxxx
+
+
+[COLOR=blue]Weather Icons:[/COLOR]
+Silverxxx
+
+
+[COLOR=blue]ClearArt:[/COLOR]
+reaven
+
+
+[COLOR=blue]cdArt:[/COLOR]
+reaven
+
+
+[COLOR=blue]Record Label Logo's:[/COLOR]
+Ninjamawwe
+
+
+[COLOR=blue]Studio Logo's:[/COLOR]
+Cosmor
+
+
+[COLOR=blue]Background Animation:[/COLOR]
+CF2009
+
+
+[COLOR=blue]Trailer Preview:[/COLOR]
+anoobie
+
+
+
+[COLOR=blue]Credits:[/COLOR]
+djh_[COLOR=grey] - Aeon[/COLOR]
+digitalhigh[COLOR=grey] - Serenity[/COLOR]
+ekim232[COLOR=grey] - The Operation MOD[/COLOR]
+
+i'm sure i've borrowed a few lines of &lt;code&gt; from all of you.  ;-)
+
+
+
+
+[COLOR=blue]Each and Everyone of You:[/COLOR]
+For Submitting Bug Reports
+Making Feature Request
+Posting New Idea's
+
+...And All The Thanx I've Received!
+
+
+
+
+
+
+[COLOR=blue]LAST BUT NOT LEAST:[/COLOR]
+Jezz-X[COLOR=grey] - For the great PM3.HD skin![/COLOR]
+
+
+
+
+
+
+
+
+
+[COLOR=blue][B]Transparency![/B][/COLOR]
+A FanArt Skin by ronie
+
+
+
+
+
+
+			</label>
+		</control>
+	</controls>
+</window>

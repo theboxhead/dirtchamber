@@ -1,0 +1,479 @@
+<window id="4">
+	<defaultcontrol always="true">8000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<imagepath>$INFO[Skin.String(Custom_Back_Settings_Folder)]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<timeperimage>5000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>2000</fadetime>
+			<include>backgroundfade</include>
+			<visible>Skin.HasSetting(Enable_Custom_Back_Settings)</visible>
+			<include condition="Skin.HasSetting(AnimateBackgrounds)">backgroundanimation</include>
+		</control>
+		<control type="largeimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>special://skin/images/backgrounds/background-settings.jpg</texture>
+			<aspectratio>scale</aspectratio>
+			<include>backgroundfade</include>
+			<visible>!Skin.HasSetting(Enable_Custom_Back_Settings)</visible>
+		</control>
+
+
+
+	<control type="image" id="2">
+		<description>MainBackground</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<visible>true</visible>
+		<colordiffuse>FFFFFFFF</colordiffuse>
+		<fadetime>200</fadetime>
+		<texture border="5" flipY="true" flipX="false">scripts.png</texture>
+		<aspectratio>false</aspectratio>
+	</control>    
+
+	<!-- NOT EDITED YET -->
+	<control type="image" id="1">
+		<description>MainBackgroundOverlay</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<visible>true</visible>
+		<fadetime>200</fadetime>
+		<texture border="5" flipY="true" flipX="false">home.png</texture>
+		<aspectratio>false</aspectratio>
+	</control>  
+
+
+
+
+
+
+
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<include>ContentPanel</include>
+			<control type="group" id="8000">
+				<posx>80</posx>
+				<posy>100</posy>
+				<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<control type="button" id="2">
+						<description>Video push button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>225</height>
+						<width>220</width>
+						<label>$LOCALIZE[3]</label>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<font>CommonScreensMedium</font>
+						<onclick>ActivateWindow(MyVideosSettings)</onclick>
+						<texturefocus border="5"></texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<textoffsetx>0</textoffsetx>
+						<textoffsety>200</textoffsety>
+						<onleft>9000</onleft>
+						<onright>3</onright>
+						<onup>6</onup>
+						<ondown>6</ondown>
+					</control>
+					<control type="image">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>200</width>
+						<height>200</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icon_video.png</texture>
+						<animation effect="fade" start="100" end="75" time="900" pulse="true" condition="Control.HasFocus(2)">conditional</animation>
+						<animation reversible="true" effect="zoom" start="10,0,200,200" end="-30,-60,300,300" time="300" condition="Control.HasFocus(2)" tween="quadratic" easing="Out">conditional</animation>
+
+						</control>
+				</control>
+				<control type="group">
+					<posx>300</posx>
+					<posy>0</posy>
+					<control type="button" id="3">
+						<description>Music push button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>225</height>
+						<width>220</width>
+						<label>$LOCALIZE[2]</label>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<font>CommonScreensMedium</font>
+						<onclick>ActivateWindow(MyMusicSettings)</onclick>
+						<texturefocus border="5"></texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<textoffsetx>0</textoffsetx>
+						<textoffsety>200</textoffsety>
+						<onleft>2</onleft>
+						<onright>4</onright>
+						<onup>7</onup>
+						<ondown>7</ondown>
+					</control>
+					<control type="image">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>200</width>
+						<height>200</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icon_music.png</texture>
+						<animation effect="fade" start="100" end="75" time="900" pulse="true" condition="Control.HasFocus(3)">conditional</animation>
+						<animation reversible="true" effect="zoom" start="10,0,200,200" end="-30,-60,300,300" time="300" condition="Control.HasFocus(3)" tween="quadratic" easing="Out">conditional</animation>			
+					</control>
+				</control>
+				<control type="group">
+					<posx>600</posx>
+					<posy>0</posy>
+					<control type="button" id="4">
+						<description>Pics push button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>225</height>
+						<width>220</width>
+						<label>$LOCALIZE[1]</label>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<font>CommonScreensMedium</font>
+						<onclick>ActivateWindow(MyPicturesSettings)</onclick>
+						<texturefocus border="5"></texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<textoffsetx>0</textoffsetx>
+						<textoffsety>200</textoffsety>
+						<onleft>3</onleft>
+						<onright>5</onright>
+						<onup>8</onup>
+						<ondown>8</ondown>
+					</control>
+					<control type="image">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>200</width>
+						<height>200</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icon_pics.png</texture>
+						<animation effect="fade" start="100" end="75" time="900" pulse="true" condition="Control.HasFocus(4)">conditional</animation>
+						<animation reversible="true" effect="zoom" start="10,0,200,200" end="-30,-60,300,300" time="300" condition="Control.HasFocus(4)" tween="quadratic" easing="Out">conditional</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>900</posx>
+					<posy>0</posy>
+					<control type="button" id="5">
+						<description>Profiles push button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>225</height>
+						<width>220</width>
+						<label>$LOCALIZE[13200]</label>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<font>CommonScreensMedium</font>
+						<onclick>ActivateWindow(Profiles)</onclick>
+						<texturefocus border="5"></texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<textoffsetx>0</textoffsetx>
+						<textoffsety>200</textoffsety>
+						<onleft>4</onleft>
+						<onright>9000</onright>
+						<onup>9</onup>
+						<ondown>9</ondown>
+					</control>
+					<control type="image">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>200</width>
+						<height>200</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icon_profiles.png</texture>
+						<animation effect="fade" start="100" end="75" time="900" pulse="true" condition="Control.HasFocus(5)">conditional</animation>
+						<animation reversible="true" effect="zoom" start="10,0,200,200" end="-30,-60,300,300" time="300" condition="Control.HasFocus(5)" tween="quadratic" easing="Out">conditional</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>0</posx>
+					<posy>300</posy>
+					<control type="button" id="6">
+						<description>Weather push button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>225</height>
+						<width>220</width>
+						<label>$LOCALIZE[8]</label>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<font>CommonScreensMedium</font>
+						<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+						<texturefocus border="5"></texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<textoffsetx>0</textoffsetx>
+						<textoffsety>200</textoffsety>
+						<onleft>9000</onleft>
+						<onright>7</onright>
+						<onup>2</onup>
+						<ondown>2</ondown>
+					</control>
+					<control type="image">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>200</width>
+						<height>200</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icon_weather.png</texture>
+						<animation effect="fade" start="100" end="75" time="900" pulse="true" condition="Control.HasFocus(6)">conditional</animation>
+						<animation reversible="true" effect="zoom" start="10,0,200,200" end="-30,-60,300,300" time="300" condition="Control.HasFocus(6)" tween="quadratic" easing="Out">conditional</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>300</posx>
+					<posy>300</posy>
+					<control type="button" id="7">
+						<description>Network push button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>225</height>
+						<width>220</width>
+						<label>$LOCALIZE[705]</label>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<font>CommonScreensMedium</font>
+						<onclick>ActivateWindow(NetworkSettings)</onclick>
+						<texturefocus border="5"></texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<textoffsetx>0</textoffsetx>
+						<textoffsety>200</textoffsety>
+						<onleft>6</onleft>
+						<onright>8</onright>
+						<onup>3</onup>
+						<ondown>3</ondown>
+					</control>
+					<control type="image">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>200</width>
+						<height>200</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icon_network.png</texture>
+						<animation reversible="true" effect="zoom" start="10,0,200,200" end="-30,-60,300,300" time="300" condition="Control.HasFocus(7)" tween="quadratic" easing="Out">conditional</animation>
+						<animation effect="fade" start="100" end="75" time="900" pulse="true" condition="Control.HasFocus(7)">conditional</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>600</posx>
+					<posy>300</posy>
+					<control type="button" id="8">
+						<description>System push button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>225</height>
+						<width>220</width>
+						<label>$LOCALIZE[13000]</label>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<font>CommonScreensMedium</font>
+						<onclick>ActivateWindow(SystemSettings)</onclick>
+						<texturefocus></texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<textoffsetx>0</textoffsetx>
+						<textoffsety>200</textoffsety>
+						<onleft>7</onleft>
+						<onright>9</onright>
+						<onup>4</onup>
+						<ondown>4</ondown>
+					</control>
+					<control type="image">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>200</width>
+						<height>200</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icon_system.png</texture>
+						<animation effect="fade" start="100" end="75" time="900" pulse="true" condition="Control.HasFocus(8)">conditional</animation>
+						<animation reversible="true" effect="zoom" start="10,0,200,200" end="-30,-60,300,300" time="300" condition="Control.HasFocus(8)" tween="quadratic" easing="Out">conditional</animation>
+					</control>
+				</control>
+				<control type="group">
+					<posx>900</posx>
+					<posy>300</posy>
+					<control type="button" id="9">
+						<description>Appearence push button</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>225</height>
+						<width>220</width>
+						<label>$LOCALIZE[480]</label>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textcolor>black</textcolor>
+						<focusedcolor>darkblue</focusedcolor>
+						<font>CommonScreensMedium</font>
+						<onclick>ActivateWindow(AppearanceSettings)</onclick>
+						<texturefocus border="5"></texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<textoffsetx>0</textoffsetx>
+						<textoffsety>200</textoffsety>
+						<onleft>8</onleft>
+						<onright>9000</onright>
+						<onup>5</onup>
+						<ondown>5</ondown>
+					</control>
+					<control type="image">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>200</width>
+						<height>200</height>
+						<aspectratio>keep</aspectratio>
+						<texture>icon_appearence.png</texture>
+						<animation effect="fade" start="100" end="75" time="900" pulse="true" condition="Control.HasFocus(9)">conditional</animation>
+						<animation reversible="true" effect="zoom" start="10,0,200,200" end="-30,-60,300,300" time="300" condition="Control.HasFocus(9)" tween="quadratic" easing="Out">conditional</animation>
+					</control>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<posy>23</posy>
+			<include>Window_OpenClose_Left_Panel_Animation</include>
+			<include>CommonNowPlaying</include>
+			<control type="group" id="9000">
+				<include condition="!Skin.HasSetting(WideSideMenuButtons)">Window_OpenClose_Left_Panel_Position_Normal</include>
+				<include condition="Skin.HasSetting(WideSideMenuButtons)">Window_OpenClose_Left_Panel_Position_Wide</include>
+				<animation effect="slide" start="0,0" end="176,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus + !Skin.HasSetting(WideSideMenuButtons)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="251,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus + Skin.HasSetting(WideSideMenuButtons)">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>-16</posy>
+					<height>16</height>
+					<texture border="0,0,15,0">shadow-top2.png</texture>
+					<include condition="!Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesNormal</include>
+					<include condition="Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesWide</include>
+				</control>
+				<control type="button" id="21">
+					<description>Skin Settings button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<include>ButtonCommonValues</include>
+					<label>20077</label>
+					<onclick>ActivateWindow(1111)</onclick>
+					<onleft>5</onleft>
+					<onright>2</onright>
+					<onup>603</onup>
+					<ondown>5031</ondown>
+					<pulseonselect>no</pulseonselect>
+					<visible>true</visible>
+				</control>
+				<control type="button" id="5031">
+					<description>Reload Skin button</description>
+					<posx>0</posx>
+					<posy>45</posy>
+					<include>ButtonCommonValues</include>
+					<label>20183</label>
+					<onclick>XBMC.ReloadSkin()</onclick>
+					<onclick>SetFocus(8000)</onclick>
+					<onleft>5</onleft>
+					<onright>2</onright>
+					<onup>21</onup>
+					<ondown>5032</ondown>
+				</control>
+				<control type="button" id="5032">
+					<description>System Info button</description>
+					<posx>0</posx>
+					<posy>90</posy>
+					<include>ButtonCommonValues</include>
+					<label>130</label>
+					<onclick>XBMC.ActivateWindow(7)</onclick>
+					<onleft>5</onleft>
+					<onright>2</onright>
+					<onup>5031</onup>
+					<ondown>20</ondown>
+				</control>
+				<control type="button" id="20">
+					<description>Filemanager button</description>
+					<posx>0</posx>
+					<posy>135</posy>
+					<include>ButtonCommonValues</include>
+					<label>7</label>
+					<onclick>ActivateWindow(FileManager)</onclick>
+					<onleft>5</onleft>
+					<onright>2</onright>
+					<onup>5032</onup>
+					<ondown>22</ondown>
+				</control>
+				<control type="button" id="22">
+					<description>Transparency! Thanx button</description>
+					<posx>0</posx>
+					<posy>180</posy>
+					<include>ButtonCommonValues</include>
+					<label>Transparency!</label>
+					<onclick>ActivateWindow(1112)</onclick>
+					<onleft>5</onleft>
+					<onright>2</onright>
+					<onup>20</onup>
+					<ondown>610</ondown>
+				</control>
+				<control type="button" id="610">
+					<description>Fake Button to fix Player Controls Navigation</description>
+					<onup>22</onup>
+					<ondown>603</ondown>
+					<visible>false</visible>
+				</control>
+				<control type="group">
+					<posx>0</posx>
+					<posy>225</posy>
+					<include>CommonNowPlaying_Controls</include>
+				</control>
+				<control type="button" id="611">
+					<description>Fake Button to fix Player Controls Navigation</description>
+					<onup>607</onup>
+					<ondown>21</ondown>
+					<visible>false</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>227</posy>
+					<height>16</height>
+					<texture border="0,0,5,0">shadow-bottom2.png</texture>
+					<animation effect="slide" end="0,45" time="0" condition="Player.HasAudio | Player.HasVideo">Conditional</animation>
+					<include condition="!Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesNormal</include>
+					<include condition="Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesWide</include>
+				</control>
+			</control>
+		</control>
+	<include>AllPagesInfo</include>
+		<control type="label">
+			<include>WindowTitleCommons</include>
+			<label>$LOCALIZE[5]</label>
+		</control>
+
+
+
+		</controls>
+		
+</window>

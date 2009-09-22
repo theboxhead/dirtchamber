@@ -1,0 +1,41 @@
+<window id="136">
+	<animation effect="fade" time="100">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<posx>510</posx>
+		<posy>630</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>-14</posx>
+			<posy>-16</posy>
+			<width>314</width>
+			<height>100</height>
+			<colordiffuse>DDFFFFFF</colordiffuse>
+			<texture border="40">popup.png</texture>
+		</control>
+		<control type="multiimage">
+			<description>Busy animation</description>
+			<posx>20</posx>
+			<posy>8</posy>
+			<width>54</width>
+			<height>54</height>
+			<imagepath>busy</imagepath>
+			<timeperimage>100</timeperimage>
+			<fadetime>0</fadetime>
+		</control>
+		<control type="label">
+			<description>Busy label</description>
+			<posx>72</posx>
+			<posy>16</posy>
+			<width>200</width>
+			<height>35</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>[COLOR=blue][B]$LOCALIZE[31001][/B][/COLOR][CR]$LOCALIZE[20186] !</label>
+			<font>font-19</font>
+		</control>
+	</controls>
+</window>
